@@ -1,0 +1,43 @@
+\section{Problem}
+
+{\bfseries%
+  Consider the ring $\Z[[F]$, where $[F]$ is the equivalence class of all finite abelian groups isomorphic to $F$. Describe the set $\Z[[F]]/\{[F_2]=[F_1]+[F_3]\}$, where relation $[F_2]=[F_1]+[F_3]$ means that there exists exact sequence:
+
+  \begin{center}\begin{tikzcd}
+    0\arrow[r] & F_1\arrow[r] & F_2\arrow[r] & F_3\arrow[r] & 0
+  \end{tikzcd}\end{center}
+}
+
+Every finite abelian group is isomorphic to either a cyclic group or a finite product of cyclic groups. We will use this fact alongside the knowledge that every cyclic group is isomorphic with $\Z_n$ for some $n\in\N$.
+
+We will start by showing that if $n=k\cdot l$ then $[\Z_n]=[\Z_k]+[\Z_l]$. Consider the sequence
+
+\begin{center}\begin{tikzcd}
+  0 \arrow[r] & \Z_k \arrow[r, "f"] & \Z_{n} \arrow[r, "g"] & \Z_l \arrow[r] & 0
+\end{tikzcd}\end{center}
+
+Define $f(1)=l\mod n$ and $g(1)=1\mod l$. We now need to check if $\ker g=\im f$. Take any $x\in\ker g$, then $x=l\cdot m\mod n$ for some $m\in\{0, 1, 2, ..., k-1\}$. Then for $m\mod l\in\Z_l$ we have $f(m\mod l)=ml\mod n$ and so $x\in\ker g\iff x\in \im f$. This shows that the sequence above is exact and $[\Z_n]=[\Z_k]+[\Z_l]$.
+
+Furthermore, if $n=\prod_{i\leq m}k_i$, then
+$$[\Z_n]=[\Z_{\prod_{i\leq m-1}k_i}]+[\Z_{k_m}]=...=\sum_{i\leq m}[\Z_{k_i}]$$
+and if $n=p^k$ then by applying the above equation we have $[\Z_n]=k[\Z_p]$.
+
+Next, we observe that for any $n,k\in\Z$ $[\Z_n\oplus \Z_k]=[\Z_n]+[\Z_k]$. This is because
+
+\begin{center}\begin{tikzcd}
+  0\arrow[r] & \Z_n \arrow[r, "f"] & \Z_n\oplus \Z_k \arrow[r, "g"] & \Z_k \arrow[r] & 0
+\end{tikzcd}\end{center}
+
+with $f(x)=x\oplus 0$ and $g(x\oplus y)=y$ is an exact sequence. For any $x\oplus y\in\ker g$ we must have $y=0$ while $x$ is unrestricted thus $x\oplus y\in \im f$.
+
+From the latter statement, the following equality is immediately obtained:
+\begin{align*}
+  \Bigl[\bigoplus_{i\leq n}\Z_{k_i}\Bigr]=\Bigl[\bigl(\bigoplus_{i\leq n-1} \Z_{k_i}\bigr)\oplus \Z_{k_n}\Bigr]=\Bigl[\bigoplus_{i\leq n-1}\Z_{k_i}\Bigr]+[\Z_{k_n}]=...=\sum_{i\leq n}[\Z_{k_i}]
+\end{align*}
+
+If $F_n$ and $F_n'$ are two abelian groups of order $n$ and if $F_n=\bigoplus_{i\leq m}\Z_{k_i}$ then we have
+$$[F_n]=\sum_{i\leq m} [\Z_{k_i}]$$
+But because $n=|F_n|=|\oplus \Z_{k_i}|=\prod k_i$, then from the first two observations we obtain
+$$[F_n']=\sum_{i\leq m} [\Z_{k_i}]$$
+and so $[F_n]=[F_n']$. This allows us to replace every $\sum n_i[F_i]\in\Z[[F]$ with $\sum k_i[\Z_{p_i}]$ for prime $p_i$. Therefore,
+$$\Z[[F]/\{[F_2]=[F_1]+[F_3]\}=\{\sum_{i\leq n} k_i[\Z_{p_i}]\;:\;p_i\text{ are prime}, n,k_i\in\N\}$$
