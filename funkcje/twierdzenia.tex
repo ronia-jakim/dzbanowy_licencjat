@@ -21,6 +21,16 @@
   numberlike=definition, %
 ]{remark}
 
+\declaretheorem[ %
+  name=Example, %
+  numberwithin=section, %
+]{example}
+
+
+\renewenvironment{proof}{{\bfseries Proof}$ $\newline}{
+  \begin{flushright} $ \spadesuit $ \end{flushright}$ $\newline
+}
+
 \usepackage{cleveref}
 
 %\crefname{definition}{definicja}{definicje}
