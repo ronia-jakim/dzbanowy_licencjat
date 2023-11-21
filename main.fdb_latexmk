@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1700246788 "main.tex" "main.pdf" "main" 1700246789 0
+["pdflatex"] 1700564906 "main.tex" "main.pdf" "main" 1700564907 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1689853683 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -209,14 +209,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692984530 4623317 a14e403ea671a9bc12f23e543c6a500e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1692984505 8204232 43b33a02560f687eef0a490aba0fedce ""
-  "funkcje/matematyka.tex" 1700239790 215 1b798b2f77ef8378f38a779c08851cc8 ""
+  "funkcje/matematyka.tex" 1700562531 252 bbf8659976baaa577c156393e51dca39 ""
   "funkcje/twierdzenia.tex" 1700239826 888 f4460f787bbae7e46586affeea8524e9 ""
-  "main.aux" 1700246788 1178 04af765ace7d10d7a543c5f5fd058ae8 "pdflatex"
-  "main.out" 1700246788 156 36abf834367de6a4c1c7a9e3f7240a35 "pdflatex"
+  "main.aux" 1700564906 1599 3becb7b940fe44a39e76f89624a12d85 "pdflatex"
+  "main.out" 1700564906 156 36abf834367de6a4c1c7a9e3f7240a35 "pdflatex"
   "main.tex" 1700239803 305 0e41d9f01f6a1919ae85e7dc7a7838cf ""
   "preamble.tex" 1700238549 487 a5959dca7ec17cc490901884cf6b03fa ""
-  "rozdzialy/zadanie_1.tex" 1700239189 4299 dc1040a504249791e006243f02751754 ""
-  "rozdzialy/zadanie_2.tex" 1700246786 824 764c5b97ee9233f98d0d0f7f8249cb7e ""
+  "rozdzialy/zadanie_1.tex" 1700562903 4315 fbcfac792ab017a3236017fa69b32b22 ""
+  "rozdzialy/zadanie_2.tex" 1700564906 2463 8413868250aa454c2081d29b43dabb06 ""
   (generated)
   "main.aux"
   "main.log"

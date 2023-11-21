@@ -2,10 +2,40 @@
 
 Consider a field $\mathfrak{K}$ and the ring of polynomials with coefficients in $\mathfrak{K}$, $\mathfrak{K}[x]$. Obviously, the aforementioned ring is a principial ideal domain. We want to consider group $\Z[[M]]$, where $[M]$ is the equivalence class of all finitely generated torsion modules isomorphic to $M$ and relation $[M_2]=[M_1]+[M_3]$ defined by the existence of an exact sequence.
 
-Any finitely generated module $M$ is isomorphic to a direct sum of cyclic modules:
-$$M\cong p_1\mathfrak{K}[x]\oplus p_2\mathfrak{K}[x]\oplus...\oplus p_n\mathfrak{K}[x]$$
+\begin{example}\color{red}
+  Let us consider $\Q[x]$-modules
+  $$M={\Q[x]}/{(x^3+1)}$$
+  $$N={\Q[x]}/{(x+1)}\oplus{\Q[x]}/{(x^2-x+1)}$$
+  we will show that
+  $$\left[{\Q[x]}/{(x^3+1)}\right]=\left[{\Q[x]}/{(x+1)}\right]+\left[{\Q[x]}/{(x^2-x+1)}\right]=\left[{\Q[x]}/{(x+1)}\oplus{\Q[x]}/{(x^2-x+1)}\right]$$
+  Exactness of sequence
+  \begin{center}\begin{tikzcd}
+    0\arrow[r] & {\Q[x]}/{(x+1)} \arrow[r, hookrightarrow] & {\Q[x]}/{(x+1)}\oplus{\Q[x]}/{(x^2-x+1)} \arrow[r, twoheadrightarrow] & {\Q[x]}/{(x^2-x+1)} \arrow[r] & 0
+  \end{tikzcd}\end{center}
+  is rather trivial: the left arrow is embedding of a summand to a direct sum and the right arrow is projection from direct sum.
 
-Moduły które mają ten sam wielomian w rozkładzie trafiają do tego samego domku.
+  The second sequence,
+  \begin{center}\begin{tikzcd}
+    0\arrow[r] & {\Q[x]}/{(x+1)} \arrow[r, "f"] & {\Q[x]}/{(x^3+1)} \arrow[r, "g"] & {\Q[x]}/{(x^2-x+1)} \arrow[r] & 0
+  \end{tikzcd}\end{center}
+  We define $f$ as 
+  $$f(w+(x+1))=w(x^2-x+1)+(x+1)(x^2-x+1)=w(x^2-x+1)+(x^3+1)$$
+  because $(x+1)(x^2-x+1)=(x^3+1)$. Then $\im(f)=(x^2-x+1)/(x^3+1)$. Now, the second homomorphism will be 
+  $$g(w+(x^3+1))=(w+(x^3+1))+(x^2-x+1)=w+(x^3+1)+(x^2-x+1)=w+(x^2-x+1)$$
+  because $(x^3+1)+(x^2-x+1)=(x^2-x+1)$ as polynomial $x^2-x+1$ divides $x^3+1$. It is clear that $\ker(g)=(x^2-x+1)$. Hence, the sequence is exact.
+\end{example}
+
+Any finitely generated module $M$ is isomorphic to a direct sum of cyclic modules:
+$$M\cong \mathfrak{K}[x]/(p_1)\oplus \mathfrak{K}[x]/(p_2)\oplus...\oplus \mathfrak{K}[x]/(p_n)$$
+
+\begin{lemma}\color{red}
+  Let $\mathfrak{K}$ be a field and consider $\mathfrak{K}[x]$-modules $M, M'$. Then $[M]_\heartsuit=[M']_\heartsuit$ if and only if irreducible polynomials $p_i$ that appear in decomposition of $M$ are the same to the ones that appear in decomposition of $M'$.
+\end{lemma}
+
+
+
+
+\color{green}Moduły które mają ten sam wielomian w rozkładzie trafiają do tego samego domku.
 
 {\color{green} If $p$, $q$ are two irreducible polynomials, then $(p)\oplus  (q)=\mathfrak{K}[x]$ (example: $x-1, x^2+1$).}
 
