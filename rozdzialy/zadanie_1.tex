@@ -1,15 +1,22 @@
-\section{Problem}
+%\section{Problem}
 
-{\bfseries%
-  Consider the ring $\Z[[F]$, where $[F]$ is the equivalence class of all finite Abelian groups isomorphic to $F$. Describe the set $\Z[[F]]/\{[F_2]=[F_1]+[F_3]\}$, where relation $[F_2]=[F_1]+[F_3]$ means that there exists exact sequence:
+%{\bfseries%
+%  Consider the ring $\Z[[F]$, where $[F]$ is the equivalence class of all finite Abelian groups isomorphic to $F$. Describe the set $\Z[[F]]/\{[F_2]=[F_1]+[F_3]\}$, where relation $[F_2]=[F_1]+[F_3]$ means that there exists exact sequence:
+%
+%  \begin{center}\begin{tikzcd}
+%    0\arrow[r] & F_1\arrow[r] & F_2\arrow[r] & F_3\arrow[r] & 0
+%  \end{tikzcd}\end{center}
+%}
 
-  \begin{center}\begin{tikzcd}
-    0\arrow[r] & F_1\arrow[r] & F_2\arrow[r] & F_3\arrow[r] & 0
-  \end{tikzcd}\end{center}
-}
+\section{What does $\Z_2\oplus\Z_2$ and $\Z_4$ have in common? (problem 1)}
+
+Consider the group $\Z[[F]]$, where $[F]$ is the equivalence class of all finite Abelian groups isomorphic to $F$. Let $\heartsuit$ be the equivalence closure of relation defined as follows: if $F_1,F_2,F_3$ are Abelian groups the $[F_2]=[F_1]+[F_3]$ if there exists an exact sequence
+\begin{center}\begin{tikzcd}
+  0\arrow[r] & F_1\arrow[r] & F_2\arrow[r] & F_3\arrow[r] & 0
+\end{tikzcd}\end{center}
 
 \begin{lemma}\label{[F]=[F']}
-  If $F, F'$ are two Abelian groups of order $n$, then they represent the same equivalence class of relation $ \heartsuit $ i.e. $[F] = [F']$.
+  If $F, F'$ are two Abelian groups of order $n$, then they represent the same equivalence class of relation $ \heartsuit $ i.e. $[F]_\heartsuit = [F']_\heartsuit$.
 \end{lemma}
 
 \begin{example}\label{Z2+Z2=Z4}

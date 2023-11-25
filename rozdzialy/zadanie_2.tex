@@ -1,13 +1,58 @@
-\section{Problem}
+%\color{red}
 
-Consider a field $\mathfrak{K}$ and the ring of polynomials with coefficients in $\mathfrak{K}$, $\mathfrak{K}[x]$. Obviously, the aforementioned ring is a principial ideal domain. We want to consider group $\Z[[M]]$, where $[M]$ is the equivalence class of all finitely generated torsion modules isomorphic to $M$ and relation $[M_2]=[M_1]+[M_3]$ defined by the existence of an exact sequence.
+\section{A venture into the worlds of other rings with Euclidean algorithm (problems 2 and 3)}
 
-\begin{example}\color{red}
-  Let us consider $\Q[x]$-modules
+We will start off by showing a result very useful to showing that a sequence is exact.
+
+\begin{lemma}\label{dzielenie przez quotient rings}
+  Let $I, J, K$ be ideals in a $PID$ ring $R$. If $I=JK$ and $I\subseteq K$, then $R/K\cong (R/I)/(R/J)$.
+\end{lemma}
+
+\begin{proof}
+  Consider the following sequence
+  \begin{center}\begin{tikzcd}
+    0\arrow[r] & R/J \arrow[r, "f"] & R/I \arrow[r, "g"] & R/K \arrow[r] & 0
+  \end{tikzcd}\end{center}
+  We will show that it is exact sequence.
+
+  Define $f:R/J\to R/I$ as
+  $$f(x+J)=xK+JK=xK+I$$
+  which gives us $\im f=K/I$. Of course, $f$ is a monomorphism, because
+  $$f(x+J)=xK+JK=yK+JK=f(y+J)\implies (x-y)K\in JK\implies x-y\in J\implies x+J=y+J$$
+
+  Now, let $g:R/I\to R/K$ be a quotient mapping
+  $$g(x+I)=x+I+K=x+K$$ 
+  and so $\ker g=K/I$.
+
+  We showed that $\ker g=\im f$ and so the sequence above is exact and $R/K\cong (R/I)/(R/J)$.
+\end{proof}
+
+\begin{theorem}\label{decomposition theorem def order}
+  Let $R$ be a $PID$ ring and $M$ be an $R$-module. Then there exist $p_1,....,p_n$ elements in $R$ such that 
+  $$M\cong R/(p_1)\oplus R/(p_2)\oplus...R/(p_n).$$
+  We will define the ideal $(p_1....p_n)$ that stems from the decomposition above as the order of module $M$ and denote it as $\ord(M)$. 
+
+  Order of a module $M$ is well defined, that is if $M'\subseteq M$ is a submodule, then we have 
+  $$\ord(M)=\ord(M')\ord(M/M')\;\cite{milnor_infinite_cyclic}.$$
+\end{theorem}
+
+%\section{Problem}
+
+\subsection{When irreducible polynomials become prime numbers}
+
+Consider a field $\mathfrak{K}$ and the ring of polynomials with coefficients in $\mathfrak{K}$, $\mathfrak{K}[x]$. Obviously, the aforementioned ring is a principial ideal domain. We want to consider group $\Z[[M]]$, where $[M]$ is the equivalence class of all finitely generated torsion modules isomorphic to $M$ and apply relation $\heartsuit$ to modules over the ring $\mathfrak{K}[x]$. That is, let $\heartsuit$ be the equivalence closure of relation: $[M_2]=[M_1]+[M_3]$ $\iff$ there exists an exact sequence
+\begin{center}\begin{tikzcd}
+  0\arrow[r] & M_1\arrow[r] & M_2\arrow[r] & M_3\arrow[r] & 0 
+\end{tikzcd}\end{center}
+
+\begin{example} As before, we will start by considering $\Q[x]$-modules
   $$M={\Q[x]}/{(x^3+1)}$$
   $$N={\Q[x]}/{(x+1)}\oplus{\Q[x]}/{(x^2-x+1)}$$
-  we will show that
+  Notice, that $x^2-x+1$ and $x+1$ are both irreducible over $\Q$ and that 
+  $$x^3+1=(x+1)(x^2-x+1).$$
+  We will show that
   $$\left[{\Q[x]}/{(x^3+1)}\right]=\left[{\Q[x]}/{(x+1)}\right]+\left[{\Q[x]}/{(x^2-x+1)}\right]=\left[{\Q[x]}/{(x+1)}\oplus{\Q[x]}/{(x^2-x+1)}\right]$$
+
   Exactness of sequence
   \begin{center}\begin{tikzcd}
     0\arrow[r] & {\Q[x]}/{(x+1)} \arrow[r, hookrightarrow] & {\Q[x]}/{(x+1)}\oplus{\Q[x]}/{(x^2-x+1)} \arrow[r, twoheadrightarrow] & {\Q[x]}/{(x^2-x+1)} \arrow[r] & 0
@@ -16,28 +61,78 @@ Consider a field $\mathfrak{K}$ and the ring of polynomials with coefficients in
 
   The second sequence,
   \begin{center}\begin{tikzcd}
-    0\arrow[r] & {\Q[x]}/{(x+1)} \arrow[r, "f"] & {\Q[x]}/{(x^3+1)} \arrow[r, "g"] & {\Q[x]}/{(x^2-x+1)} \arrow[r] & 0
+    0\arrow[r] & {\Q[x]}/{(x+1)} \arrow[r] & {\Q[x]}/{(x^3+1)} \arrow[r] & {\Q[x]}/{(x^2-x+1)} \arrow[r] & 0
   \end{tikzcd}\end{center}
-  We define $f$ as 
-  $$f(w+(x+1))=w(x^2-x+1)+(x+1)(x^2-x+1)=w(x^2-x+1)+(x^3+1)$$
-  because $(x+1)(x^2-x+1)=(x^3+1)$. Then $\im(f)=(x^2-x+1)/(x^3+1)$. Now, the second homomorphism will be 
-  $$g(w+(x^3+1))=(w+(x^3+1))+(x^2-x+1)=w+(x^3+1)+(x^2-x+1)=w+(x^2-x+1)$$
-  because $(x^3+1)+(x^2-x+1)=(x^2-x+1)$ as polynomial $x^2-x+1$ divides $x^3+1$. It is clear that $\ker(g)=(x^2-x+1)$. Hence, the sequence is exact.
+  is exact because $(x^3+1)\subseteq (x+1)$ and $(x+1)(x^2-x+1)=(x^3+1)$ allows us to use \cref{dzielenie przez quotient rings} to show that there exists an isomorphism
+  $$\Q[x]/(x^2-x+1)\cong (\Q[x]/(x^3+1))/(\Q[x]/(x+1)).$$
 \end{example}
 
-Any finitely generated module $M$ is isomorphic to a direct sum of cyclic modules:
-$$M\cong \mathfrak{K}[x]/(p_1)\oplus \mathfrak{K}[x]/(p_2)\oplus...\oplus \mathfrak{K}[x]/(p_n)$$
+In the previous section we showed that all Abelian groups of the same order (understood then as the number of elements) are in the same equivalence class. Now, we will show that the same is true for modules over a ring of polynomials, with order understood as a polynomial.
 
-\begin{lemma}\color{red}
-  Let $\mathfrak{K}$ be a field and consider $\mathfrak{K}[x]$-modules $M, M'$. Then $[M]_\heartsuit=[M']_\heartsuit$ if and only if irreducible polynomials $p_i$ that appear in decomposition of $M$ are the same to the ones that appear in decomposition of $M'$.
+\begin{lemma}
+  Let $\mathfrak{K}$ be a field and consider $\mathfrak{K}[x]$-module $M$ with $\ord(M)=(p_1....p_n)$, $p_i$ are irreducible polynomials. Then 
+  $$[M]_\heartsuit=\sum_{i=1}^n [R/(p_i)]_\heartsuit$$
+  %irreducible polynomials $p_i$ that appear in decomposition of $M$ are the same to the ones that appear in decomposition of $M'$.
 \end{lemma}
 
+\begin{proof}
+  We will use induction on the number of polynomials $n$ in decomposition of $\ord(M)$. 
 
+  \begin{enumerate}
+    \item $n=1$ 
 
+      This of course means that $M\cong R/(p_1)$ and so $[M]_\heartsuit=[R/(p_1)]_\heartsuit$.
+    \item $n\implies n+1$ 
 
-\color{green}Moduły które mają ten sam wielomian w rozkładzie trafiają do tego samego domku.
+      First, notice that $R/(p_{n+1})\subseteq M$ and so 
+      $$(p_1...p_np_{n+1})=\ord(M)=(p_{n+1})\ord(M/(p_{n+1}))=(p_{n+1})\ord(M/(p_{n+1}))$$
+      implies that $\ord(M/(p_{n+1}))=(p_1....p_n)$. From inductive hypothesis we know that 
+      $$[M/(p_{n+1})]_\heartsuit=\sum_{i=1}^n[R/(p_i)]_\heartsuit.$$
+      We know that sequence
+      \begin{center}\begin{tikzcd}
+        0\arrow[r] & R/(p_{n+1})\arrow[r] & M\arrow[r] & M/(p_{n+1}) \arrow[r] & 0 
+      \end{tikzcd}\end{center}
+      is exact, hence
+      $$[M]_\heartsuit=[R/(p_{n+1})]_\heartsuit+[M/(p_{n+1})]_\heartsuit=\sum_{i=1}^{n+1}[R/(p_i)]_\heartsuit.$$
+  \end{enumerate}
+\end{proof}
 
-{\color{green} If $p$, $q$ are two irreducible polynomials, then $(p)\oplus  (q)=\mathfrak{K}[x]$ (example: $x-1, x^2+1$).}
+{\color{red}
+\subsection{Vector space as a $\mathfrak{K}[x]$-module}
 
+{\large\color{cyan}DO DOPRACOWANIA, BO NAPISAŁAM JAKOŚ KRZYWO, może coś o Jordan basis?}
 
-$$x^2+2x+1-(x-1)(x+3)$$
+Let $V$ be a vector space over a field $\mathfrak{K}$. Take $f:V\to V$ to be any endomorphism of $V$. We can now consider $V$ as a $\mathfrak{K}[x]$-module, with multiplication of $v\in V$ by $w(x)=\sum \alpha_ix^i \in \mathfrak{K}[x]$ defined as:
+$$w\cdot v=(w(f))(v)=(\sum \alpha_if^i)(v)=\sum \alpha_i\cdot f^i(v),$$
+where $f^i=\underbrace{f\circ...\circ f}_{\text{i times}}$.
+
+For a fixed vector space $V$ (for simplicity let $V=\mathfrak{K}^n$) consider all the $\mathfrak{K}[x]$-modules created by choosing different endomorphisms $f:V\to V$, where endomorphisms that are represented by similar matrices will be treated as one object. 
+
+If an endomorphism $f:\mathfrak{K}^n\to\mathfrak{K}^n$ is represented by matrix $A$, then we know that there exists a polynomial $w\in\mathfrak{K}[x]$ such that for every $v\in\mathfrak{K}^n$ $w\cdot v=0$, because any collection of at least $n+1$ vectors from $\mathfrak{K}^n$ cannot be linearly independent. Thus we know that $\mathfrak{K}^n$ is a torsion module over $\mathfrak{K}$.
+
+The characteristic polynomial of $A$, $\chi_A(x)=\sum \alpha_ix^i$ is defined as $\det(Ix-A)$, where $I$ is the identity matrix. We know that $\chi_A(x)=\prod (x-\lambda_i)$, where $\lambda_i$ are all the eigenvalues of $A$. There are at most $n$ eigenvectors of $A$ and they are all killed by $\chi_A(x)$. This means, that 
+$$(\mathfrak{K}^n; f)\cong R/(\chi_A)$$
+
+Hence, $[(\mathfrak{K}^n; f)]_\heartsuit=[(\mathfrak{K}^n; g)]_\heartsuit\iff \chi_f(x)=\chi_g(x)$ and every vector space can be expressed as
+$$[(\mathfrak{K}^n;f)]_\heartsuit=\sum_{i=1}^n[R/(x-\lambda_i)]_\heartsuit$$
+where $\lambda_i$ are the eigenvalues of $f$.
+}
+
+\section{Ta ambitna część dyskursu}
+
+Patrzę sobie na pierścień $\Z[x]$ i tam mam ideał $(2, x)$. Jeśli ten ideał przemnożę przez $(4)$, to dostaję $(2, x)(4)=(8, 4x)$ nadal nie jest reprezentowalny przez jednego ziomka. Mogę więc napisać ciąg dokładny
+\begin{center}\begin{tikzcd}
+  0\arrow[r] & \Z[x]/(4)\arrow[r] & \Z[x]/(8, x)\arrow[r] & \Z[x]/(2, x)\arrow[r] & 0 
+\end{tikzcd}\end{center}
+Czyli
+
+$$[\Z[x]/(4)\oplus\Z[x]/(2, x)]=[\Z[x]/(4)]+[\Z[x]/(2, x)]=[\Z[x]/(8, 4x)]$$
+ale wiem też, że 
+$$\Z[x]/(4)\oplus\Z[x]/(2, x)\cong\Z/((4)\cap (2, x))=\Z/(8, 4x)$$
+co nic mi nie daje w sumie.
+
+Chyba chce tutaj jakiś przykład, który nie wykorzystuje lematu tam z góry?
+
+Dobra, wiem, że każdy $\Z[x]$-moduł mogę potraktować jako $\Z$-moduł, tylko niekoniecznie skończenie generowany $\Z[x]$ będzie skończenie generowany jako $\Z$-moduł (choćby $(x)$ nie jest generowany przez $x$ w $\Z[x]$, ale jako $\Z$-moduł generują go wszystkie potęgi $x$, których jest nieskończenie wiele). 
+
+Czym jest $(2, x)/(2)$?
