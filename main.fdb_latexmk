@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1700931394 "main.aux" "main.bbl" "main" 1700931396 0
+["bibtex main"] 1701021982 "main.aux" "main.bbl" "main" 1701024637 0
   "./literatura.bib" 1700928765 116 1db843220af5fc40c8345ee66e8ec720 ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1689853683 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1700931395 2891 0e2415c04e05c72d2ef8bf73dfca0a3e "pdflatex"
+  "main.aux" 1701024636 3493 958d874ad3fc94721da5cfe5cae7f6c6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1700931394 "main.tex" "main.pdf" "main" 1700931396 0
+["pdflatex"] 1701024635 "main.tex" "main.pdf" "main" 1701024637 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1689853683 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -222,15 +222,15 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692984530 4623317 a14e403ea671a9bc12f23e543c6a500e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1692984505 8204232 43b33a02560f687eef0a490aba0fedce ""
-  "funkcje/matematyka.tex" 1700915336 286 bf60c45cb4e9e711024f36159974d951 ""
+  "funkcje/matematyka.tex" 1701001310 318 47b4550f06faa40272a4d46118c31472 ""
   "funkcje/twierdzenia.tex" 1700239826 888 f4460f787bbae7e46586affeea8524e9 ""
-  "main.aux" 1700931395 2891 0e2415c04e05c72d2ef8bf73dfca0a3e "pdflatex"
-  "main.bbl" 1700931394 156 5c52d0c77f44289927999bc7c24fb1a9 "bibtex main"
-  "main.out" 1700931395 1972 67dc69c4c7b4dd17e5b888e4d874f12e "pdflatex"
+  "main.aux" 1701024636 3493 958d874ad3fc94721da5cfe5cae7f6c6 "pdflatex"
+  "main.bbl" 1701021982 156 5c52d0c77f44289927999bc7c24fb1a9 "bibtex main"
+  "main.out" 1701024636 1972 67dc69c4c7b4dd17e5b888e4d874f12e "pdflatex"
   "main.tex" 1700916141 364 53cd25bf186dd37738e659c81e543869 ""
   "preamble.tex" 1700238549 487 a5959dca7ec17cc490901884cf6b03fa ""
   "rozdzialy/zadanie_1.tex" 1700916372 4824 f62dfea6dcc37a05bc3f491307961911 ""
-  "rozdzialy/zadanie_2.tex" 1700931392 7918 b0009c1f70c881c5da26b62205862426 ""
+  "rozdzialy/zadanie_2.tex" 1701024633 11886 e17f00d2ebf1acdef5521f347702e354 ""
   (generated)
   "main.aux"
   "main.log"
