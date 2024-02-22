@@ -1,7 +1,10 @@
 \documentclass[13pt]{article}
 
 \input{./preamble.tex}
- 
+
+\usepackage{tikz}
+\usetikzlibrary{spath3, hobby, knots}
+
 \title{A voyage into the algebras}
 \author{
   Weronika Jakimowicz\\
@@ -14,6 +17,48 @@
 
 \begin{document}
 \maketitle
+\bigskip
+
+\begin{center}
+  \begin{tikzpicture}
+    \begin{knot}[
+      consider self intersections,
+      flip crossing=2,
+      clip width=10,
+      ]
+      \strand[thick]
+      (90:2) to[out=180,in=-120,looseness=2]
+      (-30:2) to[out=60,in=120,looseness=2]
+      (210:2) to[out=-60,in=0,looseness=2] (90:2);
+    \end{knot}
+
+  \fill (0,0) circle (2pt);
+\fill(90:2) circle (2pt);
+\fill(-30:2) circle (2pt);
+\fill(210:2) circle (2pt);
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \begin{knot}[
+      consider self intersections,
+      flip crossing=2,
+      clip width=10,
+      ]
+      \strand[thick]
+      (120:2) to [in=120, out=120, looseness=2]
+      (-30:2) to [out=120, in=-30, looseness=2]
+      (-120:2) to [looseness=2]
+      (30:2) to [looseness=2] (120:2);
+    \end{knot}
+  \fill(0,0) circle (2pt);
+\fill(120:2) circle(2pt);
+\fill(-30:2) circle(2pt);
+\fill(-120:2) circle(2pt);
+\fill(30:2) circle(2pt);
+  \end{tikzpicture}
+\end{center}
 \newpage
 
 %\input{./rozdzialy/zadanie_1.tex}

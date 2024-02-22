@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.2.21)  21 FEB 2024 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.2.22)  22 FEB 2024 13:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -586,10 +586,52 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `amsthm' support loaded on input line 3026.
-)) (./funkcje/matematyka.tex)) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (./funkcje/matematyka.tex)) (/usr/share/texmf-dist/tex/latex/spath3/tikzlibraryspath3.code.tex (/usr/share/texmf-dist/tex/latex/spath3/spath3.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count319
 \l__pdf_internal_box=\box68
+))
+Package: spath3 2022/08/24 v2.7 Functions for manipulating PGF soft paths
+ (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+\g__spath_output_int=\count320
+\l__spath_tmpa_dim=\dimen293
+\l__spath_tmpb_dim=\dimen294
+\l__spath_tmpa_int=\count321
+\l__spath_tmpb_int=\count322
+\l__spath_move_x_dim=\dimen295
+\l__spath_move_y_dim=\dimen296
+\l__spath_rectx_dim=\dimen297
+\l__spath_recty_dim=\dimen298
+\g__spath_anon_int=\count323
+)
+\l__tikzspath_tmpa_int=\count324
+) (/usr/share/texmf-dist/tex/latex/hobby/tikzlibraryhobby.code.tex
+(/usr/share/texmf-dist/tex/latex/hobby/pgflibraryhobby.code.tex (/usr/share/texmf-dist/tex/latex/hobby/hobby.code.tex (/usr/share/texmf-dist/tex/latex/hobby/pml3array.sty
+\l_array_base_int=\count325
+\l_array_top_int=\count326
+\l_array_tmp_int=\count327
+\g_array_base_int=\count328
+)
+\l_hobby_npoints_int=\count329
+\l_hobby_draw_int=\count330
+))) (/usr/share/texmf-dist/tex/latex/spath3/tikzlibraryknots.code.tex (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+\pgf@intersect@solutions=\count331
+))
+\l__knot_tmpa_int=\count332
+\l__knot_strands_int=\count333
+\g__knot_intersections_int=\count334
+\g__knot_filaments_int=\count335
+\l__knot_component_start_int=\count336
+\l__knot_tmpa_dim=\dimen299
+\l__knot_tmpb_dim=\dimen300
+\l__knot_tolerance_dim=\dimen301
+\l__knot_redraw_tolerance_dim=\dimen302
+\l__knot_clip_bg_radius_dim=\dimen303
+\l__knot_clip_draw_radius_dim=\dimen304
 )
 
 LaTeX Warning: Unused global option(s):
@@ -598,42 +640,42 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-Package hyperref Info: Link coloring OFF on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+Package hyperref Info: Link coloring OFF on input line 18.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 15.
-Package microtype Info: Applying patch `item' on input line 15.
-Package microtype Info: Applying patch `toc' on input line 15.
-Package microtype Info: Applying patch `eqnum' on input line 15.
-Package microtype Info: Applying patch `footnote' on input line 15.
-Package microtype Info: Applying patch `verbatim' on input line 15.
+LaTeX Info: Redefining \microtypecontext on input line 18.
+Package microtype Info: Applying patch `item' on input line 18.
+Package microtype Info: Applying patch `toc' on input line 18.
+Package microtype Info: Applying patch `eqnum' on input line 18.
+Package microtype Info: Applying patch `footnote' on input line 18.
+Package microtype Info: Applying patch `verbatim' on input line 18.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 15.
+LaTeX Info: Redefining \showhyphens on input line 18.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -641,16 +683,16 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count320
-\scratchdimen=\dimen293
+\scratchcounter=\count337
+\scratchdimen=\dimen305
 \scratchbox=\box69
-\nofMPsegments=\count321
-\nofMParguments=\count322
+\nofMPsegments=\count338
+\nofMParguments=\count339
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count323
-\MPscratchDim=\dimen294
-\MPnumerator=\count324
-\makeMPintoPDFobject=\count325
+\MPscratchCnt=\count340
+\MPscratchDim=\dimen306
+\MPnumerator=\count341
+\makeMPintoPDFobject=\count342
 \everyMPtoPDFconversion=\toks51
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -692,13 +734,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -720,15 +762,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C59360CCD9063B343596756CC0D90BE1;993.
  ) 
 Here is how much of TeX's memory you used:
- 27706 strings out of 476025
- 538271 string characters out of 5796532
- 1860388 words of memory out of 5000000
- 47613 multiletter control sequences out of 15000+600000
+ 30912 strings out of 476025
+ 625240 string characters out of 5796532
+ 1861388 words of memory out of 5000000
+ 50781 multiletter control sequences out of 15000+600000
  525381 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,8n,107p,1001b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,8n,413p,1001b,1211s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on main.pdf (2 pages, 149470 bytes).
+Output written on main.pdf (2 pages, 151980 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
