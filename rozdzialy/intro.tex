@@ -25,3 +25,128 @@ Seifert surface of knot $K$ is an orientable surface whose boundary is $K$. We c
 $H^1(K^*)$ is more complicated than $H^1(S^3\setminus K)$ and things get interesting if we consider it as a $\Z[\Z]$ (or $\Z[x, x^{-1}]$-module. We can use the fact that $\Pi_1(K^*)^{ab}=H^1(K^*)$ and calculate this module to obtain something called Alexander ideal $I$: $H^1(K^*)\cong \Z[\Z]/I$. If $I$ is a principal ideal, e.g. in the case of trefoil knot of figure eight knot, its generator is called "Alexander polynomial". If this is not the case, we must consider $H^1(K^*; \Q)$ - kohomology module with coefficients in $\Q$, to obtain the Alexander polynomial. In the following paper we will consider what happens if we use $F_p$, a finite field, instead of $\Q$.
 
 The matrix method
+
+\subsection{Knot colorings}
+
+{\color{blue}
+We might consider a module $M$ over some ring $R$, usually $R=\Z[t, t^{-1}]$. Let $K$ be a knot with $l$ arches and $s$ crossings that is oriented. We will consider a function $M^{l}\to M^{s}$ given by
+$$+: au+bi+co = 0$$
+$$-: \alpha u+\beta i + \gamma o = 0,$$
+where $+$ or $-$ depends on what arches $u$, $i$ and $o$ create:
+\begin{center}
+  \begin{tikzpicture}
+    \draw[<-] (0, -2)--(1.5, 0);
+    \fill[white] (0.75, -1) circle (4pt);
+    \draw[->] (0, 0)--(1.5, -2);
+
+    \node at (0.75, -2.2) {$+$};
+    \node at (0.2, 0) {$u$};
+    \node at (1.3, 0) {$i$};
+    \node at (0.3, -1.8) {$o$};
+
+    \draw[->] (3, 0)--(4.5, -2);
+    \fill[white] (3.75, -1) circle (4pt);
+    \draw[<-] (3, -2)--(4.5, 0);
+    
+    \node at (3.75, -2.2) {$-$};
+    \node at (3.2, 0) {$i$};
+    \node at (4.3, 0) {$u$};
+    \node at (4.1, -1.8) {$o$};
+  \end{tikzpicture}
+\end{center}
+The kernel of this morphism is responsible for coloring of knot $K$. 
+
+$a, b, c$ (and greek) are morphisms $M\to M$ (or $M\to N$ in more general case). We can assume that $c$ is a unit or even $c=1=\gamma$.
+
+Furthermore, we can use equations above to obtain two operators $M\times M\to M\times M$ such that $(u,i)\mapsto (o, u)$ and $(i,u)\mapsto (u, o)$.
+
+Two calculations on braids to do here, one that will give $a(a+b)=a$ and the other that states $ab=ba$ !! what is the difference when $a+b=1$ and when $a$ is not assumed to be a unit (therefore only $a^2+ab=a$)?
+
+So now we can take a knot, its diagram and make it into a braid. A braid has a group (Burau representation, Markov knot theorem - moves) and we know that $\beta(w)v=v$ for the knot $w$ and any vector $v$.
+
+the braid group $B_{n+1}$ with generators $\sigma_1, ..., \sigma_n$ can be send to $S_{n+1}$ with relation $\sigma\eta=\eta\sigma$ for translations that are disjoint and $\sigma\eta\sigma=\eta\sigma\eta$ ( i think ) but we might want to do something different and add a relation that sends $B_{n+1}$ to $H_{n+1}$ or however this algebra was named, using $\sigma^2+a\sigma+b=0$.
+
+Going back to the $M\times M$ stuff -> we can have a matrix $\begin{bmatrix} 1-t & t\\ 1 & 0\end{bmatrix}$ and we can assosiate it with translation $\sigma_i$ from $B_{n+1}$ and it acts on the braid. This gives us a coloring of the braid.
+}
+
+Let $R$ be a ring with identity and let $M$ be an $R$-module. If we consider a diagram of a knot $K$ without any orientation, the only type of crossing we will encounter is:
+\begin{center}
+  \begin{tikzpicture}
+    \draw (0, -2)--(1.5, 0);
+    \fill[white] (0.75, -1) circle (4pt);
+    \draw (0, 0)--(1.5, -2);
+
+    \node at (0.2, 0) {$u$};
+    \node at (1.3, 0) {$i$};
+    \node at (0.3, -1.8) {$o$};
+  \end{tikzpicture}
+\end{center}
+where $i$ and $o$ are indistinguishable. When $K$ has $s$ segments and $x$ crossings, we can write a morphism
+$$\phi:M^s\to M^x$$
+such that 
+{\color{blue}tutaj trzeba sie dokladnie zastanowic jak to idzie bardzo formalnie w zapisie}
+$${\color{red}\phi(u+i+o)=}au+bi+co=0$$
+for $a, b, c\in \End(M)$ that are fixed for the entirety of $K$. However, because $i$ and $o$ are impossible to tell apart, we can write $b=c$ and in fact have a very simple equation:
+$$au+b(i+o)=0.$$
+If we extend the morphism $M^s\to M^x$ to an exact sequence, we obtain
+$$0\to \ker\phi\to M^s\xrightarrow{\phi}M^x\to \coker\phi\to 0.$$
+Module $\ker\phi$ can be viewed as a coloring of the diagram of $K$ with elements of module $M$.
+
+\begin{example}
+  Let $M=\Z_n$, $R=\Z$, and consider the trefoil knot with $3$ segments and $3$ crossings.
+
+  \begin{figure}[h] \centering
+  \begin{tikzpicture}
+    \begin{knot}[
+      consider self intersections,
+      flip crossing=2,
+      clip width=20,
+      ]
+      \strand[thick]
+      (90:2) to[out=180,in=-120,looseness=2]
+      (-30:2) to[out=60,in=120,looseness=2]
+      (210:2) to[out=-60,in=0,looseness=2] (90:2);
+    \end{knot}
+    \node at (130:2) {$l_1$};
+    \node at (210:2.3) {$l_2$};
+    \node at (-30:2.3) {$l_3$};
+  \end{tikzpicture}
+  \caption{An alternating diagram of trefoil knot $3_1$.}
+\end{figure}
+
+{\color{orange}TO DO: function such that $2x-y-z=0$ always when $x$ is the upper strand, using Smith's normal form show that only $\Z_3$ can be used to make a non-trivial coloring}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw[<-] (0, -2)--(1.5, 0);
+    \fill[white] (0.75, -1) circle (4pt);
+    \draw[->] (0, 0)--(1.5, -2);
+
+    \node at (0.75, -2.2) {$+$};
+    \node at (0.2, 0) {$u$};
+    \node at (1.3, 0) {$i$};
+    \node at (0.3, -1.8) {$o$};
+
+    \draw[->] (3, 0)--(4.5, -2);
+    \fill[white] (3.75, -1) circle (4pt);
+    \draw[<-] (3, -2)--(4.5, 0);
+    
+    \node at (3.75, -2.2) {$-$};
+    \node at (3.2, 0) {$i$};
+    \node at (4.3, 0) {$u$};
+    \node at (4.1, -1.8) {$o$};
+  \end{tikzpicture}
+\end{center}
+
