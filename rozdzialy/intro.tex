@@ -26,7 +26,7 @@ $H^1(K^*)$ is more complicated than $H^1(S^3\setminus K)$ and things get interes
 
 The matrix method
 
-\subsection{Knot colorings}
+\subsection{Fast notes}
 
 {\color{blue}
 We might consider a module $M$ over some ring $R$, usually $R=\Z[t, t^{-1}]$. Let $K$ be a knot with $l$ arches and $s$ crossings that is oriented. We will consider a function $M^{l}\to M^{s}$ given by
@@ -69,8 +69,12 @@ the braid group $B_{n+1}$ with generators $\sigma_1, ..., \sigma_n$ can be send 
 Going back to the $M\times M$ stuff -> we can have a matrix $\begin{bmatrix} 1-t & t\\ 1 & 0\end{bmatrix}$ and we can assosiate it with translation $\sigma_i$ from $B_{n+1}$ and it acts on the braid. This gives us a coloring of the braid.
 }
 
-Let $R$ be a ring with identity and let $M$ be an $R$-module. If we consider a diagram of a knot $K$ without any orientation, the only type of crossing we will encounter is:
-\begin{center}
+
+\subsection{Coloring an unoriented knot diagram}
+
+Let $R$ be a ring with identity and let $M$ be an $R$-module. If we consider a diagram of a knot $K$ without any orientation, the only type of crossing we will encounter is pictured in \cref{fig.1:unoriented:crossing}
+
+\begin{figure}[h] \centering 
   \begin{tikzpicture}
     \draw (0, -2)--(1.5, 0);
     \fill[white] (0.75, -1) circle (4pt);
@@ -80,17 +84,56 @@ Let $R$ be a ring with identity and let $M$ be an $R$-module. If we consider a d
     \node at (1.3, 0) {$i$};
     \node at (0.3, -1.8) {$o$};
   \end{tikzpicture}
-\end{center}
-where $i$ and $o$ are indistinguishable. When $K$ has $s$ segments and $x$ crossings, we can write a morphism
+  \caption{\label{fig.1:unoriented:crossing}Crossing in an unoriented knot diagram.}
+\end{figure}
+
+Notice, that rotating it by $180$ degrees changes $i$ and $o$ position (see \cref{fig.2:unoriented:crossing:floped}). Thus, segments passing under a crossing are indistinguishable. 
+
+\begin{figure}[h] \centering 
+  \begin{tikzpicture}
+    \draw (0, -2)--(1.5, 0);
+    \fill[white] (0.75, -1) circle (4pt);
+    \draw (0, 0)--(1.5, -2);
+
+    \node at (0.2, 0) {$u$};
+    \node at (1.3, 0) {$i$};
+    \node at (0.3, -1.8) {$o$};
+
+    \draw[->] (3, -1) arc (-40:150:0.5);
+
+    \draw (4, -2)--(5.5, 0);
+    \fill[white] (4.75, -1) circle (4pt);
+    \draw (4, 0)--(5.5, -2);
+
+    \node at (4.2, 0) {$u$};
+    \node at (5.3, 0) {$o$};
+    \node at (4.3, -1.8) {$i$};
+  \end{tikzpicture}
+  \caption{\label{fig.2:unoriented:crossing:floped}Segments going under a crossing in an unoriented knot diagram are indistinguishable.}
+\end{figure}
+
+When $K$ has $s$ segments and $x$ crossings, we can write a labeling homomorphism
 $$\phi:M^s\to M^x$$
-such that 
-{\color{blue}tutaj trzeba sie dokladnie zastanowic jak to idzie bardzo formalnie w zapisie}
+which for segments that form a crossing pictured in \cref{fig.1:unoriented:crossing} takes value
+$$\phi(u, i, o)=au+bi+co$$
+for fixed $a,b,c\in\End(M)$. However, as we noted before, $i$ and $o$ are indistinguishable in \cref{fig.1:unoriented:crossing} and thus $b=c$, which yields a simpler definition:
+%that assigns each element $m$ of $M^s$ an arbitrary value dependent on $a,b,c\in\End(M)$ are fixed endomorphisms and its relation to other segments. However, because $i$ and $o$ are impossible to tell apart, we must take $b=c$ and this arrive at a simpler function:
+$$\phi(u,i,o)=au+b(i+o).$$
+
+{\color{yellow}tutaj trzeba sie dokladnie zastanowic jak to idzie bardzo formalnie w zapisie
 $${\color{red}\phi(u+i+o)=}au+bi+co=0$$
-for $a, b, c\in \End(M)$ that are fixed for the entirety of $K$. However, because $i$ and $o$ are impossible to tell apart, we can write $b=c$ and in fact have a very simple equation:
+for $a, b, c\in \End(M)$ that are fixed for the entirety of $K$. However, because $i$ and $o$ are impossible to tell apart, we must take $b=c$ and thus arrive at a very simple equation:
+%in fact have a very simple equation:
 $$au+b(i+o)=0.$$
-If we extend the morphism $M^s\to M^x$ to an exact sequence, we obtain
+}
+
+A coloring of a knot diagram without orientation is a labeling of its segments with elements from some module that agrees on crossings. That is, if a segment started in one crossing with label $x$ then it must be labeled with $x$ in every other crossing until another segment passes over it. Every diagram has a trivial coloring, in which every segment is labeled with the same element.
+
+In other words, a coloring is an element from $M^s$ that agrees with $a$ and $b$ on every crossing and thus it belongs to $\ker\phi$. For $(m_1,...,m_s)\in\ker\phi$ we have a coloring such that segment $i$ is labeled with $m_i$.
+
+{\color{yellow}If we extend the morphism $M^s\to M^x$ to an exact sequence, we obtain
 $$0\to \ker\phi\to M^s\xrightarrow{\phi}M^x\to \coker\phi\to 0.$$
-Module $\ker\phi$ can be viewed as a coloring of the diagram of $K$ with elements of module $M$.
+Module $\ker\phi$ can be viewed as a coloring of the diagram of $K$ with elements of module $M$.}
 
 \begin{example}
   Let $M=\Z_n$, $R=\Z$, and consider the trefoil knot with $3$ segments and $3$ crossings.
@@ -111,20 +154,24 @@ Module $\ker\phi$ can be viewed as a coloring of the diagram of $K$ with element
     \node at (210:2.3) {$l_2$};
     \node at (-30:2.3) {$l_3$};
   \end{tikzpicture}
+
+  \begin{tikzpicture}
+  \fill (90:2.5) circle (2pt);
+\fill (-30:3) circle (2pt);
+\fill (210:3) circle (2pt);
+
+\draw (90:2.5)
+  \end{tikzpicture}
   \caption{An alternating diagram of trefoil knot $3_1$.}
 \end{figure}
 
 {\color{orange}TO DO: function such that $2x-y-z=0$ always when $x$ is the upper strand, using Smith's normal form show that only $\Z_3$ can be used to make a non-trivial coloring}
+
+{\color{blue}MAYHAPSE A DIFFERENT KNOT?}
+
 \end{example}
 
-
-
-
-
-
-
-
-
+\subsection{The case of oriented knot diagram}
 
 
 
@@ -149,4 +196,6 @@ Module $\ker\phi$ can be viewed as a coloring of the diagram of $K$ with element
     \node at (4.1, -1.8) {$o$};
   \end{tikzpicture}
 \end{center}
+
+
 
