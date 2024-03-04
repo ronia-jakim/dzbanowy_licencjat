@@ -2,7 +2,7 @@
 
 \subsection{Labeling homomorphism with orientation}
 
-Every knot diagram has two orientations and in an oriented diagram there are two distinct types of crossings as seen in \cref{fig:3:two:types:crossings}. In such crossings segments $i$ and $o$ are easily distinguishable, allowing us to write two different elements to which labeling homomorphism $\phi$ will map segments that contribute to one crossing:
+Every knot diagram can be endowed with orientation in two different ways. Given an oriented knot diagram there are two distinct types of crossings as seen in \cref{fig:4:two:types:crossings}. In such crossings segments $i$ and $o$ are easily distinguishable, allowing us to write two different elements to which labeling homomorphism $\phi$ will map segments that contribute to one crossing:
 $$+:\phi(u,i,o)=au+bi+co$$
 $$-:\phi(u,i,o)=\alpha u+\beta i+\gamma o.$$
 
@@ -26,7 +26,22 @@ $$-:\phi(u,i,o)=\alpha u+\beta i+\gamma o.$$
     \node at (4.3, 0) {$u$};
     \node at (4.1, -1.8) {$o$};
   \end{tikzpicture}
-  \caption{\label{fig:3:two:types:crossings}Two types of crossings in oriented knot diagram.}
+  \caption{\label{fig:4:two:types:crossings}Two types of crossings in oriented knot diagram.}
 \end{figure}
 
-Just as before, elements from $M^s$ that map to $0$ element in $M^x$ are responsible for coloring of diagram being examined. 
+Just as before, elements from $M^s$ that map to $0$ element in $M^x$ are responsible for coloring of the diagram being examined.
+
+Those two definitions of homomorphism can be used to define two operators $M\times M\to M\times M$ which take segments that enter a crossing and return segments that leave said crossing. Looking from top to bottom of \cref{fig:4:two:types:crossings}, said operators are represented by matrices:
+$$
+A_+=\begin{pmatrix}
+  -c^{-1}a & -c^{-1}b \\
+  1 & 0
+\end{pmatrix}
+\begin{pmatrix}u\\i\end{pmatrix}
+\quad\quad\quad
+A_-=\begin{pmatrix}
+  0 & 1 \\ 
+  -\gamma^{-1}\beta & -\gamma^{-1}\alpha
+\end{pmatrix}
+\begin{pmatrix}i\\u\end{pmatrix}
+$$

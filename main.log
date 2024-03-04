@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.2.21)  3 MAR 2024 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.2.22)  4 MAR 2024 08:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -708,15 +708,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.90552pt, 483.69684pt, 56.90552pt)
-* v-part:(T,H,B)=(62.59605pt, 717.00945pt, 65.44135pt)
+* h-part:(L,W,R)=(85.35826pt, 426.79134pt, 85.35828pt)
+* v-part:(T,H,B)=(91.04881pt, 660.10393pt, 93.8941pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69684pt
-* \textheight=717.00945pt
-* \oddsidemargin=-15.36447pt
-* \evensidemargin=-15.36447pt
-* \topmargin=-46.67393pt
+* \textwidth=426.79134pt
+* \textheight=660.10393pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-18.22118pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -755,31 +755,35 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 ) [2] [3]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 139.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./rozdzialy/oriented_coloring.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./main.bbl
+[4]) (./main.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [4] [5] (./main.aux)
+) [5] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 95D484623851AA25FDEC8FE66D461252;1619.
  ) 
 Here is how much of TeX's memory you used:
- 31083 strings out of 476025
- 628224 string characters out of 5796532
- 1866388 words of memory out of 5000000
+ 31103 strings out of 476025
+ 628402 string characters out of 5796532
+ 1867388 words of memory out of 5000000
  50890 multiletter control sequences out of 15000+600000
- 528395 words of font info for 118 fonts, out of 8000000 for 9000
+ 528960 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,11n,416p,1001b,1385s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (5 pages, 222685 bytes).
+Output written on main.pdf (5 pages, 223803 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
+ 164 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  21 named destinations out of 1000 (max. 500000)
  28749 words of extra memory for PDF output out of 29859 (max. 10000000)
 
