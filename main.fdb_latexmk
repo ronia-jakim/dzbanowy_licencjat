@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1709538877 "main.aux" "main.bbl" "main" 1709538878 0
-  "./literatura.bib" 1701762413 118 6f246e32e3f70dcaf797156f42b97a5e ""
+["bibtex main"] 1709667603 "main.aux" "main.bbl" "main" 1709669038 0
+  "./literatura.bib" 1708523993 118 6f246e32e3f70dcaf797156f42b97a5e ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1704400182 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1709538878 3044 18fc0c24cfb3efc95a1e201d9420b6bb "pdflatex"
+  "main.aux" 1709669037 3586 c22d875fe75fc9abdbbf8d4879b0e621 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1709538877 "main.tex" "main.pdf" "main" 1709538878 0
+["pdflatex"] 1709669036 "main.tex" "main.pdf" "main" 1709669038 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1704400182 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1704400182 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1704400182 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -43,6 +43,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1704400182 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1704400182 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1704400182 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1704400182 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1704400182 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1704400182 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1704400182 32716 08e384dc442464e7285e891af9f45947 ""
@@ -156,6 +157,7 @@
   "/usr/share/texmf-dist/tex/latex/base/fontenc.sty" 1704400182 5119 4ce42f43368f652f9c9522d943cce8e4 ""
   "/usr/share/texmf-dist/tex/latex/base/inputenc.sty" 1704400182 5048 84b05796b49b69e2d4257d537721c960 ""
   "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1704400182 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
+  "/usr/share/texmf-dist/tex/latex/braids/tikzlibrarybraids.code.tex" 1704400182 37716 b802ed5f67afef68d7bb33b0236eeb26 ""
   "/usr/share/texmf-dist/tex/latex/cleveref/cleveref.sty" 1704400182 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "/usr/share/texmf-dist/tex/latex/doublestroke/dsfont.sty" 1704400182 230 7bc61880b468bfd38aedc173be7c3486 ""
   "/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty" 1704400182 51697 f8f08183cd2080d9d18a41432d651dfb ""
@@ -225,17 +227,17 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1704400182 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1704400182 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1704400182 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1706206742 4623317 a14e403ea671a9bc12f23e543c6a500e ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1708595927 8204244 212c1e4996a075d1c3c6a331e70acb9b ""
-  "funkcje/matematyka.tex" 1709491456 387 028d7ea620a8bbba3f451a1e1da598db ""
-  "funkcje/twierdzenia.tex" 1701344069 888 f4460f787bbae7e46586affeea8524e9 ""
-  "main.aux" 1709538878 3044 18fc0c24cfb3efc95a1e201d9420b6bb "pdflatex"
-  "main.bbl" 1709538877 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
-  "main.out" 1709538878 1619 95d484623851aa25fdec8fe66d461252 "pdflatex"
-  "main.tex" 1709536347 1795 9e5b2c5789db32a05d8393cb21967852 ""
-  "preamble.tex" 1709538874 487 c270ba6299ced6b9ba1ffd7aedf476d0 ""
-  "rozdzialy/intro.tex" 1709536347 10037 6ec95ca7363410bb991fd6ca90efc4d8 ""
-  "rozdzialy/oriented_coloring.tex" 1709538586 1878 6a05a30e7d2c4dde2cec2fa2b3c1a911 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1708514243 4623317 a14e403ea671a9bc12f23e543c6a500e ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1708514295 8204254 6827f4dff0de2bd3177a178f6727024e ""
+  "funkcje/matematyka.tex" 1709487452 387 028d7ea620a8bbba3f451a1e1da598db ""
+  "funkcje/twierdzenia.tex" 1708523993 888 f4460f787bbae7e46586affeea8524e9 ""
+  "main.aux" 1709669037 3586 c22d875fe75fc9abdbbf8d4879b0e621 "pdflatex"
+  "main.bbl" 1709667603 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
+  "main.out" 1709669037 1619 95d484623851aa25fdec8fe66d461252 "pdflatex"
+  "main.tex" 1709668027 1878 ce2bb109b60dd7087677e2bc667b36bf ""
+  "preamble.tex" 1709668576 552 b8df059caf81502103bd3554fb3914a0 ""
+  "rozdzialy/intro.tex" 1709499171 10037 6ec95ca7363410bb991fd6ca90efc4d8 ""
+  "rozdzialy/oriented_coloring.tex" 1709669035 6375 f4ea1582431ea6e56b4fb7954c5f80d9 ""
   (generated)
   "main.aux"
   "main.log"

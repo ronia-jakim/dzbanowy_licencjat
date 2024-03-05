@@ -3,7 +3,10 @@
 \input{./preamble.tex}
 
 \usepackage{tikz}
-\usetikzlibrary{spath3, hobby, knots}
+\usetikzlibrary{spath3, hobby, knots, braids}
+
+\pgfdeclarelayer{bg}    % declare background layer
+\pgfsetlayers{bg,main}
 
 \title{A voyage into the algebras}
 \author{

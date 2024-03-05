@@ -1,4 +1,4 @@
-PWD /home/marudka/uni-stuff/dzbanowy_licencjat
+PWD /home/maruda/uni-stuff/dzbanowy_licencjat
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main.tex
@@ -1080,6 +1080,9 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.co
 INPUT /usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+INPUT /usr/share/texmf-dist/tex/latex/braids/tikzlibrarybraids.code.tex
+INPUT /usr/share/texmf-dist/tex/latex/braids/tikzlibrarybraids.code.tex
+INPUT /usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT ./main.aux
 INPUT main.aux
 INPUT main.aux
@@ -1201,6 +1204,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
