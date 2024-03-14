@@ -1,0 +1,217 @@
+\subsection{What does it mean to color a knot?}
+
+What do we need?
+
+- $R$ - commutative ring with identity
+
+- $D$ - diagram of knot $K$ with $s$ segments and $x$ crossings
+
+- $\phi:M^3\to M$ - function that dictates the rules of our coloring (and induces two operators $M^2\to M^2$)
+
+In order for trivial coloring to work, $\phi(m,m,m)=0$ for all $m\in M$. This means that if we take $\phi(u, v, w)=au+bv+cw$ then $(a+b+c)\in\ann(M)$.
+
+In the most general case, $R=\Z[s, t, t^{-1}]/\{s(s+t-1)\}$ and $\phi(u,v,w)=su+tv-w$.
+
+Given those we can define $f:M^s\to M^x$, which assigns values from $M$ to segments of $D$ according to the rules set by $\phi$.
+
+This yields an exact sequence
+\begin{center}\begin{tikzcd}
+  0\arrow[r] & \ker f\arrow[r, hookrightarrow] & M^s\arrow[r, "f"] & M^x \arrow[r, two heads] & \coker f \arrow[r] & 0 
+\end{tikzcd}\end{center}
+
+We know that $\ker f$ always contains colorings - especially the trivial one. We expect $\coker f$ to contain some information about non-trivial colorings admissible.
+
+\subsection{Smith's normal form}
+
+Function $f$ can be expressed as a $s\times x$ matrix with elements from $M$ - we can make it into "diagonal form" where non-zero elements lower are divisible by elements at the top. This gives us information about $\ker f$ and $\coker f$.
+
+\begin{example}
+  Take $K=4_1$ and $R=\Z$, which takes $t=1$ and $s=2$. At the beginning, $M=\Z$.
+
+  \begin{center}
+    \begin{tikzpicture}
+      %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.5\textwidth]{./rozdzialy/4_1-3d.png}};
+      \coordinate (a1) at (90: 3.5);
+      \coordinate (a2) at (-30:3.2);
+      \coordinate (a3) at (210: 3.2);
+      \coordinate (a4) at (0,-0.45);
+      \coordinate (a5) at (-65:2);
+      \coordinate (a6) at (180+65: 2);
+      \coordinate (a7) at (90: 1.8);
+
+      %\foreach \i in {1, ..., 7} \fill (a\i) circle (2pt);
+      \begin{knot}[
+        %consider self intersections,
+        flip crossing=2,
+        clip width=20,
+        ]
+        \strand[thick, ->]
+        (a1) to [out=0, in=30, looseness=1.4] 
+        (a4) to [out=210, in=90, looseness=1] (a6);
+        \strand[thick, ->]
+        (a6) to [out=-90, in=250, looseness=1.3] (a2);
+        \strand[thick, ->] (a2) to[out=70, in=0] (a7) to[out=180, in=110] (a3);
+        \strand[thick, ->] (a3) to[out=290, in=-90, looseness=1.3] (a5);
+        \strand[thick, ->] (a5) to[out=90, in=-30, looseness=1] (a4) to [out=150, in=180, looseness=1.4] (a1);
+      \end{knot}
+      \node at (60:3.5) {$A$};
+      \node at (-30:3.6) {$B$};
+      \node at (160:2.7) {$C$};
+      \node at (1.1, -1.3) {$D$};
+
+      \draw[dashed] (a4) circle (0.4);
+      \node at (-0.8, -0.5) {$2$};
+
+      \draw[dashed] (45:2) circle (0.4);
+      \node at (35: 2.6) {$1$};
+
+      \draw[dashed] (0, -2.9) circle (0.4);
+      \node at (0, -3.6) {$3$};
+
+      \draw[dashed] (135:2) circle (0.4);
+      \node at (145:2.6) {$4$};
+    \end{tikzpicture}
+  \end{center}
+  $$f=\begin{pmatrix} 
+    2 & -1 & -1 & 0\\ 
+    -1 & -1 & 0 & 2\\ 
+    0 & 2 & -1 & -1 \\ 
+    -1 & 0 & 2 & -1
+    \end{pmatrix}$$
+    in normal form:
+  $$\begin{pmatrix}
+    -1 & 0 & 0 & 0\\ 
+    0 & 1 & 0 & 0\\
+    0 & 0 & 5 & 0\\ 
+    0 & 0 & 0 & 0
+  \end{pmatrix}$$
+  Now we know that $\ker f=\Z$ and $\coker f=\Z_5\oplus \Z$. Thus there is only a trivial coloring over $\Z$ but if we change $\Z$ to $\Z_5$ we get 
+  $$\begin{pmatrix}
+    -1 & 0 & 0 & 0\\ 
+    0 & 1 & 0 & 0\\
+    0 & 0 & 0 & 0\\ 
+    0 & 0 & 0 & 0
+  \end{pmatrix}$$
+  and now $\ker f'=\Z_5\oplus \Z_5$ and $\coker = \Z_5\oplus\Z_5$. Thus there is a coloring using elements of $\Z_5$, for example:
+
+  \begin{center}
+    \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
+      %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.5\textwidth]{./rozdzialy/4_1-3d.png}};
+      \coordinate (a1) at (90: 3.5);
+      \coordinate (a2) at (-30:3.2);
+      \coordinate (a3) at (210: 3.2);
+      \coordinate (a4) at (0,-0.45);
+      \coordinate (a5) at (-65:2);
+      \coordinate (a6) at (180+65: 2);
+      \coordinate (a7) at (90: 1.8);
+
+      %\foreach \i in {1, ..., 7} \fill (a\i) circle (2pt);
+      \begin{knot}[
+        %consider self intersections,
+        flip crossing=2,
+        clip width=20,
+        ]
+        \strand[thick]
+        (a1) to [out=0, in=30, looseness=1.4] 
+        (a4) to [out=210, in=90, looseness=1] (a6);
+        \strand[thick]
+        (a6) to [out=-90, in=250, looseness=1.3] (a2);
+        \strand[thick] (a2) to[out=70, in=0] (a7) to[out=180, in=110] (a3);
+        \strand[thick] (a3) to[out=290, in=-90, looseness=1.3] (a5);
+        \strand[thick] (a5) to[out=90, in=-30, looseness=1] (a4) to [out=150, in=180, looseness=1.4] (a1);
+      \end{knot}
+
+      \node[bgnd] at (a1) {$3$};
+      \node[bgnd] at (a2) {$0$};
+      \node[bgnd] at (a3) {$1$};
+      \node[bgnd] at (a5) {$4$};
+    \end{tikzpicture}
+  \end{center}
+  In a more general case, we would orient the diagram and use $\Z[\Z]=\Z[t, t^{-1}]$ as the ring:
+  $$
+  f=\begin{pmatrix}
+    1-t & t & -1 & 0 \\ 
+    t^{-1} & -1 & 0 & 1-t^{-1}\\ 
+    0 & 1-t^{-1} & t^{-1} & -1\\ 
+    -1 & 0 & 1-t & t
+  \end{pmatrix}
+  $$
+  $$
+  \begin{pmatrix}
+    -1 & 0 & 0 & 0 \\
+    0 & -1 & 0 & 0\\ 
+    0 & 0 & t^2-3t+1 & 0\\ 
+    0 & 0 & 0 & 0\\ 
+  \end{pmatrix}
+  $$
+  and the Alexander polynomial of $4_1$ is equal to $t-3+t^{-1}$, which is the same up to multiplication by a unit to the last term of the Smith's normal form.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%{\color{blue}
+%Let $D$ be a diagram of knot $K$ with $s$ segments and $x$ crossings.  We will take $R$ to be a commutative ring with identity and $M$ to be any $R$-module. Looking at each crossing locally, we see that exactly $3$ segments will meet and thus we need a function 
+%$$\phi:M^3\to M$$ 
+%which assigns value to a crossing based on the values inscribed on segments from which it is constructed.  
+%
+%We can now extend the function $\phi$ to work on the whole diagram $D$, which yields a new function 
+%$$f:M^s\to M^x,$$
+%that assigns values from $M$ to line segments from $D$. We say that $(x_1,...,x_s)\in M^s$ is a \emph{coloring of $D$} if 
+%$$(x_1,...,x_s)\in\ker f,$$
+%or in other words: $f(x_1,...,x_s)=0$.
+%
+%We want any trivial coloring to always be admissible and thus $a$, $b$, $c$ in the definition of $\phi$ must be from $\ann(M)$:
+%$$0=\phi(m,m,m)=am+bm+cm=(a+b+c)m$$
+%for all $m\in M$.
+%
+%On the other hand, function $\phi$ can be used to construct an operator $M^2\to M^2$ which takes segments entering a crossing and returns segments leaving it. In the case of a diagram with defined orientation, we can distinguish two types of crossings (look at \cref{fig:1:two:types:crossings}) and so $\phi$ will actually give rise to two different operators $A_{\pm}:M^2\to M^2$, whose composition is identity on $M^2$ (this is a direct result of Reidemeister moves).
+%
+%\begin{figure}[h]\centering
+%  \begin{tikzpicture}
+%    \draw[<-, thick] (0, -2)--(1.5, 0);
+%    \fill[white] (0.75, -1) circle (6pt);
+%    \draw[->, thick] (0, 0)--(1.5, -2);
+%
+%    \node at (0.75, -2.2) {$+$};
+%    %\node at (0.2, 0) {$u$};
+%    %\node at (1.3, 0) {$i$};
+%    %\node at (0.3, -1.8) {$o$};
+%
+%    \draw[->, thick] (3, 0)--(4.5, -2);
+%    \fill[white] (3.75, -1) circle (6pt);
+%    \draw[<-, thick] (3, -2)--(4.5, 0);
+%    
+%    \node at (3.75, -2.2) {$-$};
+%    %\node at (3.2, 0) {$i$};
+%    %\node at (4.3, 0) {$u$};
+%    %\node at (4.1, -1.8) {$o$};
+%  \end{tikzpicture}
+%  \caption{\label{fig:1:two:types:crossings}Two types of crossings in oriented knot diagram.}
+%\end{figure}
+%
+%{\color{red}
+%Having constructed two $2\times 2$ matrices, $A_+$ and $A_-$, from $\phi$ we can now represent $D$ as an element of braid group $W\in B_n$. This group has $(n-1)$ generators, $\sigma_1,...,\sigma_{n-1}$, to which we can assign matrices 
+%$$\sigma_i=\left[
+%\begin{array}{c|c|c}
+%  Id_{i-1} & 0 & 0 \\ 
+%  \hline 
+%  0 & A_+  & 0 \\ 
+%  \hline 
+%  0 & 0 & Id_{n-i-1}
+%\end{array}\right]
+%$$
+%Using these matrices we can now color this braid representation of $D$ to obtain a smaller matrix $B(W)$ than the one describing $f$ above. We will say that $(m_1,...,m_{s'})$ is a coloring of this braid diagram $W$ (which can have $s'\neq s$ segments) if $(m_1,...,m_{s'})\in\ker B(W)$.
+%}
+%}
+%
