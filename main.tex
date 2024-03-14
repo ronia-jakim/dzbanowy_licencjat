@@ -1,4 +1,4 @@
-\documentclass[13pt]{article}
+\documentclass[14pt]{extarticle}
 
 \input{./preamble.tex}
 
@@ -22,25 +22,25 @@
 \maketitle
 \bigskip
 
-%\begin{center}
-%  \begin{tikzpicture}
-%    \begin{knot}[
-%      consider self intersections,
-%      flip crossing=2,
-%      clip width=10,
-%      ]
-%      \strand[thick]
-%      (90:2) to[out=180,in=-120,looseness=2]
-%      (-30:2) to[out=60,in=120,looseness=2]
-%      (210:2) to[out=-60,in=0,looseness=2] (90:2);
-%    \end{knot}
-%
-%  \fill (0,0) circle (2pt);
-%\fill(90:2) circle (2pt);
-%\fill(-30:2) circle (2pt);
-%\fill(210:2) circle (2pt);
-%  \end{tikzpicture}
-%\end{center}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{knot}[
+      consider self intersections,
+      flip crossing=2,
+      clip width=20,
+      ]
+      \strand[thick]
+      (90:3) to[out=180,in=-120,looseness=2]
+      (-30:3) to[out=60,in=120,looseness=2]
+      (210:3) to[out=-60,in=0,looseness=2] (90:3);
+    \end{knot}
+
+  %\fill (0,0) circle (2pt);
+  %\fill(90:2) circle (2pt);
+  %\fill(-30:2) circle (2pt);
+  %\fill(210:2) circle (2pt);
+  \end{tikzpicture}
+\end{center}
 %
 %\begin{center}
 %  \begin{tikzpicture}
@@ -66,11 +66,11 @@
 
 %\input{./rozdzialy/zadanie_1.tex}
 
-\input{./rozdzialy/intro.tex}
+%\input{./rozdzialy/intro.tex}
 
 %\input{rozdzialy/calculations.tex}
 
-\input{rozdzialy/oriented_coloring.tex}
+%\input{rozdzialy/oriented_coloring.tex}
 
 %\input{./rozdzialy/zadanie_2.tex}
 
