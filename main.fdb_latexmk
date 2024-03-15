@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1710455402 "main.aux" "main.bbl" "main" 1710459184 0
-  "./literatura.bib" 1701762413 118 6f246e32e3f70dcaf797156f42b97a5e ""
+["bibtex main"] 1710524102 "main.aux" "main.bbl" "main" 1710532571 0
+  "./literatura.bib" 1708523993 118 6f246e32e3f70dcaf797156f42b97a5e ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1704400182 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1710459183 1241 17a55a2507ec33c72f7d5e9b5f29592e "pdflatex"
+  "main.aux" 1710532570 1241 ac9a5fc906522449420e8566260d34f4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1710459181 "main.tex" "main.pdf" "main" 1710459184 0
+["pdflatex"] 1710532567 "main.tex" "main.pdf" "main" 1710532571 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1704400182 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1704400182 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1704400182 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -212,17 +212,17 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1704400182 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1704400182 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1704400182 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1706206742 4623317 a14e403ea671a9bc12f23e543c6a500e ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1708595927 8204244 212c1e4996a075d1c3c6a331e70acb9b ""
-  "funkcje/matematyka.tex" 1709491456 387 028d7ea620a8bbba3f451a1e1da598db ""
-  "funkcje/twierdzenia.tex" 1701344069 888 f4460f787bbae7e46586affeea8524e9 ""
-  "main.aux" 1710459183 1241 17a55a2507ec33c72f7d5e9b5f29592e "pdflatex"
-  "main.bbl" 1710455402 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
-  "main.out" 1710459183 586 e0fc5660ac2598158e6cc8b951409672 "pdflatex"
-  "main.tex" 1710455332 1972 31f21f1318db9ae615a9524c020124c8 ""
-  "preamble.tex" 1710362090 552 b8df059caf81502103bd3554fb3914a0 ""
-  "rozdzialy/kolorowanie_intro.tex" 1710455248 8244 e10ebd11689114c50eda4169d9702163 ""
-  "rozdzialy/rozne.tex" 1710459180 2359 c281cef3f7600650e7960c4c5994f4d3 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1708514243 4623317 a14e403ea671a9bc12f23e543c6a500e ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1708514295 8204254 6827f4dff0de2bd3177a178f6727024e ""
+  "funkcje/matematyka.tex" 1709487452 387 028d7ea620a8bbba3f451a1e1da598db ""
+  "funkcje/twierdzenia.tex" 1708523993 888 f4460f787bbae7e46586affeea8524e9 ""
+  "main.aux" 1710532570 1241 ac9a5fc906522449420e8566260d34f4 "pdflatex"
+  "main.bbl" 1710524102 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
+  "main.out" 1710532570 586 e0fc5660ac2598158e6cc8b951409672 "pdflatex"
+  "main.tex" 1710506799 1972 31f21f1318db9ae615a9524c020124c8 ""
+  "preamble.tex" 1710410896 552 b8df059caf81502103bd3554fb3914a0 ""
+  "rozdzialy/kolorowanie_intro.tex" 1710504182 8244 e10ebd11689114c50eda4169d9702163 ""
+  "rozdzialy/rozne.tex" 1710532566 4735 4ddaf6709d0b1ab2ff28c0209d4bae42 ""
   (generated)
   "main.aux"
   "main.log"
