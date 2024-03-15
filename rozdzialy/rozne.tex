@@ -1,8 +1,12 @@
-\subsection{Misc}
+\subsection{Reducing normal form of a matrix}
 
-$K=6_1$
+We might want to ask the question regarding the ways to distinguish knots with the same Alexander polynomial, like $6_1$ and $9_{46}$. One of the answers might be to look at the function $f:M^s\to M^x$ and the equivalence class of its Smith's normal form in ring $R=\Z[t, t^{-1}].$
 
-\begin{center}
+We notice, that the function $f$ in itself is not a knot invariant. Its matrix changes in size with changes in the diagram of the knot that we are considering. What is an invariant is its $\ker f$ and $\coker f$ - information about the number of colorings and what colorings might be admissible. Furthermore, when calculated over $\Z[t, t^{-1}]$, the kernel always is a free module of dimension $1$ and all units that appear on the diagonal will not contribute to the $\coker$. Hence, we might \emph{consider the normal form of $f$ stripped of units and zeros}.
+
+\begin{example} 
+  First, consider the knot $6_1$ with diagram as seen in \cref{fig:6_1:knot}, ring $R=\Z[t, t^{-1}]$ and $M=R$. We calculate that
+\begin{figure}[h]\centering
   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
 
@@ -61,8 +65,8 @@ $K=6_1$
     %\draw[dashed] (180-28:3.1) circle (0.4);
     %\draw[dashed] (110:4) circle (0.4);
   \end{tikzpicture}
-\end{center}
-Tutaj mamy
+  \caption{\label{fig:6_1:knot}Diagram of knot $6_1$.}
+\end{figure}
 $$f=\begin{pmatrix}
   -1 & 0 & 0 & 0 & 0 & 0 \\ 
   0 & -1 & 0 & 0 & 0 & 0 \\ 
@@ -71,11 +75,16 @@ $$f=\begin{pmatrix}
   0 & 0 & 0 & 0 & -2t^{-2}+5t^{-1}-2 & 0 \\ 
   0 & 0 & 0 & 0 & 0 & 0 
 \end{pmatrix}$$
+which agrees with the Alexander polynomial of $6_1$. Now, the reduced form of $f$ would be 
+$$
+\begin{pmatrix}
+  -2t^{-2}+5t^{-1}-2
+\end{pmatrix}
+$$
+a $1\times 1$ matrix.
 
-$K=9_{46}$
-\newpage 
-
-\begin{center}
+There is another knot with Alexander polynomial equal $-2t^{-2}+5t^{-1}-2$: $9_{46}$. Using diagram in \cref{fig:9_46:knot} it can be calculated that  
+\begin{figure}[h]\centering
   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
 
@@ -138,8 +147,8 @@ $K=9_{46}$
       \fill[yellow] (-10:3.7) circle (6pt);
     \end{knot}
   \end{tikzpicture}
-\end{center}
-
+  \caption{\label{fig:9_46:knot}Diagram of knot $9_{46}$.}
+\end{figure}
 $$f=\begin{pmatrix}
   1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
   0 & t^{-1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
@@ -151,3 +160,14 @@ $$f=\begin{pmatrix}
   0 & 0 & 0 & 0 & 0 & 0 & 0 & t^{-2}-2t^{-1} & 0\\ 
   0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
 \end{pmatrix}$$
+where 
+$$\det f= (2t-t^2)(t^{-2}-2t^{-1})=2t^{-1}-5+2t$$
+is also the Alexander polynomial. The reduced form of $f$ is
+$$
+\begin{pmatrix}
+  2t-t^2 & 0 \\ 
+  0      & t^{-2}-2t^{-1}
+\end{pmatrix}
+$$
+which is significantly different than the one for $6_1$.
+\end{example}

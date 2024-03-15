@@ -21,15 +21,50 @@ This yields an exact sequence
 
 We know that $\ker f$ always contains colorings - especially the trivial one. We expect $\coker f$ to contain some information about non-trivial colorings admissible.
 
-\subsection{Smith's normal form}
+\subsection{Smith's normal form \textquestiondown and connection to Alexander polynomial?}
 
 Function $f$ can be expressed as a $s\times x$ matrix with elements from $M$ - we can make it into "diagonal form" where non-zero elements lower are divisible by elements at the top. This gives us information about $\ker f$ and $\coker f$.
 
 \begin{example}
-  Take $K=4_1$ and $R=\Z$, which takes $t=1$ and $s=2$. At the beginning, $M=\Z$.
+  Consider knot $4_1$ with diagram $D$ as seen in \cref{fig:4_1:coloring} and ring $R=M=\Z[t, t^{-1}]$. Take function $\phi:M^3\to M$ to be defined as 
+  $$\phi(u, i, o)=(1-t)u+ti-o$$
+  for crossing as seen in \cref{fig:crossing:4_1:example}.
 
-  \begin{center}
+  \begin{figure}[h]\centering
     \begin{tikzpicture}
+      \draw[<-, ,thick] (0,0)--(9/4, 3);
+      \fill[white] (9/8, 1.5) circle (8pt); 
+      \draw[->, thick] (0, 3)--(9/4, 0);
+
+      \node at (-0.1, 0.6) {$u$};
+      \node at (9/4+0.1, 0.6) {$o$};
+      \node at (9/4+0.1, 2.4) {$i$};
+    \end{tikzpicture}
+    \caption{\label{fig:crossing:4_1:example} Crossing}
+  \end{figure}
+
+  Function $f$ is then defined by matrix
+  $$
+  f=\begin{pmatrix}
+    1-t & t & -1 & 0 \\ 
+    t^{-1} & -1 & 0 & 1-t^{-1}\\ 
+    0 & 1-t^{-1} & t^{-1} & -1\\ 
+    -1 & 0 & 1-t & t
+  \end{pmatrix}
+  $$
+  which has Smith's normal form:
+  $$
+  f'=\begin{pmatrix}
+    -1 & 0 & 0 & 0 \\
+    0 & -1 & 0 & 0\\ 
+    0 & 0 & t^2-3t+1 & 0\\ 
+    0 & 0 & 0 & 0\\ 
+  \end{pmatrix}
+  $$
+  Notice, that $\det f'=t^2-3t+1$, which is the Alexander polynomial of $4_1$.
+  
+  \begin{figure}[h]\centering
+    \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
       %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.5\textwidth]{./rozdzialy/4_1-3d.png}};
       \coordinate (a1) at (90: 3.5);
       \coordinate (a2) at (-30:3.2);
@@ -54,97 +89,111 @@ Function $f$ can be expressed as a $s\times x$ matrix with elements from $M$ - w
         \strand[thick, ->] (a3) to[out=290, in=-90, looseness=1.3] (a5);
         \strand[thick, ->] (a5) to[out=90, in=-30, looseness=1] (a4) to [out=150, in=180, looseness=1.4] (a1);
       \end{knot}
-      \node at (60:3.5) {$A$};
-      \node at (-30:3.6) {$B$};
-      \node at (160:2.7) {$C$};
-      \node at (1.1, -1.3) {$D$};
 
-      \draw[dashed] (a4) circle (0.4);
-      \node at (-0.8, -0.5) {$2$};
-
-      \draw[dashed] (45:2) circle (0.4);
-      \node at (35: 2.6) {$1$};
-
-      \draw[dashed] (0, -2.9) circle (0.4);
-      \node at (0, -3.6) {$3$};
-
-      \draw[dashed] (135:2) circle (0.4);
-      \node at (145:2.6) {$4$};
+      \node[bgnd] at (60:3) {$3$};
+      \node[bgnd] at (0:2.7) {$0$};
+      \node[bgnd] at (-180:2.7) {$1$};
+      \node[bgnd] at (155:1) {$4$};
     \end{tikzpicture}
-  \end{center}
-  $$f=\begin{pmatrix} 
-    2 & -1 & -1 & 0\\ 
-    -1 & -1 & 0 & 2\\ 
-    0 & 2 & -1 & -1 \\ 
-    -1 & 0 & 2 & -1
-    \end{pmatrix}$$
-    in normal form:
-  $$\begin{pmatrix}
+    \caption{\label{fig:4_1:coloring} Coloring of knot $4_1$ with elements from $\Z_5$.}
+  \end{figure}
+
+  Now, consider a homomorphism $\Z[t, t^{-1}]\to \Z$ that sends $t\mapsto -1$. This yields a new matrix for $f$, with Smith's normal form:
+  $$f=\begin{pmatrix}
     -1 & 0 & 0 & 0\\ 
     0 & 1 & 0 & 0\\
     0 & 0 & 5 & 0\\ 
     0 & 0 & 0 & 0
   \end{pmatrix}$$
-  Now we know that $\ker f=\Z$ and $\coker f=\Z_5\oplus \Z$. Thus there is only a trivial coloring over $\Z$ but if we change $\Z$ to $\Z_5$ we get 
-  $$\begin{pmatrix}
-    -1 & 0 & 0 & 0\\ 
-    0 & 1 & 0 & 0\\
-    0 & 0 & 0 & 0\\ 
-    0 & 0 & 0 & 0
-  \end{pmatrix}$$
-  and now $\ker f'=\Z_5\oplus \Z_5$ and $\coker = \Z_5\oplus\Z_5$. Thus there is a coloring using elements of $\Z_5$, for example:
+  Now, the $\coker f=\Z\oplus \Z_5$ which hints at existence of coloring using elements from $\Z_5$. One of those colorings is presented in \cref{fig:4_1:coloring}.
 
-  \begin{center}
-    \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
-      %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.5\textwidth]{./rozdzialy/4_1-3d.png}};
-      \coordinate (a1) at (90: 3.5);
-      \coordinate (a2) at (-30:3.2);
-      \coordinate (a3) at (210: 3.2);
-      \coordinate (a4) at (0,-0.45);
-      \coordinate (a5) at (-65:2);
-      \coordinate (a6) at (180+65: 2);
-      \coordinate (a7) at (90: 1.8);
 
-      %\foreach \i in {1, ..., 7} \fill (a\i) circle (2pt);
-      \begin{knot}[
-        %consider self intersections,
-        flip crossing=2,
-        clip width=20,
-        ]
-        \strand[thick]
-        (a1) to [out=0, in=30, looseness=1.4] 
-        (a4) to [out=210, in=90, looseness=1] (a6);
-        \strand[thick]
-        (a6) to [out=-90, in=250, looseness=1.3] (a2);
-        \strand[thick] (a2) to[out=70, in=0] (a7) to[out=180, in=110] (a3);
-        \strand[thick] (a3) to[out=290, in=-90, looseness=1.3] (a5);
-        \strand[thick] (a5) to[out=90, in=-30, looseness=1] (a4) to [out=150, in=180, looseness=1.4] (a1);
-      \end{knot}
-
-      \node[bgnd] at (a1) {$3$};
-      \node[bgnd] at (a2) {$0$};
-      \node[bgnd] at (a3) {$1$};
-      \node[bgnd] at (a5) {$4$};
-    \end{tikzpicture}
-  \end{center}
-  In a more general case, we would orient the diagram and use $\Z[\Z]=\Z[t, t^{-1}]$ as the ring:
-  $$
-  f=\begin{pmatrix}
-    1-t & t & -1 & 0 \\ 
-    t^{-1} & -1 & 0 & 1-t^{-1}\\ 
-    0 & 1-t^{-1} & t^{-1} & -1\\ 
-    -1 & 0 & 1-t & t
-  \end{pmatrix}
-  $$
-  $$
-  \begin{pmatrix}
-    -1 & 0 & 0 & 0 \\
-    0 & -1 & 0 & 0\\ 
-    0 & 0 & t^2-3t+1 & 0\\ 
-    0 & 0 & 0 & 0\\ 
-  \end{pmatrix}
-  $$
-  and the Alexander polynomial of $4_1$ is equal to $t-3+t^{-1}$, which is the same up to multiplication by a unit to the last term of the Smith's normal form.
+%  Take $K=4_1$ and $R=\Z$, which takes $t=1$ and $s=2$. At the beginning, $M=\Z$.
+%
+%  \begin{center}
+%    \begin{tikzpicture}
+%      %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.5\textwidth]{./rozdzialy/4_1-3d.png}};
+%      \coordinate (a1) at (90: 3.5);
+%      \coordinate (a2) at (-30:3.2);
+%      \coordinate (a3) at (210: 3.2);
+%      \coordinate (a4) at (0,-0.45);
+%      \coordinate (a5) at (-65:2);
+%      \coordinate (a6) at (180+65: 2);
+%      \coordinate (a7) at (90: 1.8);
+%
+%      %\foreach \i in {1, ..., 7} \fill (a\i) circle (2pt);
+%      \begin{knot}[
+%        %consider self intersections,
+%        flip crossing=2,
+%        clip width=20,
+%        ]
+%        \strand[thick, ->]
+%        (a1) to [out=0, in=30, looseness=1.4] 
+%        (a4) to [out=210, in=90, looseness=1] (a6);
+%        \strand[thick, ->]
+%        (a6) to [out=-90, in=250, looseness=1.3] (a2);
+%        \strand[thick, ->] (a2) to[out=70, in=0] (a7) to[out=180, in=110] (a3);
+%        \strand[thick, ->] (a3) to[out=290, in=-90, looseness=1.3] (a5);
+%        \strand[thick, ->] (a5) to[out=90, in=-30, looseness=1] (a4) to [out=150, in=180, looseness=1.4] (a1);
+%      \end{knot}
+%      \node at (60:3.5) {$A$};
+%      \node at (-30:3.6) {$B$};
+%      \node at (160:2.7) {$C$};
+%      \node at (1.1, -1.3) {$D$};
+%
+%      \draw[dashed] (a4) circle (0.4);
+%      \node at (-0.8, -0.5) {$2$};
+%
+%      \draw[dashed] (45:2) circle (0.4);
+%      \node at (35: 2.6) {$1$};
+%
+%      \draw[dashed] (0, -2.9) circle (0.4);
+%      \node at (0, -3.6) {$3$};
+%
+%      \draw[dashed] (135:2) circle (0.4);
+%      \node at (145:2.6) {$4$};
+%    \end{tikzpicture}
+%  \end{center}
+%  $$f=\begin{pmatrix} 
+%    2 & -1 & -1 & 0\\ 
+%    -1 & -1 & 0 & 2\\ 
+%    0 & 2 & -1 & -1 \\ 
+%    -1 & 0 & 2 & -1
+%    \end{pmatrix}$$
+%    in normal form:
+%  $$\begin{pmatrix}
+%    -1 & 0 & 0 & 0\\ 
+%    0 & 1 & 0 & 0\\
+%    0 & 0 & 5 & 0\\ 
+%    0 & 0 & 0 & 0
+%  \end{pmatrix}$$
+%  Now we know that $\ker f=\Z$ and $\coker f=\Z_5\oplus \Z$. Thus there is only a trivial coloring over $\Z$ but if we change $\Z$ to $\Z_5$ we get 
+%  $$\begin{pmatrix}
+%    -1 & 0 & 0 & 0\\ 
+%    0 & 1 & 0 & 0\\
+%    0 & 0 & 0 & 0\\ 
+%    0 & 0 & 0 & 0
+%  \end{pmatrix}$$
+%  and now $\ker f'=\Z_5\oplus \Z_5$ and $\coker = \Z_5\oplus\Z_5$. Thus there is a coloring using elements of $\Z_5$, for example:
+%
+%  In a more general case, we would orient the diagram and use $\Z[\Z]=\Z[t, t^{-1}]$ as the ring:
+%  $$
+%  f=\begin{pmatrix}
+%    1-t & t & -1 & 0 \\ 
+%    t^{-1} & -1 & 0 & 1-t^{-1}\\ 
+%    0 & 1-t^{-1} & t^{-1} & -1\\ 
+%    -1 & 0 & 1-t & t
+%  \end{pmatrix}
+%  $$
+%  $$
+%  \begin{pmatrix}
+%    -1 & 0 & 0 & 0 \\
+%    0 & -1 & 0 & 0\\ 
+%    0 & 0 & t^2-3t+1 & 0\\ 
+%    0 & 0 & 0 & 0\\ 
+%  \end{pmatrix}
+%  $$
+%  and the Alexander polynomial of $4_1$ is equal to $t-3+t^{-1}$, which is the same up to multiplication by a unit to the last term of the Smith's normal form.
 \end{example}
 
 
