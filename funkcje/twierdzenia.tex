@@ -8,12 +8,22 @@
 
 \declaretheorem[ %
   name=Theorem, %
-  numberlike=definition, %
+  numberwithin=section, %
 ]{theorem}
 
 \declaretheorem[ %
+  name=Proposition, %
+  numberlike=theorem, %
+]{proposition}
+
+\declaretheorem[ %
+  name=Corollary, %
+  numberlike=theorem, %
+]{corollary}
+
+\declaretheorem[ %
   name=Lemma, %
-  numberlike=definition, %
+  numberlike=theorem, %
 ]{lemma}
 
 \declaretheorem[ %
@@ -27,9 +37,9 @@
 ]{example}
 
 
-\renewenvironment{proof}{{\bfseries Proof}$ $\newline}{
-  \begin{flushright} $ \spadesuit $ \end{flushright}$ $\newline
-}
+% \renewenvironment{proof}{{\bfseries Proof}$ $\newline}{
+%   \begin{flushright} $ \spadesuit $ \end{flushright}$ $\newline
+% }
 
 \usepackage{cleveref}
 
