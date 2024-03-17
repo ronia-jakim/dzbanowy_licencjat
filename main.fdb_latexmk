@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1710706641 "main.aux" "main.bbl" "main" 1710706733 0
+["bibtex main"] 1710709955 "main.aux" "main.bbl" "main" 1710709960 0
   "./literatura.bib" 1701762413 118 6f246e32e3f70dcaf797156f42b97a5e ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1704400182 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1710706732 4834 c5cba80d7061346cae3f2c248a230b36 "pdflatex"
+  "main.aux" 1710709959 4970 05422726eaf9353e1c85f763755e1e95 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1710706728 "main.tex" "main.pdf" "main" 1710706733 0
+["pdflatex"] 1710709955 "main.tex" "main.pdf" "main" 1710709960 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1704400182 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1704400182 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1704400182 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -227,12 +227,12 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1708595927 8204244 212c1e4996a075d1c3c6a331e70acb9b ""
   "funkcje/matematyka.tex" 1709491456 387 028d7ea620a8bbba3f451a1e1da598db ""
   "funkcje/twierdzenia.tex" 1710703169 1048 7b0cb56070c81b2a68afa3c20993cb82 ""
-  "main.aux" 1710706732 4834 c5cba80d7061346cae3f2c248a230b36 "pdflatex"
-  "main.bbl" 1710706641 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
-  "main.out" 1710706732 522 1a8235b10890a5e674040899b7cf0738 "pdflatex"
+  "main.aux" 1710709959 4970 05422726eaf9353e1c85f763755e1e95 "pdflatex"
+  "main.bbl" 1710709955 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
+  "main.out" 1710709959 522 1a8235b10890a5e674040899b7cf0738 "pdflatex"
   "main.tex" 1710706635 4118 f0bf05d32b90968607aeaab5ba7ddcb2 ""
   "preamble.tex" 1710704564 651 39b77bb4a4118d7b657c3fa61c87fe89 ""
-  "rozdzialy/kolorowanie_intro.tex" 1710706727 26326 fcfd254e629147916d37656afea60d31 ""
+  "rozdzialy/kolorowanie_intro.tex" 1710709941 26413 67bdfefd659a1cbb0626db22a563eed9 ""
   "rozdzialy/rozne.tex" 1710543955 6444 e8708430561775835ffd4768897a044c ""
   (generated)
   "main.aux"
