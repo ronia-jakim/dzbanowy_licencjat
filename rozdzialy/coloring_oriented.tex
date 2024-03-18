@@ -1,0 +1,198 @@
+\section{Coloring oriented diagrams}
+
+In the previous section we defined coloring of a diagram without an orientation. Such a diagram has only one type of crossing, while in a diagram for which an orientation was chosen, two types of crossings are distinguishable in any knot diagram (see \cref{fig two crossings}).
+
+\begin{figure}[h]\centering 
+    \begin{tikzpicture}
+      \draw[<-, ,thick] (0,0) node[above left] {$o$}--(9/4, 3) node[above left] {$i$};
+      \fill[white] (9/8, 1.5) circle (8pt);
+      \draw[->, thick] (0, 3)--(9/4, 0) node [above right] {$u$};
+
+      % \node at (-0.1, 0.6) {$u$};
+      % \node at (9/4+0.1, 0.6) {$o$};
+      % \node at (9/4+0.1, 2.4) {$i$};
+      
+      \draw[->, thick] (4, 3)--(4+9/4, 0);
+      \fill[white] (4+9/8, 1.5) circle (8pt);
+      \draw[<-, ,thick] (4,0)--(4+9/4, 3);
+
+      % \node at (-0.1, 0.6) {$u$};
+      % \node at (9/4+0.1, 0.6) {$o$};
+      % \node at (9/4+0.1, 2.4) {$i$};
+
+      \node at (9/8, -0.6) {$+$};
+      \node at (4+9/8, -0.6) {$-$};
+    \end{tikzpicture}
+    \caption{\label{fig two crossings} Two types of crossings in oriented knot diagram.}
+\end{figure}
+
+In the case of a diagram with orientation, we must chose which type of crossing is considered by $\phi$. If not explicitly stated otherwise, we will choose $\phi$ to determine the rules of coloring for crossing of type $+$ as seen in \cref{fig two crossings}. 
+
+If $u$, $i$, $o$ are labels assigned to arches creating a type $+$ crossing that constitute a coloring, then we might write 
+$$0=\phi(u, i, o)=au+bi+co.$$
+Taking $c$ to be a unit, we get the following equation for the label of the arch leaving the crossing:
+$$o=-c^{-1}au-c^{-1}bi.$$
+
+Those assumption allow us to write a $2\times 2$ matrix $A_+$ with terms in $R$ such that multiplying an element $(u, i)\in M^2$ by $A_+$ will return $(o, u)\in M^2$. This means that $A_+:M^2\to M^2$ is the operator taking labels of incoming arches as input and returning labels of segments which leave the crossing.
+$$
+A_+=\begin{pmatrix}
+  -c^{-1}a & -c^{-1}b \\ 
+  1 & 0
+\end{pmatrix}
+$$
+It is convenient to take $c=-1$.
+
+Allowing the following Reidemeister's move
+\begin{center}
+  \begin{tikzpicture}
+    \draw[thick, ->] (1, 0) to [out=180+30, in=180-30] (1, -3);
+    \fill[white] (0.5, -0.5) circle (6pt);
+    \fill[white] (0.5, -2.5) circle (6pt);
+    \draw[thick, ->] (0, 0) to [out=-30, in=30] (0, -3);
+
+    \draw[dashed] (0.5, -0.5) circle (10pt);
+    \draw[dashed] (0.5, -2.5) circle (10pt);
+    \node at (-0.5, -0.5) {$+$};
+    \node at (-0.5, -2.5) {$-$};
+
+    \draw[thick, ->] (3, 0) to[out=-70, in=70] (3, -3);
+    \draw[thick, ->] (4, 0) to[out=180+70, in=180-70] (4, -3);
+
+    \draw[->, snake it] (1.3, -1.5)--(2.7, -1.5);
+  \end{tikzpicture}
+\end{center}
+gives equality
+$$A_-A_+=Id_2,$$
+where $A_+$ is the matrix of operator for $+$ type crossing and $-$ - for the $-$ type crossing. Take $\alpha u+\beta i+\gamma o=0$ to be the coloring rule for crossings of type $-$. Once again, for the sake of convenience $\gamma =-1$ and the matrix $A_-$ must be of form
+$$
+A_-=\begin{pmatrix}
+  \beta & \alpha \\ 
+  0 & 1 
+\end{pmatrix},
+$$
+meaning that 
+$$
+\begin{cases}
+  b\beta =1\\ 
+  b\alpha -a=0.
+\end{cases}
+$$
+
+Consider another Reidemeister's move
+\begin{center}
+  \begin{tikzpicture}
+    \pic[
+braid/.cd,
+every strand/.style={thick},
+strand 1/.style={red},
+strand 2/.style={green},
+gap=.2,
+height=1.3cm,
+width=1.5cm
+] {braid={s_2^{-1} s_1^{-1}  s_2^{-1} }};
+\draw[thick, red, ->] (0, 0.1)--(0,0);
+\draw[thick, green, ->] (1.5, 0.1)--(1.5, 0);
+\draw[thick, ->] (3, 0.1)--(3, 0);
+
+  \draw[->, snake it] (3.5, 2)--(4.5, 2);
+
+\begin{scope}[shift={(5, 0)}]
+  \pic[
+    braid/.cd,
+    every strand/.style={thick},
+    strand 1/.style={red},
+    strand 2/.style={green},
+    gap=.2,
+    height=1.3cm,
+    width=1.5cm
+  ] {braid={s_1^{-1} s_2^{-1} s_1^{-1} }};
+  \draw[thick, ->] (0, 0.1)--(0,0);
+  \draw[thick, ->] (1.5, 0.1)--(1.5, 0);
+  \draw[thick, ->] (3, 0.1)--(3, 0);
+\end{scope}
+  \end{tikzpicture}
+\end{center}
+Applying $A_\pm$ to each crossing separately yields the following relations
+$$
+\begin{cases}
+  ba = ab \\ 
+  a(a+b)=a.
+\end{cases}
+$$
+
+We must assume that both $b$ and $\beta$ are units. In the most general situation, we are considering coloring modules as modules over the ring
+$$R=\Z[s, t, t^{-1}]/\{s^2+st-s\},$$
+with $a$ being send to $s$ and $b$ being send to $t$. However, it can be beneficial to at first assume yet another relation: 
+$$a+b=1,$$
+meaning that we are considering coloring as $\Z[t, t^{-1}]$ module.
+
+Coloring a knot with $\Z[t, t^{-1}]$ module allows us to obtain information about coloring over $\Z$ or many other commutative rings by sending $t$ to a unit in the ring in question.
+
+\begin{example}\label{ex3}
+  Consider knot $4_1$ with diagram $D$ as seen in \cref{fig:4_1:coloring} and ring $R=\Z[t, t^{-1}]$. Take function $\phi:M^3\to M$ to be defined as
+  $$\phi(u, i, o)=(1-t)u+ti-o$$
+
+  The coloring homomorphism $f$ is then defined by the matrix
+  $$
+  f=\begin{pmatrix}
+    1-t & t & -1 & 0 \\
+    t^{-1} & -1 & 0 & 1-t^{-1}\\
+    0 & 1-t^{-1} & t^{-1} & -1\\
+    -1 & 0 & 1-t & t
+  \end{pmatrix}
+  $$
+  Changing the coefficients in $R$ to $\Q$ yields the following Smith's normal form for $f$:
+  $$
+  S=\begin{pmatrix}
+    -1 & 0 & 0 & 0 \\
+    0 & -1 & 0 & 0\\
+    0 & 0 & t^2-3t+1 & 0\\
+    0 & 0 & 0 & 0\\
+  \end{pmatrix}
+  $$
+  Notice, that $\det S=t^2-3t+1$, which is the Alexander polynomial of $4_1$.
+
+  \begin{figure}[h]\centering
+    \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
+      %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.5\textwidth]{./rozdzialy/4_1-3d.png}};
+      \coordinate (a1) at (90: 3.5);
+      \coordinate (a2) at (-30:3.2);
+      \coordinate (a3) at (210: 3.2);
+      \coordinate (a4) at (0,-0.45);
+      \coordinate (a5) at (-65:2);
+      \coordinate (a6) at (180+65: 2);
+      \coordinate (a7) at (90: 1.8);
+
+      %\foreach \i in {1, ..., 7} \fill (a\i) circle (2pt);
+      \begin{knot}[
+        %consider self intersections,
+        flip crossing=2,
+        clip width=20,
+        ]
+        \strand[thick, ->]
+        (a1) to [out=0, in=30, looseness=1.4]
+        (a4) to [out=210, in=90, looseness=1] (a6);
+        \strand[thick, ->]
+        (a6) to [out=-90, in=250, looseness=1.3] (a2);
+        \strand[thick, ->] (a2) to[out=70, in=0] (a7) to[out=180, in=110] (a3);
+        \strand[thick, ->] (a3) to[out=290, in=-90, looseness=1.3] (a5);
+        \strand[thick, ->] (a5) to[out=90, in=-30, looseness=1] (a4) to [out=150, in=180, looseness=1.4] (a1);
+      \end{knot}
+
+      \node[bgnd] at (60:3) {$3$};
+      \node[bgnd] at (0:2.7) {$0$};
+      \node[bgnd] at (-180:2.7) {$1$};
+      \node[bgnd] at (155:1) {$4$};
+    \end{tikzpicture}
+    \caption{\label{fig:4_1:coloring} Coloring of knot $4_1$ with elements from $\Z_5$.}
+  \end{figure}
+
+  Now, consider a homomorphism $\Z[t, t^{-1}]\to \Z$ defined by $t\mapsto -1$. This yields a new matrix for $f$, with Smith's normal form:
+  $$f=\begin{pmatrix}
+    -1 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    0 & 0 & 5 & 0\\
+    0 & 0 & 0 & 0
+  \end{pmatrix}$$
+  The matrix above hints at existence of a coloring with elements from $\Z_5$, one of which is presented in \cref{fig:4_1:coloring}.
+\end{example}
