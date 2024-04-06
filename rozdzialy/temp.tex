@@ -1,0 +1,98 @@
+\section{Seifert}
+
+\tikzset{
+  plusnode/.style={circle, draw=green!60, fill=yellow!5, very thick, minimum size=5mm, scale=0.8, font=\color{green!80!red}\bfseries},
+  minusnode/.style={circle, draw=blue!60, fill=orange!5, very thick, minimum size=5mm, scale=0.8, font=\color{blue!80!red}\bfseries}
+}
+
+Na \cref{pow61} jest powierzchnia Seiferta $6_1$, kolory oznaczają pętelki-generatory.
+
+Moduł Alexandera wychodzi $\Z[\Z]/(-2t^2+5t-2)$, czyli nic niezwykłego.
+
+\begin{figure}[h]\centering
+  \input{./rozdzialy/6_1_seifert.tex}
+\caption{\label{pow61}Powierzchnia Seiferta $6_1$.}
+\end{figure}
+
+
+Powierzchnia Seiferta węzła $9_{46}$ jest z kolei na \cref{pow946} i nie wychodzi ładnie. To znaczy, relacje po rozpisaniu wyglądają następująco (nad znakami równości z których czerwonych pętelek przychodzą, pozostałe to obserwacje obrazku):
+\begin{align*}
+  ta^- &\overset{a}{=} X-f^--a^-\\ 
+  0&\overset{b}{=}-Y+E+a^-\\ 
+  tX+tC&\overset{c}{=}c^+\\ 
+  -tY&\overset{d}{=}c^+ \\ 
+  tZ-tE&\overset{e}{=}-Y+G\\ 
+  tf^- &\overset{f}{=}Z-c^++X\\ 
+  C-G&=c^+\\ 
+  0&=X+Y+Z
+\end{align*}
+\begin{figure}[h]\centering
+  \input{9_46_seifert.tex}
+  \caption{\label{pow946}Powierzchnia Seiferta $9_{46}$.}
+\end{figure}
+
+Z tych równań wyciągam tylko tyle, że 
+$$Z(1-t)+X(1-2t)+a^-(t^2+t)=0$$
+oraz
+$$Y(3t^2+2t-3)=X(1+t-t^2).$$
+Moim zdaniem powinno wyjść coś z dwoma generatorami, ale jeszcze nie wymyśliłam jak je wyciągnąć.
+
+\section{Relacja na macierzach}
+
+% Nie wzięłam ze sobą zeszytu, w którym mazałam we Wrocławiu, więc musiałam ten problem od zera rozpisywać i coś mi się przestało zgadzać. Zaczęłam od przykładów.
+Nie mam aktualnie zeszytu w którym pracowałam do tej pory, więc zaczęłam od przykładów.
+
+\begin{center}
+  \includegraphics[width=\textwidth]{./rozdzialy/relacja_trefl_1.jpg}
+\end{center}
+\newpage 
+
+Diagramiki skrzyżowań w prawym górnym rogu oznaczają, które skrzyżowanie ma $au+bi=-o$, a które $\alpha u+\beta i=-o$.
+
+Niech $D$ będzie diagramem po usunięciu kinku, a $D'$ przed (góra-dół na rysunku). Dla prostoty $D:M^s\to N^x$ i $D:M^{s+1}\to N^{x+1}$ to macierze powstałe z odpowiednich diagramów.
+
+Wtedy kolumny łuczków w $D$, które nie plączemy (ich jest $s-1$ sztuk) są bez zmiany, czyli 
+$$D(M^{s-1})=D'(M^{s-1}).$$
+Dodatkowo, jeśli $M_s$ jest łuczkiem, który zaplątaliśmy (ostatnia współrzędna, na obrazku troszkę nie wyszło), a $M_{s+1}$ łuczkiem, który przez zaplątanie powstał, to chcemy, żeby 
+$$(D'(M_s)+ D'(M_{s+1}))\cap N^x=D(M_s),$$
+gdzie to przecięcie po lewej stronie rozumiemy jako ograniczenie się do pierwszych $x$ współrzędnych powstałego wektora ($x+1$-sza to nowe skrzyżowanie).
+
+\newpage 
+
+\begin{center}
+  \includegraphics[width=\textwidth]{./rozdzialy/relacja_trefl_2.jpg}
+\end{center}
+\newpage 
+
+W tym ruchu wyjęcia nitki spod spodu naruszyliśmy tylko jeden łuczek w diagramie po wyjęciu $D$ (diagram przed wyciągnięciem to $D'$). W takim razie, podobnie jak wcześniej chcemy
+$$D(M^{s-1})=D'(M^{s-1})\cap N^x.$$
+Możemy posunąć się dalej, i jeśli pierwsza nitka $M_1$ to ta, spod której wyjmowaliśmy, to chcemy 
+$$(D(M^{s-1}), 0, 0)=D'(M^{s-1})-\omega_+(M_1, 0, 0)-\omega_-(M_1, 0, 0),$$
+gdzie $\omega_\pm(u, i, o)$ to funkcja kolorująca odpowiadająca za każdy z rodzai skrzyżowań, jaki powstał przez wsunięcie pod $M_1$ nitki $M_s$. Oczywiście, musimy wiedzieć, które skrzyżowanie w $D'$ to który rodzaj skrzyżowania i umieścić $\omega_\pm(M_1,0,0)$ na odpowiedniej współrzędnej. 
+
+Ta część wydaje mi się nieco brzydka. Po prostu chciałam jakoś zaakcentować fakt, że na ostatnich dwóch wierszach jedna nitka ma zawsze być górą i ma być górą na dwa różne sposoby.
+
+Pozostaje powiedzieć, że fragmenty wsuniętej nitki dodają się do tego, co widzimy w nitce przed byciem wsuwaną:
+$$D(M_s)=[D'(M_s)+D'(M_{s+1})+D'(M_{s+2})]\cap N^x$$
+
+Pozostaje ostatni ruch Reidenmeistera oraz (chyba) napisanie tego samego dla odwrotnej orientacji.
+
+\begin{center}
+  \includegraphics[width=\textwidth]{./rozdzialy/relacja_trefl_3.jpg}
+
+  \includegraphics[width=\textwidth] {./rozdzialy/relacja_trefl_4.jpg}
+\end{center}
+
+\section{Troszkę grafu Gaussa}
+
+\begin{center}
+  \includegraphics[width=\textwidth]{./rozdzialy/gauss_test.png}
+\end{center}
+
+Łuczki między grotami strzałek w grafie Gaussa odpowiadają łuczkom w grafie Reidemeistera.
+
+To, gdzie idzie strzałka zaczynająca się gdzieś na łuczku mówi nam, nad którymi innymi dwoma łuczkami będzie on przechodził i w jakiej kolejności.
+
+Nie wiem do końca jak będzie wtedy wyglądał kink.
+
+To jedyna obserwacja jaką do tej pory miałam.
