@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1713704143.0787 "main.aux" "main.bbl" "main" 1713706331.97925 0
+["bibtex main"] 1713716103.34838 "main.aux" "main.bbl" "main" 1713716706.34472 0
   "./literatura.bib" 1708523993.56828 118 6f246e32e3f70dcaf797156f42b97a5e ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1713199481 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1713706331.74848 1104 3f809657f18a470f84193f2e1978dedf "pdflatex"
+  "main.aux" 1713716706.14286 1250 5a7270d00cc19ba2c8bb131eebb9ae37 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1713706329.7955 "main.tex" "main.pdf" "main" 1713706331.97944 0
+["pdflatex"] 1713716703.76153 "main.tex" "main.pdf" "main" 1713716706.34491 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1713199481 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1713199481 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbi1440.tfm" 1713199481 3072 4dda4299ed0d9dcf48c6a8bcfdc499fc ""
@@ -216,13 +216,14 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1713289058 8555702 9e2d7da320f575dd3e2cd17fdf70cbc5 ""
   "funkcje/matematyka.tex" 1713704321.71921 475 605ae80ee44cb259b6b81c5578d64c11 ""
   "funkcje/twierdzenia.tex" 1710748611.02198 1048 7b0cb56070c81b2a68afa3c20993cb82 ""
-  "main.aux" 1713706331.74848 1104 3f809657f18a470f84193f2e1978dedf "pdflatex"
-  "main.bbl" 1713704143.11767 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
-  "main.out" 1713706331.75181 400 f3d3b459634649391863047edaf6a9a5 "pdflatex"
+  "main.aux" 1713716706.14286 1250 5a7270d00cc19ba2c8bb131eebb9ae37 "pdflatex"
+  "main.bbl" 1713716103.38845 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
+  "main.out" 1713716706.14286 400 f3d3b459634649391863047edaf6a9a5 "pdflatex"
   "main.tex" 1713694548.21223 2341 17e99b88a37b012bf54b14e034906e2f ""
   "preamble.tex" 1710748611.02532 651 39b77bb4a4118d7b657c3fa61c87fe89 ""
   "rozdzialy/plan.tex" 1713500082.69849 744 e8f63bea5cee85a3c438f13a987822aa ""
   "rozdzialy/relacje_macierz.tex" 1713695010.79472 3340 958649bbd26568ef354772c5f7a13902 ""
+  "rozdzialy/relacje_macierz_wyliczenie.tex" 1713716701.85957 6141 5a1b236815c55519cecdcda169e3b18c ""
   (generated)
   "main.aux"
   "main.log"
