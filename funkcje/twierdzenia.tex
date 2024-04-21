@@ -1,39 +1,66 @@
 \usepackage{amsthm}
 \usepackage{thmtools}
 
+\newtheoremstyle{straightstyle}
+  {6pt} % Space above
+  {6pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
+\newtheoremstyle{italicsstyle}
+  {6pt} % Space above
+  {6pt} % Space below
+  {\slshape} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
 \declaretheorem[ %
   name=Definition, %
   numberwithin=section, %
+  style=italicsstyle
 ]{definition}
 
 \declaretheorem[ %
   name=Theorem, %
   numberwithin=section, %
+  style=straightstyle
 ]{theorem}
 
 \declaretheorem[ %
   name=Proposition, %
   numberlike=theorem, %
+  style=straightstyle
 ]{proposition}
 
 \declaretheorem[ %
   name=Corollary, %
   numberlike=theorem, %
+  style=straightstyle
 ]{corollary}
 
 \declaretheorem[ %
   name=Lemma, %
   numberlike=theorem, %
+  style=straightstyle
 ]{lemma}
 
 \declaretheorem[ %
   name=Remark, %
   numberlike=definition, %
+  style=italicstyle
 ]{remark}
 
 \declaretheorem[ %
   name=Example, %
   numberwithin=section, %
+  style=straightstyle
 ]{example}
 
 
