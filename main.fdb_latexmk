@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1713731489.46952 "main.tex" "main.pdf" "main" 1713731493.01414 0
+["pdflatex"] 1713781054.73254 "main.tex" "main.pdf" "main" 1713781058.37754 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1713199481 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1713199481 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbl1440.tfm" 1713199481 3584 1d40127b31b17c0a8c31a7bed9f4249a ""
@@ -212,9 +212,9 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1713289058 8555702 9e2d7da320f575dd3e2cd17fdf70cbc5 ""
   "funkcje/matematyka.tex" 1713704321.71921 475 605ae80ee44cb259b6b81c5578d64c11 ""
   "funkcje/twierdzenia.tex" 1713731453.79828 1780 809cf621b0d3147447be456786189f41 ""
-  "main.aux" 1713731492.95111 2316 418eb7d8f433f9542ecafb638f5a5ff9 "pdflatex"
-  "main.out" 1713731492.95111 534 902a06199818ee778187b84e302740a3 "pdflatex"
-  "main.tex" 1713729329.92452 2380 e222ee8cc8fb7eff329cd2312fe232eb ""
+  "main.aux" 1713781058.26663 2316 418eb7d8f433f9542ecafb638f5a5ff9 "pdflatex"
+  "main.out" 1713781058.26663 534 902a06199818ee778187b84e302740a3 "pdflatex"
+  "main.tex" 1713781049.12005 2380 e222ee8cc8fb7eff329cd2312fe232eb ""
   "preamble.tex" 1713720449.70619 657 10173de3f7aa86f7a69767f7c1802e74 ""
   "rozdzialy/plan.tex" 1713500082.69849 744 e8f63bea5cee85a3c438f13a987822aa ""
   "rozdzialy/relacje_macierz.tex" 1713720974.59662 3501 a88894d312a21a5ec33b1031995e15b5 ""
