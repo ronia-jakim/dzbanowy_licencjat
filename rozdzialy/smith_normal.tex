@@ -1,9 +1,10 @@
 \section{Smith normal form}
 
-Usually, when working with knots the ring $R$ is not a PID but $\Z[\Z]$. It is possible to find invariants over this particular ring, however it is often beneficial to find a PID ring $P$ and send $t\in \Z[\Z]$ to some unit of $P$. 
-
-% Take $P=\Q[\Z]$ and consider a matrix $A\in K\phi$ as a matrix with terms in $P$-module.
-
+% To obtain the most general invariants, we take $R$ to be $\Z[t, t^{-1}]$, the ring of Laurent polynomials with integer coefficients. However, this ring is not a principal ideal domain 
+% the ring $R$ is not a PID but $\Z[\Z]$. It is possible to find invariants over this particular ring, however it is often beneficial to find a PID ring $P$ and send $t\in \Z[\Z]$ to some unit of $P$. 
+%
+% % Take $P=\Q[\Z]$ and consider a matrix $A\in K\phi$ as a matrix with terms in $P$-module.
+The ring $R$ over which we consider modules $M$ and $N$ is not necessary a principal ideal domain. However, there are plenty of PID rings and one can take any unit of $R$ and send it to any unit of a PID ring $P$ to allow for $M$ and $N$ to be considered as $P$-modules. That way, we can consider a new type of equivalence relation on any color checking matrix $D\phi$.
 \begin{definition}
 Take $A\in K\phi$ and consider it as a $s\times x$ matrix with terms in a $P$-module $M$. Then there exist a $s\times s$ matrix $S$ and $x\times x$ matrix $T$ such that $SAT$ is of form
 $$
@@ -19,22 +20,40 @@ $$
 $$
 where for every $i$ $a_i|a_{i+1}$. Such matrix $SAT$ is called \textbf{Smith normal form} of matrix $A$.
 \end{definition}
-
-Because every true coloring $\overline{x}$ of a diagram $D$ satisfies $D\phi(\overline{x})=0$, then $\overline{x}\in\ker D\phi$. The Smith normal form gives us a hint as to what is the structure of a matrix' kernel - {\color{blue}it will be $M^k$, where $k$ is the number of columns filled with zeroes}.
-
-{\color{orange}
-In the case of knot coloring it might also hint at other possible colorings. For example, if a nonunit appears on the diagonal, it might generated a submodule $M'\subseteq M$ such that $M/M'$ has new coloring that was not observed over $M$.
+{\color{blue}
+To obtain the most general invariants, we take $R$ to be $\Z[t, t^{-1}]$, the ring of Laurent polynomials with integer coefficients. There are multitudes of PIDs $P$ with homomorphisms $\Z[t, t^{-1}]\to P$.
 }
 
-We might want to enhance the original equivalence relation on color checking matrices by stating that \emph{if Smith normal forms of two color checking matrices contain the same nonzero, nonunit elements then those matrices are equivalent}. Consider the following example.
+As was mentioned in the first section, $\overline{x}\in M^s$ is a coloring of a diagram $D$ if and only if $D\phi(\overline{x})=0$, that is $\overline{x}\in\ker D\phi$. The Smith normal form hints at the structure of matrix kernel - the columns filled with zeros will contributed a free factor $M$ to the kernel. 
+
+Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $R/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood.
+
+\begin{definition}[reduced normal form of matrix]
+  Take $A$ to be a matrix with coefficients in principal ideal domain $P$. Take $a_1,...,a_k\in P$ to be elements of the Smith normal form of $A$ that are neither zero nor invertible. Consider a new square matrix 
+  $$
+  \begin{bmatrix}
+    a_1 & 0 & 0 & \hdots & 0\\ 
+    0 & a_2 & 0 & \hdots & 0 \\ 
+    0 & 0 & \ddots & &  \\ 
+    \vdots & \vdots & & & \vdots \\ 
+    0 & 0 & \hdots & 0 & a_k
+  \end{bmatrix}
+  $$
+  which will be called the \buff{reduced normal form} of matrix $A$.
+\end{definition}
+
+The following example justifies the utility of the reduced normal form of color checking matrices in distinguishing knots.
 
 \begin{example} 
-  Consider the knot $6_1$ with diagram as seen in \cref{fig:6_1:knot}, ring $R=\Z[t, t^{-1}]$, $M=R$ and 
+  Consider the knots $6_1$ with diagram as seen in \cref{fig:6_1:knot} and $9_{46}$ pictured in \cref{fig:9_46:knot}, ring $R=\Z[t, t^{-1}]$, $M=R$ and 
   $$\begin{cases}
     \phi_+(u, i, o)=(1-t)u+ti-o\\ 
     \phi_-(u,i,o)=(1-t^{-1})u+t^{-1}i-o.
   \end{cases}$$ 
-  We find the matrix $D\phi$ and after changing to the $PID$ ring $P=\Q[t, t^{-1}]$ we see that the Smith normal form is:
+  The two rings have the same Alexander polynomial, $\Delta=-2t^{-2}+5t^{-1}-2$, and the same Alexander module $H^1(S^3-K)=\Z[t, t^{-1}]/(\Delta)$.
+
+
+  For the knot $6_1$ we find the matrix $D\phi$ and after changing to the $PID$ ring $P=\Q[t, t^{-1}]$ we see that the Smith normal form is:
 \begin{figure}[h]\centering
   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
@@ -96,7 +115,7 @@ We might want to enhance the original equivalence relation on color checking mat
   \end{tikzpicture}
   \caption{\label{fig:6_1:knot}Diagram of knot $6_1$.}
 \end{figure}
-$$N=\begin{pmatrix}
+$$A=\begin{pmatrix}
   -1 & 0 & 0 & 0 & 0 & 0 \\ 
   0 & -1 & 0 & 0 & 0 & 0 \\ 
   0 & 0 & t & 0 & 0 & 0 \\ 
@@ -105,14 +124,14 @@ $$N=\begin{pmatrix}
   0 & 0 & 0 & 0 & 0 & 0 
 \end{pmatrix}$$
 which after reduction is
-$$N'=
+$$A'=
 \begin{pmatrix}
   -2t^{-2}+5t^{-1}-2
 \end{pmatrix}
 $$
 a $1\times 1$ matrix with the only term being the Alexander polynomial of $6_1$.
 
-There is another knot with Alexander polynomial equal $-2t^{-2}+5t^{-1}-2$: $9_{46}$. Using diagram in \cref{fig:9_46:knot} it can be calculated that the Smith normal form of $D\phi$ is
+Using diagram in \cref{fig:9_46:knot} of $9_{46}$ it can be calculated that the Smith normal form of $D\phi$ is
 \begin{figure}[h]\centering
   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
@@ -178,7 +197,7 @@ There is another knot with Alexander polynomial equal $-2t^{-2}+5t^{-1}-2$: $9_{
   \end{tikzpicture}
   \caption{\label{fig:9_46:knot}Diagram of knot $9_{46}$.}
 \end{figure}
-$$N=\begin{pmatrix}
+$$B=\begin{pmatrix}
   1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
   0 & t^{-1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
   0 & 0 & t^{-1} & 0 & 0 & 0 & 0 & 0 & 0\\ 
@@ -188,21 +207,29 @@ $$N=\begin{pmatrix}
   0 & 0 & 0 & 0 & 0 & 0 & 2t-t^2 & 0 & 0 \\ 
   0 & 0 & 0 & 0 & 0 & 0 & 0 & t^{-2}-2t^{-1} & 0\\ 
   0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
-\end{pmatrix}$$
-The reduced form of $N$ is
-$$N'=
+\end{pmatrix},$$
+while reduced normal form of $D\phi$ is
+$$B'=
 \begin{pmatrix}
   2t-t^2 & 0 \\ 
   0      & t^{-2}-2t^{-1}
 \end{pmatrix}
 $$
-which is significantly different than the one for $6_1$ yet 
-$$\det(N')=(2t-t^2)(t^{-2}-2t^{-1})=2t+2+2t^{-1}=-t(-2+5t^{-1}-2t^{-2})$$
-is the Alexander polynomial of $9_{46}$.
+which is significantly different than the one for $6_1$. Observe also that the determinant of both matrices is equal to the Alexander polynomial of corresponding knots 
+$$\det(A')=-2+5t^{-1}-2t^{-2}$$
+$$\det(B')=(2t-t^2)(t^{-2}-2t^{-1})=2t+2+2t^{-1}=-t(-2+5t^{-1}-2t^{-2}).$$
 \end{example}
 
 % {\large\color{red}TO DO: sprawdzić te węzły wyżej za pomocą pow. Seiferta, czy mają różne moduły Alexandera}
 
-\begin{proposition}
-  The reduced Smith normal form of color checking matrix is a knot invariant. Thus, it is well defined for $K\phi$.
-\end{proposition}
+\begin{theorem}
+  The reduced normal form of color checking matrix does not depend on the choice of diagram $D$. Thus, it is well defined for $K\phi$ and is a knot invariant.
+\end{theorem}
+
+\begin{proof}
+Take a knot $K$ and its diagram $D$ with $s$ segments and $x$ crossings. We will show that applying any Reidemeister move to this knot will not change the reduced normal form of its color checking matrix.
+
+  \subsection*{\centering R1}
+  \subsection*{\centering R2}
+  \subsection*{\centering R3}
+\end{proof}

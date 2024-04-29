@@ -10,10 +10,12 @@
 \usepackage{mathtools}
 \usepackage{dsfont}
 
+\usepackage{caption}
+
 \usepackage{enumitem}
 
 \usepackage{tikz}
-\usetikzlibrary{cd, patterns, patterns.meta, decorations.pathmorphing, calc}
+\usetikzlibrary{cd, patterns, patterns.meta, decorations.pathmorphing, calc, matrix, positioning, arrows}
 
 \usepackage{geometry}
 \geometry{a4paper, total={150mm, 232mm}, top=32mm}
@@ -24,9 +26,16 @@
 
 \input{./funkcje/matematyka.tex}
 
-\definecolor{green}{HTML}{679436}
-\definecolor{red}{HTML}{fa364a}
+\definecolor{green}{HTML}{859900}
+\definecolor{red}{HTML}{DC322F}
+\definecolor{orange}{HTML}{CB4B16}
+\definecolor{pink}{HTML}{D33682}
+\definecolor{purple}{HTML}{6C71C4}
+\definecolor{yellow}{HTML}{B58900}
+\definecolor{blue}{HTML}{268BD2}
 
 \usetikzlibrary{decorations.pathmorphing}
 
 \tikzset{snake it/.style={decorate, decoration=snake}}
+
+\newcommand{\buff}[1]{{\bfseries\color{orange!80!black}#1}}

@@ -1,6 +1,36 @@
 \usepackage{amsthm}
 \usepackage{thmtools}
 
+\declaretheoremstyle[
+    headfont=\bfseries\color{green!80!black},
+    bodyfont=\normalfont,
+    notebraces={: }{},
+    notefont=\color{green},
+    headformat=\NAME$\;$\NUMBER\NOTE,
+    postheadspace=\newline,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=green, backgroundcolor=yellow!4,
+        skipabove=3mm, skipbelow=3mm
+    }
+]{defbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\color{orange!80!black},
+    bodyfont=\normalfont,
+    notebraces={: }{},
+    notefont=\color{orange},
+    headformat=\NAME$\;$\NUMBER\NOTE,
+    postheadspace=\newline,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=orange, backgroundcolor=yellow!4,
+        skipabove=3mm, skipbelow=3mm
+    }
+]{theorembox}
+
 \newtheoremstyle{straightstyle}
   {6pt} % Space above
   {6pt} % Space below
@@ -24,19 +54,19 @@
 \declaretheorem[ %
   name=Definition, %
   numberwithin=section, %
-  style=italicsstyle
+  style=defbox
 ]{definition}
 
 \declaretheorem[ %
   name=Theorem, %
   numberwithin=section, %
-  style=straightstyle
+  style=theorembox
 ]{theorem}
 
 \declaretheorem[ %
   name=Proposition, %
   numberlike=theorem, %
-  style=straightstyle
+  style=theorembox
 ]{proposition}
 
 \declaretheorem[ %
@@ -54,7 +84,7 @@
 \declaretheorem[ %
   name=Remark, %
   numberlike=definition, %
-  style=italicstyle
+  style=italicsstyle
 ]{remark}
 
 \declaretheorem[ %

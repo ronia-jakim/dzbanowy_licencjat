@@ -1,11 +1,20 @@
 \section{Relation on color checking matrices}
 
-In order to ensure that all matrices that stem from the same knot are considered in one equivalence class we must look at how Reidemeister moves change the matrix. 
+In order to ensure that all matrices that stem from the same knot are considered in one equivalence class we will look at how Reidemeister moves change the matrix. 
 
-In this section we will always assume that diagram $D$ has $s$ segments and $x$ crossings. Furthermore, we will always put crossings and segments that are affected by the Reidemeister move as the last columns and rows of the matrix.
+In this section we will always assume that the diagram labeled as $D$ has $s$ segments and $x$ crossings. This means that always 
+$$D\phi:M^s \to N^x.$$
+Furthermore, we will always put rows and columns corresponding to crossings and segments that are affected by the Reidemeister move as the last columns and rows of the matrix.
+
+\subsection*{\centering R1}
+
+\def\bracketL{[}
+\def\bracketR{]}
+\renewcommand{\figurename}{}
+\captionsetup{labelformat=empty}
 
 \begin{figure}[h!]\centering 
-  \textbf{R1a}
+  \caption{\textbf{R1a}\label{R1a}}
   \medskip
 
   \begin{tikzpicture}
@@ -32,18 +41,19 @@ In this section we will always assume that diagram $D$ has $s$ segments and $x$ 
   \end{tikzpicture}
 \end{figure}
 
-In the case of this Reidemeister move we have 
-$$D\phi:M^s\to N^x$$
+In oriented diagrams, there are four distinct Reidemeister moves \cite{ruchy_zorientowane}, the first one having to account for two types of crossing. We start with \textbf{R1a}, pictured in \cref{R1a}. Consider the two matrices 
+$$D\phi:M^s\to N^x$$ 
 $$D'\phi:M^{s+1}\to N^{x+1}.$$
-Only two arcs have changed thus 
+Only two arcs change between the two, thus 
 $$D\phi\restriction M^{s-1}=D'\phi\restriction M^{s-1}.$$
-Furthermore, we want for any $x_s, x_{s+1}\in M$
-$$\pi_{x+1}[D'\phi(0,..., x_s, s_{s+1})]=\phi_+(x_{s+1},x_s,x_{s+1}),$$
-where $\pi_{x+1}$ is projection onto the last coordinate, and 
-$$(D\phi(0,..., x_s), 0)=D'\phi(0,..., x_s, x_s).$$
+Furthermore, we want to assert that the two arcs $x_s$ and $x_{s+1}$, into which $y_s$ is split, are arranged in a $+$ type crossing. Thus, for all $x_s, x_{s+1}\in M$ we require that
+$$\pi_{x+1}[D'\phi(0,..., x_s, x_{s+1})]=\phi_+(x_{s+1},x_s,x_{s+1}),$$
+where $\pi_{x+1}$ is projection onto the last coordinate. 
+Additionally, we want the column that represented contribution of the twisted arc in diagram $D$ to be the sum of two new arcs in $D'\phi$, meaning that for every $y_s\in M$:
+$$(D\phi(0,..., y_s), 0)=D'\phi(0,..., y_s, y_s).$$
 
 \begin{figure}[h!]\centering 
-  \textbf{R1b}
+  \caption{\textbf{R1b}\label{R1b}}
   \medskip
 
   \begin{tikzpicture}
@@ -65,24 +75,25 @@ $$(D\phi(0,..., x_s), 0)=D'\phi(0,..., x_s, x_s).$$
 
     \node at (-3.5, 0) {$y_s$};
     \node at (-0.3, -1) {$x_s$};
-    \node at (0.5, 0.9) {$x_{s+1}$};
+    \node at (-0.5, 0.9) {$x_{s+1}$};
   \end{tikzpicture}
+
 \end{figure}
 
-This Reidemeister move on oriented diagram is necessary in defining equivalent oriented knot diagrams but the matrix relation is the one in \textbf{R1a} with $\phi_+$ changed to $\phi_-$:
-% $$D\phi:M^s\to N^x$$
-% $$D'\phi:M^{s+1}\to N^{x+1}.$$
-$$D\phi\sim D'\phi$$
-$$\text{if and only if}$$
-\begin{align*}
-  &D\phi\restriction M^{s-1}=D'\phi\restriction M^{s-1}\land\\
-  \land&\pi_{x+1}[D'\phi(0,..., x_s, s_{s+1})]=\phi_-(x_{s+1},x_s,x_{s+1})\land\\
-  \land&(D\phi(0,..., x_s), 0)=D'\phi(0,..., x_s, x_s).
-\end{align*}
+The second type of \textbf{R1} is seen in \cref{R1b}. The relation for this move is almost the same as above. We start with two matrices
+$$D\phi:M^s\to N^x$$
+$$D'\phi:M^{s+1}\to N^{x+1}$$
+that must agree on the arcs and crossings that are not changed between $D$ and $D'$:
+$$D\phi\restriction M^{s-1}=D'\phi\restriction M^{s-1}.$$
+The type of crossing into which an arc of $D$ is twisted in $D'$ is differented than in \textbf{R1a}, thus the second equality is slightly different: for all $x_s, x_{s+1}\in M$
+$$\pi_{x+1}[D'\phi(0,..., x_s, x_{s+1})]=\phi_-(x_{s},x_s,x_{s+1}).$$
+The last requirement is not changed from \textbf{R1a}, meaning that for all $y_s\in M$:
+$$(D\phi(0,..., y_s), 0)=D'\phi(0,..., y_s, y_s).$$
 
+\subsection*{\centering R2}
 
 \begin{figure}[h!]\centering 
-  \textbf{R2}
+  \caption{\textbf{R2}\label{R2}}
   \medskip 
 
   \begin{tikzpicture}
@@ -115,6 +126,11 @@ $$\text{if and only if}$$
     \node at (0.3, 1.8) {$x_{s+2}$};
   \end{tikzpicture}
 \end{figure}
+
+{\color{red}For this Reidemeinster move we start with matrices 
+$$D\phi:M^s\to N^x$$
+$$D'\phi:M^{s+2}\to N^{x+2}.$$
+Beyond the two segments }
 
 $$D\phi\sim D'\phi$$
 $$\text{if and only if}$$
@@ -194,4 +210,5 @@ $$\text{if and only if}$$
   to be the equivalence class of the matrix $D\phi$. Then, $K\phi$ is a knot invariant.
 \end{theorem}
 
-
+\renewcommand{\figurename}{Figure}
+\captionsetup{labelformat=simple}
