@@ -424,6 +424,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
 INPUT ./rozdzialy/smith_normal.tex
 INPUT ./rozdzialy/smith_normal.tex
 INPUT rozdzialy/smith_normal.tex
+INPUT ./rozdzialy/theorem_reduced_normal_is_invariant.tex
+INPUT ./rozdzialy/theorem_reduced_normal_is_invariant.tex
+INPUT ./rozdzialy/theorem_reduced_normal_is_invariant.tex
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl

@@ -1,0 +1,145 @@
+\begin{theorem}
+  The reduced normal form of color checking matrix does not depend on the choice of diagram $D$. Thus, it is well defined for $K\phi$ and is a knot invariant.
+\end{theorem}
+
+\begin{proof}
+Take a knot $K$ and its diagram $D$ with $s$ segments and $x$ crossings. We will show that applying any Reidemeister move to this knot will not change the reduced normal form of its color checking matrix.
+
+  \subsection*{\centering R1}
+
+  The first Reidemeister move is split into \textbf{R1a} and \textbf{R1b}. Due to those two cases being analogous, we will focus on the move \textbf{R1a} (the proof of \textbf{R1b} is left as an exercise for the reader).
+
+  Take $D'$ to be diagram $D$ with one arc twisted into a $+$ crossing. In opposition to the assumption in previous section, we will take the arcs and crossings that differ between those two diagrams to be on first positions. Now, the matrices $D\phi$ and $D'\phi$ are as follows
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    b & a-1 & 0 & \hdots\\ 
+    x_2 & y_2 & \hdots \\ 
+    x_3 & y_3 \\ 
+    \vdots 
+  \end{bmatrix}
+  $$
+  $$
+  D\phi=
+  \begin{bmatrix}
+    x_2 + y_2 & \hdots \\ 
+    x_3 + y_3 \\ 
+    \vdots
+  \end{bmatrix}
+  $$
+  Adding the first column of $D'\phi$ to the second column will yield 
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    b & 0 & 0 & \hdots\\ 
+    x_2 & x_2+y_2 & \hdots \\ 
+    x_3 & x_3+y_3 \\ 
+    \vdots 
+  \end{bmatrix}
+  $$
+  because $a+b=1$. Now we know that $b$ is a unit, thus we can easily remove the elements of the first column that are not $b$. This results in 
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    b & 0 & 0 & \hdots\\ 
+    0 & x_2+y_2 & \hdots \\ 
+    0 & x_3+y_3 \\ 
+    \vdots 
+  \end{bmatrix}
+  $$
+  notice that the lower right portion of this matrix looks exactly like $D\phi$. The only difference is a column containing a singular unit element and thus it will be struck out when computing the reduced normal form. Thus, the reduced normal form of $D'\phi$ is the same as in $D\phi$.
+  
+  \subsection*{\centering R2}
+
+  Now the diagram $D'$ is a diagram $D$ with one arc poked onto another. Once again we will put those changed arcs at the beggining of the color checking matrix to obtain following matrices:
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    \alpha & \beta & -1 & 0 & \hdots \\ 
+    a & 0 & b & -1  \\ 
+    x_3 & u_3 & 0 & v_3 \\ 
+    x_4 & u_4 & 0 & v_4 \\ 
+    \vdots & & & & \ddots
+  \end{bmatrix}
+  $$
+  $$
+  D\phi= 
+  \begin{bmatrix}
+    x_3 & u_3 + v_3 & \hdots \\ 
+    x_4 & u_4 + v_4 \\ 
+    \vdots
+  \end{bmatrix}
+  $$
+  Adding the third column of $D'\phi$ multiplied by $\alpha$ and $\beta$ to first and second column respectively we are able to reduce the first row to only zeros and $-1$. Now, adding this row to the second one creates a column with only $-1$ and zeros. We can put it as the first column:
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    -1 & 0 & 0 & 0 & \hdots \\ 
+    0 & a +b\alpha & 0 & -1  \\ 
+    0 & x_3 & u_3 & v_3 \\ 
+    0 & x_4 & u_4 & v_4 \\ 
+    \vdots & & & & \ddots
+  \end{bmatrix}
+  $$
+  Notice that $a+b\alpha=0$ and so we can transform this matrix into
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    -1 & 0 & 0 & 0 & \hdots \\ 
+    0 & -1 & -1 & 0  \\ 
+    0 & v_3 +u_3 & v_3+u_3&  x_3 & \\ 
+    0 & v_4 +u_4 & v_4+u_4 & x_4 \\ 
+    \vdots & & & & \ddots
+  \end{bmatrix}
+  $$
+  and then into 
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    -1 & 0 & 0 & 0 & \hdots \\ 
+    0 & -1 & 0 & 0  \\ 
+    0 & 0 & v_3+u_3&  x_3 & \\ 
+    0 & 0 & v_4+u_4 & x_4 \\ 
+    \vdots & & & & \ddots
+  \end{bmatrix}
+  $$
+  which obviously has the same reduced normal form as $D\phi$.
+
+  \subsection*{\centering R3}
+
+  $$D\phi=
+  \begin{bmatrix}
+    \alpha & -1 & \beta & 0 & 0 & 0 \\ 
+    0 & 0 & -1 & b & 0 & a \\ 
+    \beta & 0 & 0 & 0 & -1 & \alpha \\ 
+    u_4 & 0 & v_4 & w_4 & x_4 & y_4
+  \end{bmatrix}
+  $$
+  $$D'\phi=
+  \begin{bmatrix}
+    0 & 0 & -1 & \beta & \alpha & 0 \\ 
+    \beta & 0 & 0 & 0 & -1 & \alpha \\ 
+    0 & -1 & b & 0 & 0 & a\\ 
+    u_4 & 0 & v_4 & w_4 & x_4 & y_4
+  \end{bmatrix}
+  $$
+  
+  $$D\phi=
+  \begin{bmatrix}
+    -1 & \alpha  & \beta & 0 & 0 & 0 \\ 
+    0 & 0 & -1 & b & 0 & a \\ 
+    0 & \beta & 0 & 0 & -1 & \alpha \\ 
+    0 & u_4 & v_4 & w_4 & x_4 & y_4
+  \end{bmatrix}
+  $$
+  $$D'\phi=
+  \begin{bmatrix}
+    -1 & 0      & b     & \beta  & \alpha & 0      \\ 
+    0  & \beta  & 0     & 0      & -1     & \alpha \\ 
+    0  & 0      & -1    & 0      & 0      & a      \\ 
+    0  & u_4    & v_4   & w_4    & x_4    & y_4
+  \end{bmatrix}
+  $$
+
+  
+\end{proof}

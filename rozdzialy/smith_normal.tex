@@ -24,12 +24,17 @@ where for every $i$ $a_i|a_{i+1}$. Such matrix $SAT$ is called \textbf{Smith nor
 To obtain the most general invariants, we take $R$ to be $\Z[t, t^{-1}]$, the ring of Laurent polynomials with integer coefficients. There are multitudes of PIDs $P$ with homomorphisms $\Z[t, t^{-1}]\to P$.
 }
 
+{
+  \color{red}\large 
+  DOPISAĆ JAKIE OPERACJE ŻEBY DOSTAĆ ŁOPATOLOGICZNIE SMITH NORMAL FORM
+}
+
 As was mentioned in the first section, $\overline{x}\in M^s$ is a coloring of a diagram $D$ if and only if $D\phi(\overline{x})=0$, that is $\overline{x}\in\ker D\phi$. The Smith normal form hints at the structure of matrix kernel - the columns filled with zeros will contributed a free factor $M$ to the kernel. 
 
 Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $R/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood.
 
 \begin{definition}[reduced normal form of matrix]
-  Take $A$ to be a matrix with coefficients in principal ideal domain $P$. Take $a_1,...,a_k\in P$ to be elements of the Smith normal form of $A$ that are neither zero nor invertible. Consider a new square matrix 
+  Take $A$ to be a matrix with coefficients in principal ideal domain $P$. Take $a_1,...,a_k\in P$ to be all the elements of the Smith normal form of $A$ that are neither zero nor invertible. Consider a new square matrix 
   $$
   \begin{bmatrix}
     a_1 & 0 & 0 & \hdots & 0\\ 
@@ -222,14 +227,4 @@ $$\det(B')=(2t-t^2)(t^{-2}-2t^{-1})=2t+2+2t^{-1}=-t(-2+5t^{-1}-2t^{-2}).$$
 
 % {\large\color{red}TO DO: sprawdzić te węzły wyżej za pomocą pow. Seiferta, czy mają różne moduły Alexandera}
 
-\begin{theorem}
-  The reduced normal form of color checking matrix does not depend on the choice of diagram $D$. Thus, it is well defined for $K\phi$ and is a knot invariant.
-\end{theorem}
-
-\begin{proof}
-Take a knot $K$ and its diagram $D$ with $s$ segments and $x$ crossings. We will show that applying any Reidemeister move to this knot will not change the reduced normal form of its color checking matrix.
-
-  \subsection*{\centering R1}
-  \subsection*{\centering R2}
-  \subsection*{\centering R3}
-\end{proof}
+\input{./rozdzialy/theorem_reduced_normal_is_invariant.tex}
