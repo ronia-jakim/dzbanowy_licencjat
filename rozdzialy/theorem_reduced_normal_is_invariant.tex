@@ -3,6 +3,7 @@
 \end{theorem}
 
 \begin{proof}
+  \marginnote{nie wiem, czy tutaj aż tak powinno się dokładnie mówić co i jak dodaję?} % TO DO
 Take a knot $K$ and its diagram $D$ with $s$ segments and $x$ crossings. We will show that applying any Reidemeister move to this knot will not change the reduced normal form of its color checking matrix.
 
   \subsection*{\centering R1}
@@ -123,23 +124,26 @@ Take a knot $K$ and its diagram $D$ with $s$ segments and $x$ crossings. We will
     u_4 & 0 & v_4 & w_4 & x_4 & y_4
   \end{bmatrix}
   $$
-  
-  $$D\phi=
-  \begin{bmatrix}
-    -1 & \alpha  & \beta & 0 & 0 & 0 \\ 
-    0 & 0 & -1 & b & 0 & a \\ 
-    0 & \beta & 0 & 0 & -1 & \alpha \\ 
-    0 & u_4 & v_4 & w_4 & x_4 & y_4
-  \end{bmatrix}
-  $$
-  $$D'\phi=
-  \begin{bmatrix}
-    -1 & 0      & b     & \beta  & \alpha & 0      \\ 
-    0  & \beta  & 0     & 0      & -1     & \alpha \\ 
-    0  & 0      & -1    & 0      & 0      & a      \\ 
-    0  & u_4    & v_4   & w_4    & x_4    & y_4
-  \end{bmatrix}
-  $$
 
-  
+  Applying row and column operations on those matrices results in 
+  $$
+  D\phi=
+  \begin{bmatrix}
+    -1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & -1 & 0 & 0 & 0 & 0 \\ 
+    0 & 0 & \beta & 0 & -1 & 0 \\ 
+    0 & 0 & u_4+v_4 & w_4+v_4 & x_4-v_4 & y_4+u_4+x_4
+  \end{bmatrix}
+  $$
+  $$
+  D'\phi=
+  \begin{bmatrix}
+    b & 0 & 0 & 0 & 0 & 0 \\
+    0 & -\beta & 0 & 0 & 0 & 0 \\ 
+    0 & 0 & \beta & 0 & -1 & 0 \\ 
+    0 & 0 & u_4+v_4 & w_4+v_4 & x_4-v_4 & y_4+u_4+x_4
+  \end{bmatrix}
+  $$
+  which makes clear that those matrices have the same reduced normal form as $b$ and $\beta$ were taken to be units.
+
 \end{proof}

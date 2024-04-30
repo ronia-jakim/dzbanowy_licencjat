@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}What is a knot coloring}{3}{section.1}%
+\contentsline {section}{\numberline {2}Relation on color checking matrices}{5}{section.2}%
+\contentsline {section}{\numberline {3}Smith normal form}{9}{section.3}%
+\contentsline {section}{\numberline {4}Skein relations}{16}{section.4}%
+\contentsline {section}{\numberline {5}Investigation into resolution of fundamental group}{16}{section.5}%

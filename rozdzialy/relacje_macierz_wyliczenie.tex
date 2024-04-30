@@ -127,23 +127,21 @@ $$(D\phi(0,..., y_s), 0)=D'\phi(0,..., y_s, y_s).$$
   \end{tikzpicture}
 \end{figure}
 
-{\color{red}For this Reidemeinster move we start with matrices 
+For this Reidemeinster move we start with matrices 
 $$D\phi:M^s\to N^x$$
 $$D'\phi:M^{s+2}\to N^{x+2}.$$
-Beyond the two segments }
-
-$$D\phi\sim D'\phi$$
-$$\text{if and only if}$$
+Only two segments of $D$ are manipulated, thus
+$$D\phi\restriction M^{s-2}=D'\phi\restriction M^{s-2}.$$
+To ensure that the poke contributes adequate crossings, we want for every $x,y\in M$
 \begin{align*}
-  &D\phi\restriction M^{s-2}=D'\phi\restriction M^{s-2}\land \\ 
-  % \land & (\forall x\in M) (D\phi(0,..., x, 0), 0, 0) = \\ 
-        % &=D'\phi(0,..., x, 0) - (0,..., \phi_-(x, 0, 0), \phi_+(x, 0, 0))\land\\ 
-  \land & (\forall x\in M) D'\phi(0,..., x, y, y, y) =\\ 
-        &=(D\phi(0,..., x, y), \phi_-(x, y, y), \phi_+(x, y, y))
+  &D'\phi(0,..., x,y,y,y)=\\
+  =&(D\phi(0,..., x,y), \phi_-(x,y,y), \phi_+(x,y,y))
 \end{align*}
 
+\subsection*{\centering R3}
+
 \begin{figure}[h!]\centering 
-  \textbf{R3}
+  \caption{\textbf{R3}\label{R3}}
   \medskip 
 
   \begin{tikzpicture}
@@ -196,6 +194,7 @@ $$\text{if and only if}$$
 
 $$D\phi\sim D'\phi$$
 $$\text{if and only if}$$
+\marginnote{WRÓCIĆ I DOPISAĆ?} %TO DO
 \begin{align*}
   &D\phi\restriction M^{s-5}=D'\phi\restriction M^{s-5}\land \\ 
   \land & (\forall\;x,y,z\in M) \pi_{x-3}[D\phi(0,...,x,y,z)]=\\ 
@@ -204,11 +203,16 @@ $$\text{if and only if}$$
   \land & D\phi(0,...,z,0,y,x,0,0) = D'\phi(0,...,z,0,0,y,x,0)
 \end{align*}
 
+
 \begin{theorem}
   Let $K$ be a knot and $D$ its oriented diagram. Define 
   $$K\phi:=[D\phi]$$
   to be the equivalence class of the matrix $D\phi$. Then, $K\phi$ is a knot invariant.
 \end{theorem}
+
+\begin{proof}
+  An immediate result of construction presented above.\marginnote{brzydko brzmi}% TO DO
+\end{proof}
 
 \renewcommand{\figurename}{Figure}
 \captionsetup{labelformat=simple}

@@ -5,7 +5,7 @@
 %
 % % Take $P=\Q[\Z]$ and consider a matrix $A\in K\phi$ as a matrix with terms in $P$-module.
 The ring $R$ over which we consider modules $M$ and $N$ is not necessary a principal ideal domain. However, there are plenty of PID rings and one can take any unit of $R$ and send it to any unit of a PID ring $P$ to allow for $M$ and $N$ to be considered as $P$-modules. That way, we can consider a new type of equivalence relation on any color checking matrix $D\phi$.
-\begin{definition}
+\begin{definition}[Smith normal form]
 Take $A\in K\phi$ and consider it as a $s\times x$ matrix with terms in a $P$-module $M$. Then there exist a $s\times s$ matrix $S$ and $x\times x$ matrix $T$ such that $SAT$ is of form
 $$
 \begin{bmatrix}
@@ -20,14 +20,30 @@ $$
 $$
 where for every $i$ $a_i|a_{i+1}$. Such matrix $SAT$ is called \textbf{Smith normal form} of matrix $A$.
 \end{definition}
-{\color{blue}
+
+{
+  % TO DO WROCIC 
+  \marginnote{dziwnie opisane?}
+  Given a matrix $A$ one can compute its Smith normal form by the following algorithm:
+  \begin{enumerate}
+    \item Take the ideal containing all elements from $A$. It has a generator $x$.
+    \item If $x$ is an element of $A$, then permute rows and columns so that $x$ is in the upper left corner of $A$.
+    \item Otherwise, use the following two operations 
+      \begin{itemize}
+        \item adding a linear combination of remaining rows to a row
+        \item adding a linear combination of remaining columns to a column
+      \end{itemize}
+      to force $x$ to be an element of $A$. Go to step 2.
+    \item As the generator of the ideal spanned by all elements of $A$ is in the upper left corner, we might now reduce the first row and column to only zeros with $x$ on their intersection. 
+    \item Strike out the first row and column to create a new matrix $A'$ and repeat the whole process.
+  \end{enumerate}
+}
+
+{%\color{blue} TO DO WROCIC
+  \marginnote{ten akapit to chyba niezbyt pasuje}
 To obtain the most general invariants, we take $R$ to be $\Z[t, t^{-1}]$, the ring of Laurent polynomials with integer coefficients. There are multitudes of PIDs $P$ with homomorphisms $\Z[t, t^{-1}]\to P$.
 }
 
-{
-  \color{red}\large 
-  DOPISAĆ JAKIE OPERACJE ŻEBY DOSTAĆ ŁOPATOLOGICZNIE SMITH NORMAL FORM
-}
 
 As was mentioned in the first section, $\overline{x}\in M^s$ is a coloring of a diagram $D$ if and only if $D\phi(\overline{x})=0$, that is $\overline{x}\in\ker D\phi$. The Smith normal form hints at the structure of matrix kernel - the columns filled with zeros will contributed a free factor $M$ to the kernel. 
 
@@ -223,6 +239,7 @@ $$
 which is significantly different than the one for $6_1$. Observe also that the determinant of both matrices is equal to the Alexander polynomial of corresponding knots 
 $$\det(A')=-2+5t^{-1}-2t^{-2}$$
 $$\det(B')=(2t-t^2)(t^{-2}-2t^{-1})=2t+2+2t^{-1}=-t(-2+5t^{-1}-2t^{-2}).$$
+\marginnote{to wyliczenie wogóle jest na miejscu?} % TO DO
 \end{example}
 
 % {\large\color{red}TO DO: sprawdzić te węzły wyżej za pomocą pow. Seiferta, czy mają różne moduły Alexandera}
