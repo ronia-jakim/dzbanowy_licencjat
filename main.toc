@@ -1,5 +1,6 @@
-\contentsline {section}{\numberline {1}What is a knot coloring}{3}{section.1}%
-\contentsline {section}{\numberline {2}Relation on color checking matrices}{5}{section.2}%
-\contentsline {section}{\numberline {3}Smith normal form}{9}{section.3}%
-\contentsline {section}{\numberline {4}Skein relations}{16}{section.4}%
-\contentsline {section}{\numberline {5}Investigation into resolution of fundamental group}{16}{section.5}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}What is a knot coloring}{3}{section.2}%
+\contentsline {section}{\numberline {3}Relation on color checking matrices}{5}{section.3}%
+\contentsline {section}{\numberline {4}Smith normal form}{6}{section.4}%
+\contentsline {section}{\numberline {5}Skein relations}{12}{section.5}%
+\contentsline {section}{\numberline {6}Another way to look at knot colorings}{12}{section.6}%

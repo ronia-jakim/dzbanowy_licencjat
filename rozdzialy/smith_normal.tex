@@ -4,9 +4,12 @@
 % the ring $R$ is not a PID but $\Z[\Z]$. It is possible to find invariants over this particular ring, however it is often beneficial to find a PID ring $P$ and send $t\in \Z[\Z]$ to some unit of $P$. 
 %
 % % Take $P=\Q[\Z]$ and consider a matrix $A\in K\phi$ as a matrix with terms in $P$-module.
-The ring $R$ over which we consider modules $M$ and $N$ is not necessary a principal ideal domain. However, there are plenty of PID rings and one can take any unit of $R$ and send it to any unit of a PID ring $P$ to allow for $M$ and $N$ to be considered as $P$-modules. That way, we can consider a new type of equivalence relation on any color checking matrix $D\phi$.
+The ring $R$ over which we consider modules $M$ is not necessary a principal ideal domain. However, there are plenty of PID rings and one can find at least one PID $P$ with a homomorphism $R\to P$ that allows to consider $M$ as a $P$-module by tensoring it with $P$:
+$$M_P=M\otimes_R P.$$
+That way, we can consider a new type of equivalence relation on any color checking matrix $D\phi$.
+% However, there are plenty of PID rings and one can take any unit of $R$ and send it to any unit of a PID ring $P$ to allow for $M$ and $N$ to be considered as $P$-modules. That way, we can consider a new type of equivalence relation on any color checking matrix $D\phi$.
 \begin{definition}[Smith normal form]
-Take $A\in K\phi$ and consider it as a $s\times x$ matrix with terms in a $P$-module $M$. Then there exist a $s\times s$ matrix $S$ and $x\times x$ matrix $T$ such that $SAT$ is of form
+Take $A\in K\phi$ and consider it as a $s\times x$ matrix with terms in a $P$. Then there exist a $s\times s$ matrix $S$ and $x\times x$ matrix $T$ such that $SAT$ is of form
 $$
 \begin{bmatrix}
   a_1 & 0 & 0 & \hdots & 0 & \hdots & 0 \\ 
@@ -18,36 +21,36 @@ $$
   0 & & \hdots & & 0 & \hdots & 0
 \end{bmatrix}
 $$
-where for every $i$ $a_i|a_{i+1}$. Such matrix $SAT$ is called \textbf{Smith normal form} of matrix $A$.
+where for every $i$ $a_i|a_{i+1}$. Such a matrix $SAT$ is called the \buff{Smith normal form} of matrix $A$.
 \end{definition}
 
-{
-  % TO DO WROCIC 
-  \marginnote{dziwnie opisane?}
-  Given a matrix $A$ one can compute its Smith normal form by the following algorithm:
-  \begin{enumerate}
-    \item Take the ideal containing all elements from $A$. It has a generator $x$.
-    \item If $x$ is an element of $A$, then permute rows and columns so that $x$ is in the upper left corner of $A$.
-    \item Otherwise, use the following two operations 
-      \begin{itemize}
-        \item adding a linear combination of remaining rows to a row
-        \item adding a linear combination of remaining columns to a column
-      \end{itemize}
-      to force $x$ to be an element of $A$. Go to step 2.
-    \item As the generator of the ideal spanned by all elements of $A$ is in the upper left corner, we might now reduce the first row and column to only zeros with $x$ on their intersection. 
-    \item Strike out the first row and column to create a new matrix $A'$ and repeat the whole process.
-  \end{enumerate}
-}
-
-{%\color{blue} TO DO WROCIC
-  \marginnote{ten akapit to chyba niezbyt pasuje}
-To obtain the most general invariants, we take $R$ to be $\Z[t, t^{-1}]$, the ring of Laurent polynomials with integer coefficients. There are multitudes of PIDs $P$ with homomorphisms $\Z[t, t^{-1}]\to P$.
-}
-
-
+% {
+%   % TO DO WROCIC 
+%   \marginnote{dziwnie opisane?}
+%   Given a matrix $A$ one can compute its Smith normal form by the following algorithm:
+%   \begin{enumerate}
+%     \item Take the ideal containing all elements from $A$. It has a generator $x$.
+%     \item If $x$ is an element of $A$, then permute rows and columns so that $x$ is in the upper left corner of $A$.
+%     \item Otherwise, use the following two operations 
+%       \begin{itemize}
+%         \item adding a linear combination of remaining rows to a row
+%         \item adding a linear combination of remaining columns to a column
+%       \end{itemize}
+%       to force $x$ to be an element of $A$. Go to step 2.
+%     \item As the generator of the ideal spanned by all elements of $A$ is in the upper left corner, we might now reduce the first row and column to only zeros with $x$ on their intersection. 
+%     \item Strike out the first row and column to create a new matrix $A'$ and repeat the whole process.
+%   \end{enumerate}
+% }
+%
+% {%\color{blue} TO DO WROCIC
+%   \marginnote{ten akapit to chyba niezbyt pasuje}
+% To obtain the most general invariants, we take $R$ to be $\Z[t, t^{-1}]$, the ring of Laurent polynomials with integer coefficients. There are multitudes of PIDs $P$ with homomorphisms $\Z[t, t^{-1}]\to P$.
+% }
+%
+%
 As was mentioned in the first section, $\overline{x}\in M^s$ is a coloring of a diagram $D$ if and only if $D\phi(\overline{x})=0$, that is $\overline{x}\in\ker D\phi$. The Smith normal form hints at the structure of matrix kernel - the columns filled with zeros will contributed a free factor $M$ to the kernel. 
 
-Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $R/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood.
+Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $P/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood.
 
 \begin{definition}[reduced normal form of matrix]
   Take $A$ to be a matrix with coefficients in principal ideal domain $P$. Take $a_1,...,a_k\in P$ to be all the elements of the Smith normal form of $A$ that are neither zero nor invertible. Consider a new square matrix 
@@ -62,6 +65,23 @@ Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith nor
   $$
   which will be called the \buff{reduced normal form} of matrix $A$.
 \end{definition}
+
+{\color{purple}
+  When working with knots we usually take $R=\Z[t, t^{-1}]$ and $M=\Z[t, t^{-1}]$. This is not a PID ring but there are multitudes of PID rings into which $R$ can be mapped. The following algorithm can be used to calculate the Smith normal form of a color checking matrix.
+  %, however we might want to try and calculate the Smith normal form of the color checking matrix without changing to PID.
+
+  \begin{enumerate}
+    \item Let $A=\{a_{i,j}\}_{i,j\leq n}$ be an $n\times n$ matrix. Take the ideal $I=(a_{i,j})$ generated by all the terms of $A$. 
+    \item If we are in PID then $I$ has one generator, call it $a$.
+    \item We can now use the following row and column operations to put $a$ in the upper left corner of $A$
+      \begin{enumerate}
+        \item Permuting rows (columns).
+        \item Adding a linear combination of rows (columns) to the remaining row (column).
+      \end{enumerate}
+    \item With $a$ in the upper left corner we can now use the fact that it was the generator of $I$ to strike out the remaining terms on the first column and row, using the operations described in the previous point.
+    \item Repeat the same algorithm on the smaller matrix  $\{a_{i,j}\}_{1<i, j\leq n}$.
+  \end{enumerate}
+}
 
 The following example justifies the utility of the reduced normal form of color checking matrices in distinguishing knots.
 
