@@ -1,0 +1,37 @@
+1. Wezel  gladki lub PL  (Uwaga o wezlach Julii?)
+2. K dopelnienie wezla: 3 rozmaitosc z brzegiem.  Homology circles.
+3. G=\pi_1 K. mocny za trudny niezmiennik.
+4. K\to G\to G^ab=Z   przechodzi w K^ab\to G^m \to G^ab.
+(uniwersalny metabelowy iloraz).
+5. G^m to to samo co K^ab jako ZZ modul  (modul Alexandera)
+5a. To jest to samo co H_1(\bar K, Z); torsyjnosc K^ab
+6. Jaka jest naturalna obolnosc tej konstrukcji?
+6a.
+7. K^ab jest ciagle za trudny  upraszaczmy go tak ze
+a. najpierw "komplikujemy" biorac rezolwente, 
+ale to nie jest komplikacja bo rezolwenty sa rownowazne
+potem drastycznie upraszaczemy biorac torsje.  
+b. Zmieniamy K^ab tensorujac przez ustalony modul M (zmaina wspolczynnikow ZZ na R, ale nie tylko)
+c. bierzemy Hom (K^ab, M) gdzie M ustalony modul
+
+8. Torsja: opis konstrukcji i dowod potrzebnych wlasnosci
+
+9. Konstrukcja prezentacji oraz rezolwenty K z prezentacji G lub G^m
+macierz Alexandera jej "wyznacznik" vs torsja.
+
+10. rozszerzanie wspolczynnikow: ZZ\to (R,u), PID. 
+10a. Jesli ZZ i R maja takie samo cialo ulamkow, to torsje nad ZZ i nad R sa rowne
+10b. Forma normalna Smitha. 
+10c. redukcja do F_p[Z].
+10d??  Tensorowanie przez inne moduly niz (R,u) ??
+
+11. Hom (K^ab, M).  Kolorowania 
+11a. Hom (K^ab, M) a Hom(G, H)= Hom (G^m, H) dla grup metabelowych dla ktorych H^ab=Z
+(na przylkad dyhedralnych).
+
+12. Paleta Alexandera. Paleta Foxa, Kategoria palet.
+12a. Paleta Alexandera vs mala macierz Burau nad M.
+ M- Reprezentacja Burau (grupy warkoczy) nad M
+12b. M kolorowania (K)= ker (Burau_M(K) - id).
+
+Przyklady wyliczen.
