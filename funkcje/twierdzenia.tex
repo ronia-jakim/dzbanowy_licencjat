@@ -46,6 +46,21 @@
     }
 ]{lemmabox}
 
+\declaretheoremstyle[
+    headfont=\bfseries\color{orange!80!black},
+    bodyfont=\normalfont,
+    notebraces={: }{},
+    notefont=\color{orange},
+    headformat=\NAME$\;$\NUMBER\NOTE,
+    postheadspace=\newline,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=red!50!orange, backgroundcolor=yellow!4,
+        skipabove=3mm, skipbelow=3mm
+    }
+]{conclusionbox}
+
 \newtheoremstyle{straightstyle}
   {6pt} % Space above
   {6pt} % Space below
@@ -102,11 +117,20 @@
   style=italicsstyle
 ]{remark}
 
+
+
+\declaretheorem[ %
+  name=Conclusion, %
+  numberlike=theorem, %
+  style=conclusionbox
+]{conclusion}
+
 \declaretheorem[ %
   name=Example, %
   numberwithin=section, %
   style=straightstyle
 ]{example}
+
 
 
 % \renewenvironment{proof}{{\bfseries Proof}$ $\newline}{
