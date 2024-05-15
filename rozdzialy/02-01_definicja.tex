@@ -32,7 +32,12 @@ The group $G$ has $n$ generators and $n$ relations, and therefore the module $K^
   where $n$ is the number of crossings of the chosen diagram $D$ of knot $K$.
 \end{proposition}
 
-\begin{proof}
+\begin{proof}{\color{blue}
+  Tutaj tak naprawdę chcę powiedzieć, że jądro $A_D$ jest jednowymiarowe. Czyli wystarczy pokazać, że po wyjęciu dowolnej kolumny mam niezerowy wyznacznik. Ale trik alexandera z sumowaniem rzeczy tutaj nie zadziała.
+
+
+
+
   Take $R=\Z[\Z]$ and consider its ring of fractions $R^{-1}R$. There is an homomorphism $R\to R^{-1}R$ which allows us to change the coefficients in the resolution of $K_G^{ab}$ as follows:
   \begin{center}
     \begin{tikzcd}
@@ -42,7 +47,7 @@ The group $G$ has $n$ generators and $n$ relations, and therefore the module $K^
     \end{tikzcd}
   \end{center}
   In \cref{prop: modul alexandera jest torsyjny} it was proven that $K_G^{ab}$ is a torsion module and so $K_G^{ab}\otimes_R R^{-1}R=0$. This reduces the sequence given above to a short exact sequence of vector spaces over the field $R^{-1}R$ which implies that 
-  $$n=(n-1)+a\implies a=1.$$
+$$n=(n-1)+a\implies a=1.$$}
 \end{proof}
 
 
