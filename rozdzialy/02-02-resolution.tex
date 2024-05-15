@@ -1,0 +1,33 @@
+The resolution of a module at first glance is in no way a simplification of said module. However, there are multiple ways of distilling simplifications and invariants from the resolution of the Alexander module. In this section we want to 
+
+\begin{proposition}
+  Let $G$ be a knot group of $K$. Then it always has a resolution
+  \begin{center}
+    \begin{tikzcd}
+      0\arrow[r] & \Z[\Z]^1 \arrow[r] & \Z[\Z]^{n}\arrow[r] & \Z[\Z]^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0
+    \end{tikzcd}
+  \end{center}
+  where $n$ is the number of crossings of the chosen diagram $D$ of knot $K$.
+\end{proposition}
+
+\begin{proof}
+  Take $R=\Z[\Z]$ and consider its ring of fractions $R^{-1}R$. There is an homomorphism $R\to R^{-1}R$ which allows us to change the coefficients in the resolution of $K_G^{ab}$ as follows:
+  \begin{center}
+    \begin{tikzcd}
+      0\arrow[r] & R^a\otimes_R R^{-1}R \arrow[r] & R^{n}\otimes_R R^{-1}R \arrow[r] & R^{n-1}\otimes_R \arrow[dll, rounded corners, to path={--([xshift=2ex]\tikztostart.east) |- ([xshift=-3ex, yshift=-2ex]\tikztostart.south) -| ([xshift=-2ex]\tikztotarget.west) -- (\tikztotarget)
+      }]\\ 
+      & K_G^{ab}\otimes_R R^{-1}R \arrow[r] & 0
+    \end{tikzcd}
+  \end{center}
+  In \cref{prop: modul alexandera jest torsyjny} it was proven that $K_G^{ab}$ is a torsion module and so $K_G^{ab}\otimes_R R^{-1}R=0$. Moreover, in \cref{alexander matrix has trivial kernel} we showed that $A_D$ is a surjection onto $(n-1)$ dimensional module. Combining this knowledge we obtain a short exact sequence of vector spaces, call them $V$, over $R^{-1}R$:
+  \begin{center}
+    \begin{tikzcd}
+      0\arrow[r] & V^a\arrow[r] & V^n\arrow[r] & V^{n-1}\arrow[r] & 0
+    \end{tikzcd}
+  \end{center}
+  which implies that 
+  $$n=n-1+a$$ 
+  and so $a=1$.
+\end{proof}
+
+
