@@ -1,9 +1,9 @@
-Let $X$ be the complement of a knot $K$, that is $X=S^3-K$. Take $\widetilde{X}$ to be its universal covering, meaning that its fundamental group is trivial. The fundamental group $G$ of $X$ acts on its universal covering by deck transformations. The commutator subgroup $K_G=[G, G]$ is normal in $G$ and so we the action of $K_G$ on $\widetilde{X}$ is well defined. Thus we might take the quotient space $\overline{X}=\widetilde{X}/[G, G]$ and call it the \buff{infinite cyclic covering} of $X$. The fundamental group of $\overline{X}$ is exactly 
+Let $X$ be the complement of a knot $K$, that is $X=S^3-K$. Take $\widetilde{X}$ to be its universal covering, meaning that it is simply connected. The fundamental group $G$ of $X$ acts on its universal covering by deck transformations. The commutator subgroup $K_G=[G, G]$ is normal in $G$ and so the action of $K_G$ on $\widetilde{X}$ is well defined. Thus we might take the quotient space $\overline{X}=\widetilde{X}/[G, G]$ and call it the \buff{infinite cyclic covering} of $X$. The fundamental group of $\overline{X}$ is exactly 
 $$\pi_1(\overline{X})=[G, G]=K_G$$
 and from the perspective of homology modules, we have
 $$H_1(\overline{X}, \Z)=\pi_1(\overline{X})^{ab}=K_G^{ab}.$$
 
-The following diagram illustrates the construction described above
+The following diagram illustrates the construction of infinite cycle covering described above
 
 \def\actson{
   \begin{tikzpicture}[baseline]
@@ -14,7 +14,7 @@ The following diagram illustrates the construction described above
 \begin{center}
   \begin{tikzcd}[column sep=tiny]
     \widetilde{X}\arrow[d] & \arrow[l, phantom, sloped, "\actson"] G \\ 
-    \overline{X} \arrow[d] & \arrow[l, phantom, sloped, "\actson"] G/[K_G, K_G] \\ 
+    \overline{X} \arrow[d] & \arrow[l, phantom, sloped, "\actson"] G/[G, G] \\ 
     X=S^3-K
   \end{tikzcd}
 \end{center}
