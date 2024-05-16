@@ -5,9 +5,10 @@
 \contentsline {section}{\numberline {2}Resolution of the Alexander module}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Alexander module}{7}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Basic properties}{9}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Hinting at colorings}{12}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Knot colorings}{12}{section.3}%
-\contentsline {subsection}{\numberline {3.1}What is a knot coloring}{12}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Relation on color checking matrices}{15}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Smith normal form}{16}{subsection.3.3}%
-\contentsline {section}{\numberline {4}A look at category theory}{23}{section.4}%
+\contentsline {subsection}{\numberline {2.3}A homological roots of diagram colorings}{12}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Knot colorings}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Diagram colorings}{13}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Color checking matrix}{14}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Relation on color checking matrices}{15}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Smith normal form}{17}{subsection.3.4}%
+\contentsline {section}{\numberline {4}A look at category theory}{24}{section.4}%

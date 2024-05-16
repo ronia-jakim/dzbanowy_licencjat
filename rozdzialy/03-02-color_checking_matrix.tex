@@ -1,0 +1,180 @@
+\begin{definition}[color checking matrix]\label{def:color checking matrix}
+  After assignings arcs to coordinates in $M^s$ and crossings to coordinates in $N^x$ it is possible to define a linear homomorphism $D\phi:M^s\to N^x$  as
+  $$D\phi(m_1,...,m_s)=(\phi_\pm(\pi_{x_1}(m_1,...,m_s)), \phi_\pm(\pi_{x_2}(m_1,...,m_s)),...).$$
+  Matrix that is created after choosing a basis for $M^s$ and $N^x$ will be called a \buff{color checking matrix}.
+\end{definition}
+
+Taking $\phi_\pm$ to be linear equations of form
+$$\phi_+(u,i,o)=au+bi+co$$
+$$\phi_-(u,i,o)=\alpha u+\beta i+\gamma o,$$
+where $u$, $i$ and $o$ correspond to arcs as seen in \cref{crossing_type} and all the coefficients are linear homomorphisms $M\to N$, we know that all the entries for the color checking matrix will be linear combinations of $a$, $b$, $c$, $\alpha$, $\beta$, $\gamma$. If $M$ has $n$ generators we chose to block the matrix $D\phi$ into $n\times n$ blocks.
+
+\begin{proposition}
+  Coloring $(m_1,...,m_s)\in M^s$ is admissible $\iff$ $(m_1,...,m_s)\in\ker D\phi$.
+\end{proposition}
+
+\begin{proof}\color{blue}
+  $\implies$
+
+  We know that every projection $\pi_{x_j}(m_1,...,m_s)$ is in $\ker\phi_\pm$, depending on the type of $x_j$ crossing. Thus, there is no projection $\pi_{x_j}$ that is not being reduced by $\phi_\pm$.
+
+  $\impliedby$
+
+\end{proof}
+
+{\color{blue}We need to impose restrictions on the coloring rule.} We want $\mathcal{C}$ to be two dimensional (have two generators). That way we have the following diagram
+% \begin{center}
+% \begin{tikzcd}
+%   M^2 & M^3\arrow[l, twoheadrightarrow] \arrow[r, hookleftarrow] & \mathcal{C}\arrow[ll, bend left=20, red, "\sim"]
+% \end{tikzcd}
+% \end{center}
+\begin{center}
+\begin{tikzcd}
+  M^2 \arrow[r, hookrightarrow] \arrow[rr, bend right=20, red, "\sim" below] & M^3 \arrow[r, twoheadrightarrow] & \mathcal{C}
+\end{tikzcd}
+\end{center}
+We can assume that $M^2$ corresponds to the 'up' and 'in' segments in a crossing (compare \cref{crossing_type}), then we can define $\phi_\pm'$ to take $u$ and $i$ segments and return the out segment so that the labeling agrees with the coloring rule. Now, take the red arrow in the diagram above to be the correspondence
+$$(u, i)\mapsto (u, i, \phi_\pm'(u,i)).$$
+This demands that both $c$ and $\gamma$ in the definition of $\phi_+$ and $\phi_-$ are invertible. For the sake of simplicity, we will take $c=\gamma=-1$. 
+
+With this assumption for any admissible coloring $(u,i,o)$ of a crossing we have the following relation:
+$$\phi_+\;:\;o=au+bi$$
+$$\phi_-\;:\;o=\alpha u+\beta i.$$
+
+
+%it will be beneficial to demand that the red arrow is an isomorphism.
+% \begin{enumerate}
+%   \item To allow \emph{trivial colorings}, that is colorings in which every arc is assigned the same value it is necessary that
+%     $$(\forall\;m\in M)\;\phi_\pm(m,m,m)=0.$$
+%   \item To simplify operations of color checking matrices, if
+%     $$\phi_+(u, i, o)=au+bi+co$$
+%     $$\phi_-(u,i,o)=\alpha u+\beta i+\gamma o,$$
+%     then we take $c$ and $\gamma$ to be invertible. For the sake of simplicity, take $c=\gamma=-1$.
+%   \item The two variations of orientation of the first Reidemeister move, pictured in \cref{fig: ograniczanie phi reidemeister 1}, put the following constrictions on $a$, $b$ and $\alpha$, $\beta$:
+%     $$\begin{cases}
+%       a+b=1\\
+%       \alpha+\beta=1
+%     \end{cases}$$
+%   \item Lastly, from the second Reidemeister move, pictured in \cref{fig: ograniczanie phi reidemeister}, one can gather that  
+%     $$\begin{cases}
+%       a+b\alpha=0\\ 
+%       b\beta=1
+%     \end{cases}$$
+%     meaning that both $b$ and $\beta$ must be units.
+% \end{enumerate}
+% %
+% \begin{figure}[h]\centering
+%   \begin{tikzpicture}
+%       \begin{knot}[
+%         clip width=20pt, 
+%         consider self intersections,
+%         flip crossing=1
+%         ]
+%         \strand[thick, ->] (0, 0) to[out=90, in=-90] (0, 1) to[out=90, in=150] (1, 2.5) to[out=-30, in=90] (1.3, 2) to[out=-90, in=30] (1, 1.5) to[out=-150, in=-90] (0, 3) to[out=90, in=-90] (0, 4);
+%
+%         \strand[thick, ->] (3, 0)--(3, 4);
+%
+%       \end{knot}
+%       \draw[dashed, <->] (1.5, 2)--(2.7, 2);
+%
+%       \node at (-.5, 2) {$+$};
+%       \node at (-1.3, 3.7) {$(a+b)x $};
+%       \node at (-.3, -.3) {$x$};
+%       \node at (3.3, -.3) {$x$};
+%     \begin{scope}[shift={(0, -6)}]
+%       \begin{knot}[
+%         clip width=20pt, 
+%         consider self intersections
+%         ]
+%         \strand[thick, ->] (0, 0) to[out=90, in=-90] (0, 1) to[out=90, in=150] (1, 2.5) to[out=-30, in=90] (1.3, 2) to[out=-90, in=30] (1, 1.5) to[out=-150, in=-90] (0, 3) to[out=90, in=-90] (0, 4);
+%
+%         \strand[thick, ->] (3, 0)--(3, 4);
+%
+%       \end{knot}
+%       \draw[dashed, <->] (1.5, 2)--(2.7, 2);
+%       \node at (-.5, 2) {$-$};
+%
+%       \node at (-1.3, 3.7) {$(\alpha+\beta)x $};
+%       \node at (-.3, -.3) {$x$};
+%       \node at (3.3, -.3) {$x$};
+%     \end{scope}
+%   \end{tikzpicture}
+%   \caption{The two variations of the first Reidemeister move in oriented diagrams. They suggest that $(a+b)=1$ and $(\alpha+\beta)=1$.\label{fig: ograniczanie phi reidemeister 1}}
+% \end{figure}
+%
+% \begin{figure}[h]\centering
+%   \begin{tikzpicture}
+%     \begin{knot}[
+%       clip width=20pt, 
+%       flip crossing=1,
+%       flip crossing=2
+%       ]
+%       \strand[thick, ->] (0,-1)--(0, 4);
+%       \strand[thick, ->] (-1, -1) to[out=90, in=180+45] (-.8, 0) to[out=45, in=-90] (1, 1.5) to[out=90, in=-45] (-.8, 3) to[out=180-45, in=-90] (-1, 4);
+%
+%       \strand[thick, ->] (5, -1) -- (5, 4);
+%       \strand[thick, ->] (6, -1) -- (6, 4);
+%
+%     \end{knot}
+%     \draw[dashed, <->] (1.5, 1.5)--(4.5, 1.5);
+%
+%     \node at (-1.3, -.3) {$x$};
+%     \node at (.3, -.3) {$y$};
+%     \node[anchor=east] at (-.3, 1.5) {$\alpha x+\beta y$};
+%     \node[anchor=west] at (.3, 3.7) {$(a+b\alpha) x+b\beta y$};
+%
+%     \node at (4.7, -.3) {$x$};
+%     \node at (6.3, -.3) {$y$};
+%
+%   \end{tikzpicture}
+%   \caption{Second Reidemeister move. It suggests that $(a+b\alpha)=0$ and $b\beta =1$.\label{fig: ograniczanie phi reidemeister}}
+% \end{figure}
+%
+%
+% \marginnote{jeszcze przemyśleć tekst}
+% It is worth mentioning that examining the second Reidemeister move (\cref{fig: ograniczanie phi reidemeister}) with $\phi_\pm$ changed to $2\times 2$ matrices $A_\pm$, which take arcs entering a crossing as input and output the arcs leaving it, we can see that 
+% $$A_+ A_-=\begin{bmatrix}0 & 1\\ b & a\end{bmatrix}\begin{bmatrix}\alpha & \beta \\ 1 & 0\end{bmatrix}=Id.$$
+% This means that from homomorphism $\phi_+$ we are able to calculate $\phi_-$ and vice versa.
+%
+% The color checking matrix is not a knot invariant, despite the restrictions laid on $\phi$. Changing the number of crossings in a diagram will obviously create a different matrix for the same knot. We will thus proceed to define an equivalence relation on the set of all color checking matrices of a knot $K$.
+
+% Let $R$ be a commutative ring, typically $\Z[\Z]$, and take $M,N$ to be two $R$-modules. Consider two module homomorphisms $\phi_+:M^3\to N$ and $\phi_-:M^3\to N$ such that
+% $$(\forall\;x\in M)\;\phi_\pm(x,x,x)=0.$$ 
+% This homomorphism will be used to determine whether or not a labelling of knot arcs constitutes a coloring or not.
+%
+% \medskip
+%
+%
+% {\large\color{red}tak naprawdę wystarczy jeden homomorfizm $\phi$, ale nie wiem jeszcze jak to wyjaśnić beż zahaczania o linki lub warkocze}.
+% %{\large\color{red}JAK WUTLUMACZYC, ZE NAPRAWDE TO WYSTARCZY JEDNA FUNKCJA, ALE TAK BEDZIE MI LATWIEJ W ZYCIU? BO JAK NARYSUJĘ DIAGRAM Z DWOMA SKRZYŻOWANIAMI JEDNO + A DRUGIE - I POŁĄCZĘ JAK PRZY WARKOCZE -> LINKI TO DOSTAJĘ LINKA Z 2 KOMPONENTAMI :V}
+% % It might appear that in the case of oriented diagram two different functions $\phi$ are required. However, considering the following diagram
+% % \begin{figure}[h]\centering 
+% %   \begin{tikzpicture}
+% %     \draw[->] (0,-0.5) to (0, -1) to [out=-90, in=90] (1, -3);
+% %     \draw[->] (1, -3) to (1, -3.5) to[out=-90, in=90] (0, -5.5) to (0,-6);
+% %
+% %     \fill[white] (.5, -2) circle (6pt);
+% %     \fill[white] (.5, -4.5) circle (6pt);
+% %
+% %     \draw[->] (1,-0.5) to (1, -1) to[out=-90, in=90] (0, -3);
+% %     \draw[->] (0, -3) to (0, -3.5) to[out=-90, in=90] (1, -5.5) to (1, -6);
+% %     \draw (1, -6) to [out=-90, in=-90] (3, -4) to[out=90, in=-90] (3, -2.5) to[out=90, in=90] (1, -.5);
+% %
+% %     \node at (1, -2) {$-$};
+% %     \node at (1, -4.5) {$+$};
+% %   \end{tikzpicture}
+% %   \caption{Why only one function $\phi$ is required?\label{just_why_phi}}
+% % \end{figure}
+%
+% \medskip
+%
+%
+% The color checking matrix in itself is obviously not a knot invariant. However, we might define an equivalence relation on the set of all matrices $M^m\to N^n$, $m,n\in\N$, such that all the matrices which come from the same knot fall into the same equivalence class.
+%
+
+
+
+We might also demand that a trivial coloring (every arc is assigned the same element of $M$) is an admissible coloring.
+
+% The color checking matrix is not a knot invariant. Changing the diagram with accordance to the Reidemeister moves might change the dimensions of the matrix. Thus, we need to define an equivalence relation on the set of all color checking matrices.
+

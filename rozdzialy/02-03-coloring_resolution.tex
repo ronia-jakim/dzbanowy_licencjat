@@ -1,1 +1,23 @@
-Weles
+Thus far a resolution of the Alexander module $K_G^{ab}$ provided a matrix and with it a polynomial invariant of knots. In this short section we will explain the connection between Alexander module and knot colorings, which will be the focus of the subsequent section.
+
+Take $M$ to be a finitely generated $R=\Z[\Z]$-module. The functor $\Hom(-, M^n)$ is left exact therefore applied to the resolution of the Alexander module generates the following sequence
+\def\dupa{\Hom(A_D, M)}
+$$
+  \begin{tikzcd}[column sep=small, /tikz/column 3/.style={column sep=2cm}, trim left=-7.6cm]
+    0\arrow[r] & \Hom(R, M)\arrow[r] & \Hom(R^n, M)\arrow["\dupa", r] & \Hom(R^{n-1}, M) \arrow[r] & \Hom(K_G^{ab}, M^n)
+  \end{tikzcd}
+$$
+
+The diagram $D$ taken as the starting point for the construction of $K_G^{ab}$ had $n=x$ crossings and $n=s$ segments. The module $K_G^{ab}$ was presented using $(n-1)$ generators, corresponding to all but one segments of the diagram. If we allow for propagation of values, then $\Hom(R^{n-1}, M)$ can be interpreted as assigning values from $M$ to $(n-1)$ segments in diagram $D$, with the last segment colored based on the remaining part of the diagram. 
+
+The arrow $\Hom(R^{n-1}, M)\to \Hom(K_G^{ab}, M)$ ensures that the structure of $K$ is taken into account during this assigment. Its kernel is be equal to $\im \Hom(A_D, M)$ and thus remembers which segments contributed to which crossings.
+
+The above remark points at a similarity between the concept of diagram colorings, elaborated in the following section, and the more {\color{red}topological invariant which is the Alexander module}
+
+
+
+
+% A coloring, in its essence, is any assignment of elements from a module to segments (or in the case of Alexander - to regions). Of course, to synthesize information about a knot one has to impose rules on which coloring will be interesting. This is the subject of the next section. 
+%
+% For the time being, suppose that there exists a homomorphism $\psi:M^n\to N^n$ such that every nice coloring $(m_1,...,m_s)\in\ker\psi$.
+

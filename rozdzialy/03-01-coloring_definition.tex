@@ -1,0 +1,55 @@
+Let $K$ be a knot and $D$ be its oriented diagram with $s$ segments and $x$ crossings. In such diagrams we can see two different crossing types as seen in \cref{crossing_type}. 
+\begin{figure}[h]\centering
+  \begin{tikzpicture}
+    \draw[->] (0,0) node[below] {i} -- (1.5, 2) node[above] {o};
+    \fill[white] (0.75, 1) circle (6pt);
+    \draw[->] (1.5, 0)--(0, 2) node[above] {u};
+    \node at (0.75, -0.5) {$+$};
+
+    \draw[->] (4.5, 0) node[below] {i} --(3, 2) node[above] {o};
+    \fill[white] (3.75, 1) circle (6pt);
+    \draw[->] (3, 0)--(4.5, 2) node[above] {u};
+    \node at (3.75, -0.5) {$-$};
+  \end{tikzpicture}
+  \caption{Two types of crossing in oriented diagram.\label{crossing_type}}
+\end{figure}
+
+Take a commutative ring with unity $R$ and an $R$-module $M$.
+
+\begin{definition}[coloring rule]
+  Take $\mathcal{C}\subseteq M^3$ to be a finitely generated submodule of $M^3$. We will call $\mathcal{C}$ a \buff{coloring rule}. There are two submodules $\mathcal{C}_\pm\subseteq \mathcal{C}$, each corresponding to a type of crossing in diagram $D$. 
+\end{definition}
+
+We can now construct three homomorphisms
+$$\phi:M^3\to M/\mathcal{C}=N$$
+$$\phi_\pm:M^3\to M/\mathcal{C}_\pm=N_\pm.$$
+We will call $\phi$ and $\mathcal{C}$ \buff{coloring rule} interchangeably.
+
+%Take a commutative ring with unity $R$ and two $R$-modules $M$ and $N$. Take two arbitrary module homomorphisms $\phi_+:M^3\to N$ and $\phi_-:M^3\to N$, one for each type of crossing.
+
+% \begin{definition}[diagram coloring]
+%   Let $x_1,..., x_s\in M$ be labels of arcs in diagram $D$. We will say that $(x_1,...,x_s)\in M^s$ is a \buff{coloring} if for every crossing $\pm$ in $D$ consisting of arcs $u$, $i$, $o$ the following relation is satisfied
+%   $$\phi_\pm(u,i,o)=0.$$
+% \end{definition}
+
+For each crossing $x_j$ in diagram $D$ we can construct a projection 
+$$\pi_{x_j}:M^s\twoheadrightarrow M^3$$
+which restricts $M^s$ to the three arcs that constitute $x_j$.
+
+\begin{definition}[diagram coloring]
+  A \buff{coloring of diagram} $D$ is any element $(m_1,..., m_s)\in M^s$ that assigns elements of $M$ to each arc. We will call this coloring \buff{admissible} if for every crossing $x_j$ of type $\pm$ we have 
+  $$\pi_{x_j}(m_1,..., m_s)\in \mathcal{C}_\pm\subseteq\mathcal{C}.$$
+\end{definition}
+
+% It is easy to express admissibility of a coloring in terms of homomorphism $\phi$.
+
+It will be beneficial to express admissibility of a coloring in terms of homomorphism $\phi$.
+\begin{proposition}
+  A coloring $(m_1,..., m_s)\in M^s$ is a admissible $\iff$ for each crossing $x_j$ of type $\pm$ 
+  $$\phi_\pm(\pi_{x_j}(m_1,...,m_s))=0.$$
+\end{proposition}
+
+\begin{proof}
+  Stems from the fact that $\mathcal{C}_\pm=\ker\phi_\pm$.
+\end{proof}
+
