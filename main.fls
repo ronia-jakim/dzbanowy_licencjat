@@ -1,4 +1,4 @@
-PWD /home/marudka/uni-stuff/dzbanowy_licencjat
+PWD /home/maruda/uni-stuff/dzbanowy_licencjat
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main.tex
@@ -437,6 +437,9 @@ INPUT rozdzialy/02-01_definicja.tex
 INPUT ./rozdzialy/02-02-resolution.tex
 INPUT ./rozdzialy/02-02-resolution.tex
 INPUT rozdzialy/02-02-resolution.tex
+INPUT ./rozdzialy/02-03-coloring_resolution.tex
+INPUT ./rozdzialy/02-03-coloring_resolution.tex
+INPUT rozdzialy/02-03-coloring_resolution.tex
 INPUT ./rozdzialy/relacje_macierz.tex
 INPUT ./rozdzialy/relacje_macierz.tex
 INPUT rozdzialy/relacje_macierz.tex
