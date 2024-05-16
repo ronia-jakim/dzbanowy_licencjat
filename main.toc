@@ -10,5 +10,5 @@
 \contentsline {subsection}{\numberline {3.1}Diagram colorings}{13}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Color checking matrix}{14}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Relation on color checking matrices}{15}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Smith normal form}{17}{subsection.3.4}%
-\contentsline {section}{\numberline {4}A look at category theory}{24}{section.4}%
+\contentsline {subsection}{\numberline {3.4}Smith normal form}{18}{subsection.3.4}%
+\contentsline {section}{\numberline {4}A look at category theory}{25}{section.4}%

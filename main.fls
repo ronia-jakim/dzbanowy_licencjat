@@ -446,9 +446,9 @@ INPUT rozdzialy/03-01-coloring_definition.tex
 INPUT ./rozdzialy/03-02-color_checking_matrix.tex
 INPUT ./rozdzialy/03-02-color_checking_matrix.tex
 INPUT rozdzialy/03-02-color_checking_matrix.tex
-INPUT ./rozdzialy/relations_reidemeister_diagrams.tex
-INPUT ./rozdzialy/relations_reidemeister_diagrams.tex
-INPUT rozdzialy/relations_reidemeister_diagrams.tex
+INPUT ./rozdzialy/03-03-wyliczenie_relacji.tex
+INPUT ./rozdzialy/03-03-wyliczenie_relacji.tex
+INPUT rozdzialy/03-03-wyliczenie_relacji.tex
 INPUT ./rozdzialy/smith_normal.tex
 INPUT ./rozdzialy/smith_normal.tex
 INPUT rozdzialy/smith_normal.tex
