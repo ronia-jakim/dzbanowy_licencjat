@@ -1,18 +1,26 @@
-The resolution of a module at first glance is in no way a simplification of said module. However, there are multiple ways of distilling simplifications and invariants from the resolution of the Alexander module. {\color{purple}In this section we want to }
+The resolution of a module at first glance is in no way a simplification of said module. However, there are multiple ways of distilling simplifications and invariants from the resolution of the Alexander module. {\large\color{red}In this section we want to }
 
 We start writing the beginning $K_G^{ab}$ resolution as follows:
-\begin{center}
+\begin{equation}\label{pierwsza rezolwenta}
   \begin{tikzcd}
     ...\arrow[r] & \Z[\Z]^{n}\arrow[r, "A_D"] & \Z[\Z]^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0
   \end{tikzcd}
-\end{center}
+\end{equation}
 
 
 \begin{definition}[Alexander matrix]
   The matrix of homomorphism $A_D$ in the diagram above is called the \buff{Alexander matrix} of group $G$ (knot $K$).
 \end{definition}
 
-The Alexander matrix in the case of a knot group is not a square matrix. However, striking out any of its rows will give a square matrix whose determinant is nonzero.
+The Alexander matrix in the case of a knot group is not a square matrix. However, striking out any of its rows will give a square matrix whose determinant is nonzero. We will prove this statement promptly after consider the Alexander module as a vector space over the field of fractions of $R=\Z[\Z]$.
+
+In \cref{prop: modul alexandera jest torsyjny} it was shown that the Alexander module is torsion. Thus, as a vector field $K_G^{ab}\otimes_R R^{-1}R=0$ it is trivial. Hence, the sequence in (\ref{pierwsza rezolwenta}) translates to the following sequence of $R^{-1}R$ modules
+\begin{equation}\label{resolution vector spaces}
+  \begin{tikzcd}
+    ...\arrow[r] & R^n\otimes_R R^{-1}R \arrow[r, "A_D^V"] & R^{n-1}\otimes_R R^{-1}R \arrow[r] & 0
+  \end{tikzcd}
+\end{equation}
+Naturally, $A_D^V=A_D\otimes Id_{R^{-1}R}$ is just matrix $A_D$ (with terms in $R$) with adjoined $1\times 1$ matrix with just identity of $R^{-1}R$. Thus, we can easily translate most properties of $A_D^V$ to properties of $A_D$, i.e. its determinant and surjectivity, by forgetting the $R^{-1}R$ factor.
 
 \begin{proposition}\label{alexander matrix has trivial kernel}
   Let $A_D'$ be the Alexander matrix $A_D$ with one of its rows struck out. Then $\det(A_D')\neq 0$.
@@ -44,20 +52,22 @@ The Alexander matrix in the case of a knot group is not a square matrix. However
   $$\pm t^n[(t-1)U-tC]=0.$$
   Notice that the coefficients in row corresponding to this crossing are $0$ and $\pm1$. Thus, the sum is not equal to zero. There are two of such rows as the segment $b$ has to be the "out" and "in" segment of some crossing. In other words, segment $b$ has to have a start and end in some crossings.
 
+  The reasoning above is true for matrix $A_D^V$ from (\ref{resolution vector spaces}). We make the switch to vector fields to use the connection between the rank of matrix and the dimension of its image.
+
   Let $S_i$ be the column of the Alexander matrix corresponding to the segment labeled $i$. The sum $\sum_{i\leq n-1} S_i$ is a vector with two nonzero terms. Take $S_j$ and $S_k$ to be the vectors with those nonzero terms. The only way to cancel out those coordinates is to multiply both $S_j$ and $S_k$ by zero. However, doing this we eliminate two other coordinates with nonzero terms. This yields a sum
   $$\sum_{\substack{i\leq n-1 \\ i\neq j,k}}S_i$$ 
   which still has two nonzero elements. Repeat the reasoning until only one nonzero vector remains or all the vectors are multiplied by $0$.
 
-  We showed that $\{S_i\;:\;i\leq n-1\}$ is a set of linearly independent vectors and thus every minor of $A_D(1)$ has nonzero determinant. In particular, $\det(A_D')(1)\neq 0$.
+  We showed that $\{S_i\;:\;i\leq n-1\}$ is a set of linearly independent vectors and thus every minor of $A_D^V(1)$ has nonzero determinant. In particular, $\det(A_D')(1)\neq 0$.
 \end{proof}
 
-The \cref{alexander matrix has trivial kernel} implies that image of $A_D$ has dimension $(n-1)$. We will use this knowledge later on to construct the resolution of the Alexander module.
+The \cref{alexander matrix has trivial kernel} implies that image of $A_D^V$ has dimension $(n-1)$. We will use this knowledge later on to construct the resolution of the Alexander module.
 
 \begin{theorem}\label{wyznacznik nie zalezy od diagramu}
   The determinant $\det(A_D')$ is independent of the choice of the diagram $D$
 \end{theorem}
 
-\begin{proof}
+\begin{proof}\color{red}
   If $D$ and $D'$ are two diagrams of knot $K$, then they yield equivalent representations of $G=\pi_1(K)$. Thus, the chain of elementary ideals of $A_D$ and $A_{D'}$ are the same according to Fox \cite[Chapter~VII]{fox} from which immediately follows that the determinants of the maximum minors of $A_D$ and $A_{D'}$ are equal.
 \end{proof}
 
@@ -78,33 +88,60 @@ The Alexander polynomial is a knot invariant as a consequence of \cref{wyznaczni
 \end{proposition}
 
 \begin{proof}
-  Take $R=\Z[\Z]$ and consider its field of fractions $R^{-1}R$. There is an obvious homomorphism $R\to R^{-1}R$ which allows us to work on $A_D$ as if it was a linear map between vector spaces
-  \begin{center}
-    \begin{tikzcd}[column sep=huge]
-      R\otimes_R R^{-1}R \arrow[r, "A_D\otimes_R id_{R^{-1}R}"] & R\otimes_R R^{-1}R
-    \end{tikzcd}
-  \end{center}
-  with $\dim(A_D\otimes_R id_{R^{-1}R})=(n-1)$ as was proven in \cref{alexander matrix has trivial kernel}.
+   \Cref{alexander matrix has trivial kernel} implies that (\ref{resolution vector spaces}) can be extended into the following acyclic complex of vector spaces
+   \begin{center}
+     \begin{tikzcd}[column sep=1cm]
+       0\arrow[r] & R\otimes_R R^{-1}R\arrow[r] & R^n\otimes_R R^{-1}R \arrow[dl, 
+       to path={
+         -- ([xshift=3mm]\tikztostart.east)
+         |- ([xshift=-3mm, yshift=-3mm]\tikztostart.south)
+         -| ([xshift=-3mm]\tikztotarget.west)
+         -- (\tikztotarget.west)
+       }, rounded corners,
+       "A_D^V"] \\ 
+                  & R^{n-1}\otimes_R R^{-1}R\arrow[r] & K_G^{ab}\otimes_RR^{-1}R=0\arrow[r] & 0
+     \end{tikzcd}
+   \end{center}
+   as we proved that $\dim(\im A_D^V)=n-1$.
+  %
+  %
+  % Take $R=\Z[\Z]$ and consider its field of fractions $R^{-1}R$. There is an obvious homomorphism $R\to R^{-1}R$ which allows us to work on $A_D$ as if it was a linear map between vector spaces
+  % \begin{center}
+  %   \begin{tikzcd}[column sep=huge]
+  %     R\otimes_R R^{-1}R \arrow[r, "A_D\otimes_R id_{R^{-1}R}"] & R\otimes_R R^{-1}R
+  %   \end{tikzcd}
+  % \end{center}
+  % with $\dim(A_D\otimes_R id_{R^{-1}R})=(n-1)$ as was proven in \cref{alexander matrix has trivial kernel}.
+  %
+  % Thus, the following is an exact sequence of vector spaces
+  % \begin{center}
+  %   \begin{tikzcd}
+  %     0\arrow[r] & V \arrow[r] & V^n\arrow[r, "A_D'"] & V^{n-1}\arrow[r] & 0
+  %   \end{tikzcd}
+  % \end{center}
+  % where $V=R^{-1}R$ and $A_D'=A_D\otimes_R id_{R^{-1}R}$.
+  %
+  % Now consider the following sequence
+  % \begin{equation}\label{diagramik resolution}
+  %   \begin{tikzcd}
+  %     0\arrow[r] &R\arrow[r] & R^n\arrow[r, "A_D", twoheadrightarrow] & R^{n-1} \arrow[r, twoheadrightarrow] & K_G^{ab}\arrow[r] & 0
+  %   \end{tikzcd}
+  % \end{equation}
+  % The only concerning point is the leftmost arrow as it might not be an injection to $\ker A_D$.
 
-  Thus, the following is an exact sequence of vector spaces
+  The ring of fractions is flat \cite[Chapter~3]{atiyah}. This combined with the ease of obtaining information about the sequence 
   \begin{center}
     \begin{tikzcd}
-      0\arrow[r] & V \arrow[r] & V^n\arrow[r, "A_D'"] & V^{n-1}\arrow[r] & 0
+      0\arrow[r] & \Z[\Z]^1 \arrow[r] & \Z[\Z]^{n}\arrow[r] & \Z[\Z]^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0
     \end{tikzcd}
   \end{center}
-  where $V=R^{-1}R$ and $A_D'=A_D\otimes_R id_{R^{-1}R}$.
+  from (\ref{resolution vector spaces}) implies that the sequence above is exact and is a resolution of $K_G^{ab}$.
 
-  Now consider the following sequence
-  \begin{equation}\label{diagramik resolution}
-    \begin{tikzcd}
-      0\arrow[r] &R\arrow[r] & R^n\arrow[r, "A_D", twoheadrightarrow] & R^{n-1} \arrow[r, twoheadrightarrow] & K_G^{ab}\arrow[r] & 0
-    \end{tikzcd}
-  \end{equation}
-  The only concerning point is the leftmost arrow as it might not be an injection to $\ker A_D$.
 
-  The ring of fractions is flat \cite[Chapter~3]{atiyah}, the module $K_G^{ab}$ is torsion \cref{prop: modul alexandera jest torsyjny} and thus
-  $$K_G^{ab}\otimes_R R^{-1}R=0.$$
-  Because of that, tensoring the sequence (\ref{diagramik resolution}) by $R^{-1}R$ {\large\color{red}induces an isomorphism between homologies of the sequences above}, wherefore it is exact.
+  % the module $K_G^{ab}$ is torsion \cref{prop: modul alexandera jest torsyjny} and thus
+  % $$K_G^{ab}\otimes_R R^{-1}R=0.$$
+
+  % Because of that, tensoring the sequence (\ref{diagramik resolution}) by $R^{-1}R$ {\large\color{red}induces an isomorphism between homologies of the sequences above}, wherefore it is exact.
 %
 %
 %

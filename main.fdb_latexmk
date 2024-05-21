@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1715888528.35901 "main.aux" "main.bbl" "main" 1715888728.8447 0
+["bibtex main"] 1716313771.88765 "main.aux" "main.bbl" "main" 1716313952.61739 0
   "./literatura.bib" 1715859569.44966 1627 ed65d5155ae9e78455ee33cf010a5d1e ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1713199481 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1715888728.52301 8665 7890c443aef7afc3e5af988ccb78310d "pdflatex"
+  "main.aux" 1716313952.3433 8672 74fcecc63cf265e19cc8e6fc75b974b4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1715888723.16611 "main.tex" "main.pdf" "main" 1715888728.8449 0
+["pdflatex"] 1716313947.20002 "main.tex" "main.pdf" "main" 1716313952.61758 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1713199481 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1713199481 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbi1440.tfm" 1713199481 3072 4dda4299ed0d9dcf48c6a8bcfdc499fc ""
@@ -245,17 +245,17 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1713282271 8555701 c7cc5792ebbb83c15db8149537ccf6d1 ""
   "funkcje/matematyka.tex" 1715366838.93811 475 605ae80ee44cb259b6b81c5578d64c11 ""
   "funkcje/twierdzenia.tex" 1715759792.27511 3543 57c3dafbd46635506a38ed7879af22a8 ""
-  "main.aux" 1715888728.52301 8665 7890c443aef7afc3e5af988ccb78310d "pdflatex"
-  "main.bbl" 1715888528.43301 895 70d3e0fa3f3b6c5c06f5ebecfb109d30 "bibtex main"
-  "main.out" 1715888728.52634 2337 a2a943f2f75d2c849d060964d0da6a7b "pdflatex"
+  "main.aux" 1716313952.3433 8672 74fcecc63cf265e19cc8e6fc75b974b4 "pdflatex"
+  "main.bbl" 1716313771.95664 895 70d3e0fa3f3b6c5c06f5ebecfb109d30 "bibtex main"
+  "main.out" 1716313952.3433 2337 a2a943f2f75d2c849d060964d0da6a7b "pdflatex"
   "main.tex" 1715886034.31633 4090 5b1b81e6741863ccf188eb8c32d928c4 ""
-  "main.toc" 1715888728.52634 1191 1ad5fdec2b5859b0fabe098149c7e68c "pdflatex"
+  "main.toc" 1716313952.3433 1191 1ad5fdec2b5859b0fabe098149c7e68c "pdflatex"
   "preamble.tex" 1715797215.9787 1195 91900d907e83385ebc9b83cdc75f5975 ""
   "rozdzialy/01-01_knots_diagrams.tex" 1715859569.44966 2866 621c233f663efec790b207a1e3855e52 ""
   "rozdzialy/01-02_group_knot.tex" 1715804686.68169 3443 af8d30733eb0ce637a6d3881308e6050 ""
   "rozdzialy/01-03_infinite_cyclic.tex" 1715808356.61486 4673 112468481eaa9eafc765cdb6118e62c1 ""
-  "rozdzialy/02-01_definicja.tex" 1715807952.66821 2666 d57cb8703cfeda3897ffb80d1893ae88 ""
-  "rozdzialy/02-02-resolution.tex" 1715859569.45299 7469 94d6ea02bd3da238da11eb847215ac6d ""
+  "rozdzialy/02-01_definicja.tex" 1716311778.02333 3000 278e034847940a0bc6ae52b34f213c4f ""
+  "rozdzialy/02-02-resolution.tex" 1716313946.9733 9787 3d6301518b59c7016f6a94eaab2bce25 ""
   "rozdzialy/02-03-coloring_resolution.tex" 1715868622.62609 2046 31a820d6ba7ccca81353f27907c6c50d ""
   "rozdzialy/03-01-coloring_definition.tex" 1715885910.49966 2738 ecab31bdc2d566c1ff4c2f828f9c891f ""
   "rozdzialy/03-02-color_checking_matrix.tex" 1715868887.41275 9244 d9dd3cfcdb4f21433789bc693c532248 ""
