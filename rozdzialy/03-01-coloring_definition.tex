@@ -17,13 +17,14 @@ Let $K$ be a knot and $D$ be its oriented diagram with $s$ segments and $x$ cros
 Take a commutative ring with unity $R$ and an $R$-module $M$.
 
 \begin{definition}[coloring rule]
-  Take $\mathcal{C}\subseteq M^3$ to be a finitely generated submodule of $M^3$. We will call $\mathcal{C}$ a \buff{coloring rule}. There are two submodules $\mathcal{C}_\pm\subseteq \mathcal{C}$, each corresponding to a type of crossing in diagram $D$. 
+  Take $\mathcal{C}\subseteq M^3\oplus M^3$ to be a module such that there exists two modules $\mathcal{C}_\pm\subseteq M^3$ for which $\mathcal{C}=\mathcal{C}_+\oplus \mathcal{C}_-$. We will call $\mathcal{C}$ a \buff{coloring rule}. The two submodules $\mathcal{C}_\pm$ each correspond to a type of crossing in diagram $D$.
+  % There are two submodules $\mathcal{C}_\pm\subseteq \mathcal{C}$, $C=C_++C_-$, each corresponding to a type of crossing in diagram $D$. 
 \end{definition}
 
-We can now construct two homomorphisms
+We can now construct a pair of homomorphisms
 % $$\phi:M^3\to M/\mathcal{C}=N$$
-$$\phi_\pm:M^3\to M/\mathcal{C}_\pm=N_\pm.$$
-We will call $\phi_\pm$ and $\mathcal{C}$ \buff{coloring rule} interchangeably.
+$$\phi_\pm:M^3\to M/\mathcal{C}_\pm=N_\pm,$$
+cumulatively referred to as $\phi$. We will call $\phi$ and $\mathcal{C}$ \buff{coloring rule} interchangeably.
 
 %Take a commutative ring with unity $R$ and two $R$-modules $M$ and $N$. Take two arbitrary module homomorphisms $\phi_+:M^3\to N$ and $\phi_-:M^3\to N$, one for each type of crossing.
 
@@ -34,7 +35,7 @@ We will call $\phi_\pm$ and $\mathcal{C}$ \buff{coloring rule} interchangeably.
 
 For each crossing $x_j$ in diagram $D$ we can construct a projection 
 $$\pi_{x_j}:M^s\twoheadrightarrow M^3$$
-which restricts $M^s$ to the three arcs that constitute $x_j$.
+which restricts $M^s$ to the three (or two, in which case one coordinate is zero) arcs that constitute $x_j$.
 
 \begin{definition}[diagram coloring]
   A \buff{coloring of diagram} $D$ is any element $(m_1,..., m_s)\in M^s$ that assigns elements of $M$ to each arc. We will call this coloring \buff{admissible} if for every crossing $x_j$ of type $\pm$ we have 
@@ -43,8 +44,8 @@ which restricts $M^s$ to the three arcs that constitute $x_j$.
 
 % It is easy to express admissibility of a coloring in terms of homomorphism $\phi$.
 
-It will be beneficial to express admissibility of a coloring in terms of homomorphism $\phi$.
-\begin{proposition}
+It will be beneficial to express admissibility of a coloring in terms of homomorphisms $\phi$.
+\begin{proposition}\label{proposition male kernel kolorowania}
   A coloring $(m_1,..., m_s)\in M^s$ is a admissible $\iff$ for each crossing $x_j$ of type $\pm$ 
   $$\phi_\pm(\pi_{x_j}(m_1,...,m_s))=0.$$
 \end{proposition}

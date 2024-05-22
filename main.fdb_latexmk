@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1716313771.88765 "main.aux" "main.bbl" "main" 1716321159.89037 0
+["bibtex main"] 1716390240.07645 "main.aux" "main.bbl" "main" 1716390252.1451 0
   "./literatura.bib" 1715858067.59145 1627 ed65d5155ae9e78455ee33cf010a5d1e ""
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1713199481 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1716321159.66678 8672 74fcecc63cf265e19cc8e6fc75b974b4 "pdflatex"
+  "main.aux" 1716390251.96244 9141 7cb45cc1cd1583e0c683563342be2973 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1716321155.04516 "main.tex" "main.pdf" "main" 1716321159.89059 0
+["pdflatex"] 1716390247.09527 "main.tex" "main.pdf" "main" 1716390252.14524 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1713199481 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1713199481 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbi1440.tfm" 1713199481 3072 4dda4299ed0d9dcf48c6a8bcfdc499fc ""
@@ -15,6 +15,8 @@
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1713199481 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx2074.tfm" 1713199481 3584 7666d038713b9e38abb5c2e0f6972188 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx2488.tfm" 1713199481 3584 0181dbc4d429c3ba4e30feba37b5df96 ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm" 1713199481 3584 cf973739aac7ab6247f9150296af7954 ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1713199481 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1713199481 3584 3169d30142b88a27d4ab0e3468e963a2 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm" 1713199481 3584 3c76ccb63eda935a68ba65ba9da29f1a ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm2074.tfm" 1713199481 3584 8e2870ec7aa9776f59654942b0923f51 ""
@@ -245,22 +247,22 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1713289058 8555702 9e2d7da320f575dd3e2cd17fdf70cbc5 ""
   "funkcje/matematyka.tex" 1713704321.71921 475 605ae80ee44cb259b6b81c5578d64c11 ""
   "funkcje/twierdzenia.tex" 1715701323.45736 3543 57c3dafbd46635506a38ed7879af22a8 ""
-  "main.aux" 1716321159.66678 8672 74fcecc63cf265e19cc8e6fc75b974b4 "pdflatex"
-  "main.bbl" 1715859185.54305 895 70d3e0fa3f3b6c5c06f5ebecfb109d30 "bibtex main"
-  "main.out" 1716321159.66678 2337 a2a943f2f75d2c849d060964d0da6a7b "pdflatex"
-  "main.tex" 1716321150.81349 4066 a092420296f60b11f9e5e677a30e7aa6 ""
-  "main.toc" 1716321159.66678 1191 1ad5fdec2b5859b0fabe098149c7e68c "pdflatex"
+  "main.aux" 1716390251.96244 9141 7cb45cc1cd1583e0c683563342be2973 "pdflatex"
+  "main.bbl" 1716390240.11599 895 70d3e0fa3f3b6c5c06f5ebecfb109d30 "bibtex main"
+  "main.out" 1716390251.96578 2380 626e9f2dfd9027b1a1c0463cf7f926be "pdflatex"
+  "main.tex" 1716387566.37524 4188 c89af7b72bb1e3fd14cf7e92e5f23c3d ""
+  "main.toc" 1716390251.96578 1199 95211812d8530346d956c551613d1262 "pdflatex"
   "preamble.tex" 1715773578.16408 1195 91900d907e83385ebc9b83cdc75f5975 ""
   "rozdzialy/01-01_knots_diagrams.tex" 1715853095.97625 2866 621c233f663efec790b207a1e3855e52 ""
   "rozdzialy/01-02_group_knot.tex" 1715852998.7402 3443 af8d30733eb0ce637a6d3881308e6050 ""
   "rozdzialy/01-03_infinite_cyclic.tex" 1715852998.7402 4673 112468481eaa9eafc765cdb6118e62c1 ""
   "rozdzialy/02-01_definicja.tex" 1716319978.03525 3000 278e034847940a0bc6ae52b34f213c4f ""
   "rozdzialy/02-02-resolution.tex" 1716319978.03525 9787 3d6301518b59c7016f6a94eaab2bce25 ""
-  "rozdzialy/02-03-coloring_resolution.tex" 1716319978.03525 2046 31a820d6ba7ccca81353f27907c6c50d ""
-  "rozdzialy/03-01-coloring_definition.tex" 1716319978.03525 2738 ecab31bdc2d566c1ff4c2f828f9c891f ""
-  "rozdzialy/03-02-color_checking_matrix.tex" 1716319978.03525 9244 d9dd3cfcdb4f21433789bc693c532248 ""
-  "rozdzialy/03-03-wyliczenie_relacji.tex" 1716319978.03525 6542 1955e42ebf0d7c3ca216168d8052fd79 ""
-  "rozdzialy/smith_normal.tex" 1715701048.91778 11986 6bb10a2080cdca848665d25374926561 ""
+  "rozdzialy/02-03-coloring_resolution.tex" 1716386743.9756 2046 31a820d6ba7ccca81353f27907c6c50d ""
+  "rozdzialy/03-01-coloring_definition.tex" 1716382261.46897 3078 143c38813bc653ac8af0b1a15a973f6f ""
+  "rozdzialy/03-02-color_checking_matrix.tex" 1716387078.74383 11828 5f3fe23facf318a9ffa59513f43849c3 ""
+  "rozdzialy/03-03-wyliczenie_relacji.tex" 1716387380.83925 6542 46b1f46d91e091b51fc66838aafd71ec ""
+  "rozdzialy/03-04-reduced-smith-normal.tex" 1716390246.73254 12111 3ceb58c930bb086f37b6f36a16cff842 ""
   "rozdzialy/theorem_reduced_normal_is_invariant.tex" 1714489150.18456 4715 d33cf4e674a45292f95efcf9bc18c00c ""
   (generated)
   "main.aux"
