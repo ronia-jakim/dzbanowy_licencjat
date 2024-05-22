@@ -1,0 +1,27 @@
+We will work towards defining a category of palettes for a chosen knot $K$. This will allow us to change rules of colorings as we see fit.
+
+\begin{definition}[palette]
+  Let $R$ be a commutative ring with unity, $M$ a finitely generated $R$-module and $\mathcal{C}\subseteq M^3\oplus M^3$ to be a coloring rule confomring to all rules outlined in the previous section. We say that a triplet $(R, M, \mathcal{C})$ is a \buff{palette}.
+\end{definition}
+
+Notice that if there is a ring homomorphism $f:R\to S$ then we can consider $M$ as a $S$ module by tensoring with $S$. This allows us to write a morphism between palettes
+$$\overline{f}:(R, M, \mathcal{C})\to (S, M_S, \mathcal{C}_S).$$
+Similarly, if there is a module homomorphism $g:M\to M'$, then the induced morphism of palettes is
+$$\overline{g}:(R, M, \mathcal{C})\to (R, M', \mathcal{C}').$$
+
+\begin{definition}[category of palettes for knot $K$]
+  We define $\mathcal{Col}(K)$ to be a category of palettes of $K$ with 
+  $$\text{Ob}(\mathcal{Col}(K))=\{(R, M, \mathcal{C})\}$$
+  being all palettes and for any two palettes
+  $$\Hom((R, M, \mathcal{C}), (R, N, \mathcal{K}))=\{\overline{g}\;:\;g:M\to N\}$$
+\end{definition}
+
+Fixing the ring $R$ hints at $(R, 0, 0)$ being a trivial palette and products and coproducts of palettes being defined by their modules:
+$$(R, M, \mathcal{C})\oplus (R, N, \mathcal{K}):=(R, M\oplus N, \mathcal{C}\oplus \mathcal{K}).$$
+
+\begin{conjecture}
+  A category of palettes over a fixed ring $R$, $\mathcal{Col}_R(K)$ is Abelian.
+\end{conjecture}
+
+
+

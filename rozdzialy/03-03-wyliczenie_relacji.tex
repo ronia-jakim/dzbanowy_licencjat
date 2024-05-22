@@ -1,5 +1,7 @@
 The color checking matrix, defined in \cref{def:color checking matrix}, is not a knot invariant. Its size and structure changes as Reidemeister moves are applied to the diagram. Thus, we need to define which matrices stem from equivalent knot diagrams.
 
+For the time being the diagram $D$ has $s$ segments and $x$ crossings. Although only knots are considered in this paper, it is possible to expand definitions of color checking matrices and relations on them to links.
+
 \subsection*{\centering R1}
 
 \begin{center}
@@ -83,6 +85,11 @@ $$
 $$
 where $(\forall\;i=1,...,x)\;x_i=0\;\lor y_i=0$.
 
+Notice, that if the propagation rule that was outlined at the beginning of this section is to be true, one must have
+$$0=a+b+c=a+b-1\implies a=1-b$$
+$$0=\alpha+\beta+\gamma=\alpha+\beta-1\implies \alpha=1-\beta,$$
+as the two segments in both $D'$ must admit coloring with one element from $M$. This puts further restrictions on coloring rules.
+
 \subsection*{\centering R2}
 
 \begin{center}
@@ -142,6 +149,13 @@ $$
 \end{matrix}
 $$
 where $(\forall\; i=1,...,x)\;x_i=0\;\lor z_i=0$.
+
+Once more, if the propagation property of coloring is to be upheld, then 
+$$\begin{cases}
+  a\beta+\alpha =0 \\ 
+  \beta b=1
+\end{cases}$$
+meaning that $x$ and $z$ can be colored with one element from $M$.
 
 \subsection*{\centering R3}
 

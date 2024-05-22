@@ -3,8 +3,8 @@
 \end{theorem}
 
 \begin{proof}
-  \marginnote{nie wiem, czy tutaj aż tak powinno się dokładnie mówić co i jak dodaję?} % TO DO
-Take a knot $K$ and its diagram $D$ with $s$ segments and $x$ crossings. We will show that applying any Reidemeister move to this knot will not change the reduced normal form of its color checking matrix.
+  % \marginnote{nie wiem, czy tutaj aż tak powinno się dokładnie mówić co i jak dodaję?} % TO DO
+Take a knot $K$ and its diagram $D$ with $n$ segments and $n$ crossings. We will start by showing that applying any Reidemeister move to obtain a new diagram $D'$ will not change the reduced normal form of its color checking matrix.
 
   \subsection*{\centering R1}
 
@@ -145,5 +145,7 @@ Take a knot $K$ and its diagram $D$ with $s$ segments and $x$ crossings. We will
   \end{bmatrix}
   $$
   which makes clear that those matrices have the same reduced normal form as $b$ and $\beta$ were taken to be units.
+
+  Notice that if $A\sim B$ and $B\sim C$, where $\sim$ means having the same reduced Smith normal form, then $A\sim C$. Thus, if two knots differ by a finite sequence of Reidemeister moves (as is the case for different diagrams of the same knot), then their reduced Smith normal forms are equal.
 
 \end{proof}

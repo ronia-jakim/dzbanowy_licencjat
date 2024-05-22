@@ -21,6 +21,9 @@
 % \definecolor{orange}{HTML}{000000}
 % \definecolor{green}{HTML}{000000}
 
+% \includeonly{rozdzialy/04-00-category.tex}
+% \includeonly{wstep.tex}
+
 \begin{document}
 \maketitle
 \bigskip
@@ -29,53 +32,106 @@
   \large
   \textbf{Promotor:} prof. Tadeusz Januszkiewicz
 \end{center}
-\vspace{30pt}
+\vspace{10pt}
 
 \begin{center}
-  \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
-    %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
+\scalebox{0.7}{
+    \begin{tikzpicture}
+      \coordinate (a1) at (90:5);
+      \coordinate (a2) at (40:3);
+      \coordinate (a3) at (-40:3);
+      \coordinate (a4) at (-90:5);
+      \coordinate (a5) at (-160:3.5);
+      \coordinate (a6) at (40:1);
+      \coordinate (a7) at (20:6);
+      \coordinate (a8) at (80:3);
+      \coordinate (a9) at (180+25:1);
+      \coordinate (a10) at (130:4);
+      \coordinate (a11) at (180:5);
+      \coordinate (a12) at (-90:3);
+      \coordinate (a13) at (-10:6);
+      \coordinate (a14) at (110:2);
+      \coordinate (a15) at (110:5);
 
-    \coordinate (a0) at (0,0);
-    \coordinate (a1) at (90:5);
-    \coordinate (a2) at (45:3);
-    \coordinate (a3) at (-40:4.6);
-    \coordinate (a4) at (-120:2.4);
-    \coordinate (a5) at (10:0.7);
-    \coordinate (a6) at (50:5);
-    \coordinate (a7) at (90:3.5);
-    \coordinate (a8) at (180-50:5);
-    \coordinate (a9) at (170:0.7);
-    \coordinate (a10) at (-70:2.4);
-    \coordinate (a11) at (220:4.6);
-    \coordinate (a12) at (180-45:3);
+      % \foreach \i in {1,..., 15} \fill (a\i) circle (5pt);
 
-    %\foreach \i in {0,...,12} \fill (a\i) circle (2pt);
-
-    \begin{knot}[
-      clip width=20,
-      flip crossing=1,
-      flip crossing=3,
-      flip crossing=6
-      ]
-      \strand[thick] (a1) to[out=0, in=90+45] (a2) to[out=-45, in=40] (a3);
-      \strand[thick] (a3) to[out=220, in=-90] (a4) to[out=90, in=200] (a5);
-      \strand[thick] (a5) to[out=20, in=-30] (a6);
-      \strand[thick] (a6) to[out=150, in=5] (a7);
-      \strand[thick] (a7) to[out=175, in=30] (a8);
-      \strand[thick] (a8) to[out=210, in=160] (a9);
-      \strand[thick] (a9) to[out=-20, in=90] (a10);
-      \strand[thick] (a10) to[out=-90, in=-40] (a11);
-      \strand[thick] (a11) to[out=140, in=180+45] (a12);
-      \strand[thick] (a12) to[out=45, in=180] (a1);
-    \end{knot}
-  \end{tikzpicture}
+      \begin{knot}[
+        consider self intersections, 
+        clip width = 20pt, 
+        % draft mode=crossings, 
+        flip crossing=1, 
+        flip crossing=3, 
+        flip crossing=8, 
+        flip crossing=4, 
+        flip crossing=7, 
+        flip crossing=10, 
+        flip crossing=9
+        ]
+        \strand[thick] (a1) to[out=0, in=90] 
+        (a2) to[out=-90, in=90] 
+        (a3) to[out=-90, in=0] 
+        (a4) to[out=180, in=-120]
+        (a5) to[out=60, in=150]
+        (a6) to[out=-30, in=-90] 
+        (a7) to[out=90, in=90, looseness=2] 
+        (a8) to[out=-90, in=30]
+        (a9) to[out=-150, in=-60]
+        (a10) to[out=120, in=90] 
+        (a11) to[out=-90, in=180]
+        (a12) to[out=0, in=-90] 
+        (a13) to[out=90, in=20, looseness=1.5]
+        (a14) to[out=-160, in=200, looseness=2]
+        (a15) to[out=20, in=180] 
+        (a1);
+      \end{knot}
+    \end{tikzpicture}
+    % \caption{A diagram for knot $K11n164$.\label{k11n164 diagram}}
+}
 \end{center}
+
+% \begin{center}
+%   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
+%     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
+%
+%     \coordinate (a0) at (0,0);
+%     \coordinate (a1) at (90:5);
+%     \coordinate (a2) at (45:3);
+%     \coordinate (a3) at (-40:4.6);
+%     \coordinate (a4) at (-120:2.4);
+%     \coordinate (a5) at (10:0.7);
+%     \coordinate (a6) at (50:5);
+%     \coordinate (a7) at (90:3.5);
+%     \coordinate (a8) at (180-50:5);
+%     \coordinate (a9) at (170:0.7);
+%     \coordinate (a10) at (-70:2.4);
+%     \coordinate (a11) at (220:4.6);
+%     \coordinate (a12) at (180-45:3);
+%
+%     %\foreach \i in {0,...,12} \fill (a\i) circle (2pt);
+%
+%     \begin{knot}[
+%       clip width=20,
+%       flip crossing=1,
+%       flip crossing=3,
+%       flip crossing=6
+%       ]
+%       \strand[thick] (a1) to[out=0, in=90+45] (a2) to[out=-45, in=40] (a3);
+%       \strand[thick] (a3) to[out=220, in=-90] (a4) to[out=90, in=200] (a5);
+%       \strand[thick] (a5) to[out=20, in=-30] (a6);
+%       \strand[thick] (a6) to[out=150, in=5] (a7);
+%       \strand[thick] (a7) to[out=175, in=30] (a8);
+%       \strand[thick] (a8) to[out=210, in=160] (a9);
+%       \strand[thick] (a9) to[out=-20, in=90] (a10);
+%       \strand[thick] (a10) to[out=-90, in=-40] (a11);
+%       \strand[thick] (a11) to[out=140, in=180+45] (a12);
+%       \strand[thick] (a12) to[out=45, in=180] (a1);
+%     \end{knot}
+%   \end{tikzpicture}
+% \end{center}
 
 \newpage
 
-%\input{./rozdzialy/temp.tex}
-
-% \input{rozdzialy/old/plan.tex}
+\include{wstep.tex}
 
 \newpage
 
@@ -83,68 +139,13 @@
 
 \newpage
 
-\section{Preliminaries}
+\include{rozdzialy/01-00-preliminaries.tex}
 
-\subsection{Knots and diagrams}
+\include{rozdzialy/02-00-resolution.tex}
 
-\input{rozdzialy/01-01_knots_diagrams.tex}
+\include{rozdzialy/03-00-colorings.tex}
 
-\subsection{Knot group}
-
-\input{rozdzialy/01-02_group_knot.tex}
-
-\subsection{Infinite cyclic covering}
-
-\input{rozdzialy/01-03_infinite_cyclic.tex}
-
-\section{Resolution of the Alexander module}
-\label{section2}
-
-\subsection{Alexander module}
-\label{alexander module discussion}
-
-\input{rozdzialy/02-01_definicja.tex}
-
-\subsection{Basic properties}
-
-\input{rozdzialy/02-02-resolution.tex}
-
-\subsection{A homological roots of diagram colorings}
-\label{homological coloring}
-
-\input{rozdzialy/02-03-coloring_resolution.tex}
-
-\section{Knot colorings}
-
-\subsection{Diagram colorings}
-
-\input{rozdzialy/03-01-coloring_definition.tex}
-
-\subsection{Color checking matrix}
-
-\input{rozdzialy/03-02-color_checking_matrix.tex}
-
-\subsection{Relation on color checking matrices}
-
-\input{rozdzialy/03-03-wyliczenie_relacji.tex}
-
-\subsection{Reduced Smith normal form}
-
-% \input{rozdzialy/relacje_macierz.tex}
-
-% \input{rozdzialy/relations_reidemeister_diagrams.tex}
-%\input{rozdzialy/relacje_macierz_wyliczenie.tex}
-% \input{rozdzialy/smith_normal.tex}
-
-\input{rozdzialy/03-04-reduced-smith-normal.tex} 
-
-\section{A look at category theory}
-
-% \input{./rozdzialy/knot_coloring.tex}
-%
-% \input{./rozdzialy/coloring_oriented.tex}
-%
-% \input{./rozdzialy/reduced_normal_form.tex}
+\include{rozdzialy/04-00-category.tex}
 
 \bibliographystyle{plain}
 \bibliography{literatura}

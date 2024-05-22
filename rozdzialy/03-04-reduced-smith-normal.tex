@@ -56,7 +56,53 @@ Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith nor
 The following example justifies the utility of the reduced normal form of color checking matrices in distinguishing knots.
 
 \begin{example} 
-  Consider the knots $K11n85$ and $K11n164$ pictured in \cref{k11n164 diagram}
+  \begin{figure}[h]\centering 
+    \begin{tikzpicture}
+      \coordinate (a1) at (90:6);
+      \coordinate (a2) at (0: 2);
+      \coordinate (a3) at ($(-90:5.5)+(4, 0)$);
+      \coordinate (a4) at (-80:2);
+      \coordinate (a5) at (-90:5.5);
+      \coordinate (a6) at (-10:5);
+      \coordinate (a7) at (30:7);
+      \coordinate (a8) at (180:2.5);
+      \coordinate (a9) at (-90:3.5);
+      \coordinate (a10) at (-10:7);
+      \coordinate (a11) at (110:2);
+
+      % \foreach \i in {1,..., 11} \fill (a\i) circle (5pt);
+
+      \begin{knot}[
+        consider self intersections, 
+        clip width = 20pt,
+        % draft mode=crossings, 
+        ignore endpoint intersections=false,
+        flip crossing=1, 
+        flip crossing=3,
+        flip crossing=4, 
+        flip crossing=5, 
+        flip crossing=7, 
+        flip crossing=11, 
+        flip crossing=12, 
+        flip crossing=9
+        ]
+        \strand[thick] (a1) to[out=-30, in=90] 
+        (a2) to[out=-90, in=200] 
+        (a3) to[out=20, in=0, looseness=2]
+        (a4) to[out=180, in=180, looseness=2] 
+        (a5) to[out=0, in=-100] 
+        (a6) to[out=80, in=-60] 
+        (a7) to[out=120, in=90]
+        (a8) to[out=-90, in=180] 
+        (a9) to[out=0, in=-90, looseness=2] 
+        (a10) to[out=90, in=0]
+        (a11) to[out=180, in=150, looseness=1.5]
+        (a1);
+      \end{knot}
+    \end{tikzpicture}
+    \caption{A diagram for knot $K11n85$.\label{k11n85 diagram}}
+  \end{figure}
+
   \begin{figure}[h]\centering 
     \begin{tikzpicture}
       \coordinate (a1) at (90:5);
@@ -109,183 +155,29 @@ The following example justifies the utility of the reduced normal form of color 
     \end{tikzpicture}
     \caption{A diagram for knot $K11n164$.\label{k11n164 diagram}}
   \end{figure}
-
-  %   Consider the knots $6_1$ with diagram as seen in \cref{fig:6_1:knot} and $9_{46}$ pictured in \cref{fig:9_46:knot}, ring $R=\Z[t, t^{-1}]$, $M=R$ and 
-%   $$\begin{cases}
-%     \phi_+(u, i, o)=(1-t)u+ti-o\\ 
-%     \phi_-(u,i,o)=(1-t^{-1})u+t^{-1}i-o.
-%   \end{cases}$$ 
-%   The two rings have the same Alexander polynomial, $\Delta=-2t^{-2}+5t^{-1}-2$, and the same Alexander module $H^1(S^3-K)=\Z[t, t^{-1}]/(\Delta)$.
-%
-%
-%   For the knot $6_1$ we find the matrix $D\phi$ and after changing to the $PID$ ring $P=\Q[t, t^{-1}]$ we see that the Smith normal form is:
-% \begin{figure}[h]\centering
-%   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
-%     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
-%
-%     \coordinate (a0) at (0,0);
-%     \coordinate (a1) at (90:5);
-%     \coordinate (a2) at (45:3);
-%     \coordinate (a3) at (-40:4.6);
-%     \coordinate (a4) at (-120:2.4);
-%     \coordinate (a5) at (10:0.7);
-%     \coordinate (a6) at (50:5);
-%     \coordinate (a7) at (90:3.5);
-%     \coordinate (a8) at (180-50:5);
-%     \coordinate (a9) at (170:0.7);
-%     \coordinate (a10) at (-70:2.4);
-%     \coordinate (a11) at (220:4.6);
-%     \coordinate (a12) at (180-45:3);
-%
-%     %\foreach \i in {0,...,12} \fill (a\i) circle (2pt);
-%
-%     \begin{knot}[
-%       clip width=20, 
-%       flip crossing=1,
-%       flip crossing=3,
-%       flip crossing=6
-%       ]
-%       \strand[thick, ->] (a1) to[out=0, in=90+45] (a2) to[out=-45, in=40] (a3);
-%       \strand[thick, ->] (a3) to[out=220, in=-90] (a4) to[out=90, in=200] (a5);
-%       \strand[thick, ->] (a5) to[out=20, in=-60] (a6);
-%       \strand[thick, ->] (a6) to[out=150, in=5] (a7);
-%       \strand[thick, ->] (a7) to[out=170, in=20] (a8);
-%       \strand[thick, ->] (a8) to[out=240, in=160] (a9);
-%       \strand[thick, ->] (a9) to[out=-20, in=90] (a10);
-%       \strand[thick, ->] (a10) to[out=-90, in=-40] (a11);
-%       \strand[thick, ->] (a11) to[out=140, in=180+45] (a12);
-%       \strand[thick, ->] (a12) to[out=45, in=180] (a1);
-%     \end{knot}
-%
-%     %\node at (80: 5) {$A$};
-%     %\node at (-40:4) {$B$};
-%     %\node at (45:5.5) {$C$};
-%     %\node at (135:5.5) {$D$};
-%     %\node at (-1.5,0.1) {$E$};
-%     %\node at (220:4) {$F$};
-%     %
-%     %\node[bgnd] at (70:4.7) {$1$};
-%     %\node[bgnd] at (25:3.9) {$2$};
-%     %\node[bgnd] at (-90:3) {$3$};
-%     %\node[bgnd] at (90:0.5) {$4$};
-%     %\node[bgnd] at (110:4.7) {$5$};
-%     %\node[bgnd] at (180-25:3.9) {$6$};
-%
-%     %\draw[dashed] (70: 4) circle (0.4);
-%     %\draw[dashed] (28: 3.1) circle (0.4);
-%     %\draw[dashed] (-90:3.5) circle (0.4);
-%     %\draw[dashed] (-90:0.15) circle (0.4);
-%     %\draw[dashed] (180-28:3.1) circle (0.4);
-%     %\draw[dashed] (110:4) circle (0.4);
-%   \end{tikzpicture}
-%   \caption{\label{fig:6_1:knot}Diagram of knot $6_1$.}
-% \end{figure}
-% $$A=\begin{pmatrix}
-%   -1 & 0 & 0 & 0 & 0 & 0 \\ 
-%   0 & -1 & 0 & 0 & 0 & 0 \\ 
-%   0 & 0 & t & 0 & 0 & 0 \\ 
-%   0 & 0 & 0 & t & 0 & 0 \\ 
-%   0 & 0 & 0 & 0 & -2t^{-2}+5t^{-1}-2 & 0 \\ 
-%   0 & 0 & 0 & 0 & 0 & 0 
-% \end{pmatrix}$$
-% which after reduction is
-% $$A'=
-% \begin{pmatrix}
-%   -2t^{-2}+5t^{-1}-2
-% \end{pmatrix}
-% $$
-% a $1\times 1$ matrix with the only term being the Alexander polynomial of $6_1$.
-%
-% Using diagram in \cref{fig:9_46:knot} of $9_{46}$ it can be calculated that the Smith normal form of $D\phi$ is
-% \begin{figure}[h]\centering
-%   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
-%     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
-%
-%     \coordinate (a0) at (0,0);
-%     \coordinate (a1) at (60:5);
-%     \coordinate (a2) at (150:3);
-%     \coordinate (a3) at (-110:2.5);
-%     \coordinate (a4) at (-60:6);
-%     \coordinate (a5) at (30:1.5);
-%     \coordinate (a6) at (200:0.8);
-%     \coordinate (a7) at (170:5);
-%     \coordinate (a8) at (120:5);
-%     \coordinate (a9) at (30:3);
-%     \coordinate (a10) at (-70:2.5);
-%     \coordinate (a11) at (180+60:6);
-%     \coordinate (a12) at (150:1.5);
-%     \coordinate (a13) at (-20:0.8);
-%     \coordinate (a14) at (10:5);
-%
-%     %\foreach \i in {0,...,14} \fill (a\i) circle (2pt);
-%
-%     \begin{knot}[
-%       clip width=20, 
-%       consider self intersections,
-%       ignore endpoint intersections=false,
-%       %draft mode=crossings,
-%       flip crossing=1,
-%       flip crossing=4,
-%       flip crossing=7, 
-%       flip crossing=9
-%       ]
-%       \strand[thick, ->] 
-%         (a1) to [out=180, in=30]
-%         (a2) to [out=210, in=150]
-%         (a3);
-%       \strand[thick, ->]
-%         (a3) to [out=-30, in=180] 
-%         (a4) to [out=0, in=-15, looseness=1.5] 
-%         (a5);
-%       \strand[thick, ->]
-%         (a5) to [out=170, in=30] 
-%         (a6) to [out=220, in=-90] 
-%         (a7);
-%       \strand[thick, ->]
-%         (a7) to [out=90, in=180, looseness=1.3] 
-%         (a8) to [out=0, in=150] 
-%         (a9);
-%       \strand[thick, ->]
-%         (a9) to [out=-30, in=30]
-%         (a10) to [out=210, in=0] 
-%         (a11);
-%       \strand[thick, ->]
-%         (a11) to [out=180, in=180+15, looseness=1.5] 
-%         (a12) to [out=10, in=150]
-%         (a13);
-%       \strand[thick, ->]
-%         (a13) to [out=-40, in=-90]
-%         (a14) to [out=90, in=0, looseness=1.3]
-%         (a1);
-%       \fill[yellow] (-10:3.7) circle (6pt);
-%     \end{knot}
-%   \end{tikzpicture}
-%   \caption{\label{fig:9_46:knot}Diagram of knot $9_{46}$.}
-% \end{figure}
-% $$B=\begin{pmatrix}
-%   1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
-%   0 & t^{-1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
-%   0 & 0 & t^{-1} & 0 & 0 & 0 & 0 & 0 & 0\\ 
-%   0 & 0 & 0 & t  & 0 & 0 & 0 & 0 & 0 \\ 
-%   0 & 0 & 0 & 0 & t  & 0 & 0 & 0 & 0 \\ 
-%   0 & 0 & 0 & 0 & 0 & t  & 0 & 0 & 0\\ 
-%   0 & 0 & 0 & 0 & 0 & 0 & 2t-t^2 & 0 & 0 \\ 
-%   0 & 0 & 0 & 0 & 0 & 0 & 0 & t^{-2}-2t^{-1} & 0\\ 
-%   0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
-% \end{pmatrix},$$
-% while reduced normal form of $D\phi$ is
-% $$B'=
-% \begin{pmatrix}
-%   2t-t^2 & 0 \\ 
-%   0      & t^{-2}-2t^{-1}
-% \end{pmatrix}
-% $$
-% which is significantly different than the one for $6_1$. Observe also that the determinant of both matrices is equal to the Alexander polynomial of corresponding knots 
-% $$\det(A')=-2+5t^{-1}-2t^{-2}$$
-% $$\det(B')=(2t-t^2)(t^{-2}-2t^{-1})=2t+2+2t^{-1}=-t(-2+5t^{-1}-2t^{-2}).$$
-% \marginnote{to wyliczenie wogóle jest na miejscu?} % TO DO
+  Consider the knots $K11n85$ and $K11n164$ pictured in \cref{k11n85 diagram,k11n164 diagram}. They both have the Alexander polynomial equal 
+  $$
+  \Delta(t)=-t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}.
+  $$
+  Coloring them over ring $\Z[\Z]$ with module $M=\Z[\Z]$ and coloring rules
+  $$
+  \phi_+(u, i, o)=(1-t)u+tb-o
+  $$
+  $$
+  \phi_-(u,i,o)=(1-t^{-1})y+t^{-1}b-o
+  $$
+  yields two $11\times 11$ matrices whose any $10\times 10$ minor is equal to the Alexander polynomial (up to multiplication by a unit). However, the reduced Smith normal form are 
+  $$D_{11n85}\phi=\begin{bmatrix}
+    -t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}
+  \end{bmatrix}$$
+  $$
+  D_{11n164}\phi=\begin{bmatrix}
+    1-t+t^2 & 0 \\ 
+    0 & -t^{-1}+4-5t+4t^2-t^3
+  \end{bmatrix}
+  $$
 \end{example}
 
-% {\large\color{red}TO DO: sprawdzić te węzły wyżej za pomocą pow. Seiferta, czy mają różne moduły Alexandera}
+Having witnessed the utility of the reduced normal form of a coloring matrix we proceed to show that it is in fact a knot invariant.
 
 \input{./rozdzialy/theorem_reduced_normal_is_invariant.tex}
