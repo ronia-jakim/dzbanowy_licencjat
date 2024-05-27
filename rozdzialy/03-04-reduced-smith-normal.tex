@@ -22,7 +22,7 @@ As was mentioned in the first section, $\overline{x}\in M^n$ is a coloring of a 
 
 Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $P/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood. Meaning that kernel became bigger and more colorings are admissible over $P/(a)$.
 
-\begin{definition}[reduced normal form of matrix]
+\begin{definition}[reduced normal form of matrix]\label{reduced normal form def}
   Take $A$ to be a matrix with coefficients in principal ideal domain $P$. Take $a_1,...,a_k\in P$ to be all the elements of the Smith normal form of $A$ that are neither zero nor invertible. Consider a new square matrix 
   $$
   \begin{bmatrix}
@@ -55,7 +55,7 @@ Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith nor
 
 The following example justifies the utility of the reduced normal form of color checking matrices in distinguishing knots.
 
-\begin{example} 
+\begin{example} \label{example reduced normal form}
   \begin{figure}[h]\centering 
     \begin{tikzpicture}
       \coordinate (a1) at (90:6);

@@ -8,10 +8,18 @@ In knot theory distinguishing knots is often a difficult endeavor, usually facil
 
 Very often, considering only one invariant is not sufficient, as there are many knots that share its value, i.e. $K11n85$ and $K11n164$ have the same Alexander polynomial. However, a more subtle application of the same method that yields the Alexander polynomial can sometimes distinguish such knots.
 
-In the following paper, connections between the knot group, knot colorings and homology modules of infinite cyclic covering (see \cite{milnor_infinite_cyclic}) will be studied. As an additional exercise, we will show a way of distinguishing already mentioned knots $K11n85$ and $K11n164$.
+The following paper is a result of a year long cooperation between prof. Tadeusz Januszkiewicz, Julia Walczuk and the author of this thesis. In it, connections between the knot group, knot colorings and homology modules of infinite cyclic covering (see \cite{milnor_infinite_cyclic}) will be outlined. As an additional exercise, we will show a way of distinguishing already mentioned knots $K11n85$ and $K11n164$.
 
-{\color{red}
-The first section of this paper defines the most important terms used in knot theory, as well as introduces the connection between the Alexander module of a knot and the first homology module of an infinite cyclic covering of said knot. 
-}
+The first section of this paper defines the most important terms used in knot theory, as well as highlights the connection between the metabelianization of knot group and the first homology module of an infinite cyclic covering of the complement of said knot. 
 
+Subsequently, the construction of a $\Z[\Z]$ module from the kernel of $G^m\to \Z$ is presented. This module is defined to be the Alexander module $K_G^{ab}$ of knot $K$ (\cref{alexander module def}). Then, Alexander matrix is introduced (\cref{alexander matrixi def}) as the representation matrix of the Alexander module. In this section the resolution of Alexander module is proven to be of form  
+\begin{center}
+  \begin{tikzcd}
+    0\arrow[r] & \Z[\Z]\arrow[r] & \Z[\Z]^{n}\arrow[r] & \Z[\Z]^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0 
+  \end{tikzcd}
+\end{center}
+At the end of the second section, a connection between resolution of the Alexander module and coloring of diagrams is made.
 
+The third and last section is focused on coloring matrices (\cref{def:color checking matrix}) and defining an equivalence relation between matrices relating to the same knot. A new knot invariant is defined (\cref{reduced normal form def}) and an example of its utility is presented in \cref{example reduced normal form}.
+
+Last section is dedicated to presenting an approach to diagram colorings from the perspective from category theory. In addition, a connection between the Alexander matrix and color checking matrix (using a particular palette, named the Alexander palette) is presented.

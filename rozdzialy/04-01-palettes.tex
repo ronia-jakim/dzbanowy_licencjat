@@ -10,18 +10,46 @@ Similarly, if there is a module homomorphism $g:M\to M'$, then the induced morph
 $$\overline{g}:(R, M, \mathcal{C})\to (R, M', \mathcal{C}').$$
 
 \begin{definition}[category of palettes for knot $K$]
-  We define $\mathcal{Col}(K)$ to be a category of palettes of $K$ with 
-  $$\text{Ob}(\mathcal{Col}(K))=\{(R, M, \mathcal{C})\}$$
-  being all palettes and for any two palettes
-  $$\Hom((R, M, \mathcal{C}), (R, N, \mathcal{K}))=\{\overline{g}\;:\;g:M\to N\}$$
+  We define $\Col(K)$ to be a \buff{category of palettes} of $K$ with 
+  $$\text{Ob}(\Col(K))=\{(R, M, \mathcal{C})\}$$
+  being all palettes as described above and for any two palettes
+  $$\Hom((R, M, \mathcal{C}), (S, N, \mathcal{K}))$$
+  is the set of induced morphisms $\overline{g}$ between modules or $\overline{f}$ between rings, when modules are $M$ and $N=M_S$ respectively.
 \end{definition}
 
-Fixing the ring $R$ hints at $(R, 0, 0)$ being a trivial palette and products and coproducts of palettes being defined by their modules:
-$$(R, M, \mathcal{C})\oplus (R, N, \mathcal{K}):=(R, M\oplus N, \mathcal{C}\oplus \mathcal{K}).$$
+It is beneficial to highlight one palette in particular: 
+$${(\Z[\Z], \Z[\Z], \{(u, i, (1-t)u+ti)\;:\;u,i\in\Z[\Z]\})},$$
+which will be referred to as the \buff{Alexander palette}. We can derive this palette (which was used in \cref{example reduced normal form}) from the Wirtinger presentation of a knot as follows.
 
-\begin{conjecture}
-  A category of palettes over a fixed ring $R$, $\mathcal{Col}_R(K)$ is Abelian.
-\end{conjecture}
+Consider a crossing
+\begin{center}
+  \begin{tikzpicture}
+    \draw[<-] (0, 0) node[above] {$o$} --(2, 0) node[above] {$i$};
+    \fill[white](1, 0) circle (7pt);
+    \draw[->] (1, -1) node[right] {$u$}--(1, 1);
+  \end{tikzpicture}
+\end{center}
+and take some $x$ to be the generator that is used to generate a representation for $K_G^{ab}$. Then, the following is a relation in said group:
+$$UxCx(Ux)^{-1}=Ix$$
+where $U=ux^{-1}$, $I=ix^{-1}$ and $O=ox^{-1}$. 
+We can multiply both sides by $x^{-1}$ to obtain
+$$x^{-1}UxCU^{-1}=x^{-1}Ix$$
+which is change in $\Z[\Z]$ to
+$$
+tU+C-U=tI\implies 0=(1-t)U+tI-C
+$$
+The procedure for the other type of crossing is analogous.
+
+The question that presents itself here is whether using row and column operations one can obtain representation matrix for the Alexander module from coloring matrices.
 
 
 
+% Fixing the ring $R$ hints at $(R, 0, 0)$ being a trivial palette and products and coproducts of palettes being defined by their modules:
+% $$(R, M, \mathcal{C})\oplus (R, N, \mathcal{K}):=(R, M\oplus N, \mathcal{C}\oplus \mathcal{K}).$$
+%
+% % \begin{conjecture}
+% %   A category of palettes over a fixed ring $R$, $\mathcal{Col}_R(K)$ is Abelian.
+% % \end{conjecture}
+%
+%
+%

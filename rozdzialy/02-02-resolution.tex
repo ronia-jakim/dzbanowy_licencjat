@@ -1,4 +1,5 @@
-The resolution of a module at first glance is in no way a simplification of said module. However, there are multiple ways of distilling simplifications and invariants from the resolution of the Alexander module. {\large\color{red}In this section we want to }
+The resolution of a module at first glance is in no way a simplification of said module. However, there are multiple ways of distilling simplifications and invariants from the resolution of the Alexander module. 
+% {\large\color{red}In this section we want to }
 
 We start writing the beginning $K_G^{ab}$ resolution as follows:
 \begin{equation}\label{pierwsza rezolwenta}
@@ -8,7 +9,7 @@ We start writing the beginning $K_G^{ab}$ resolution as follows:
 \end{equation}
 
 
-\begin{definition}[Alexander matrix]
+\begin{definition}[Alexander matrix]\label{alexander matrixi def}
   The matrix of homomorphism $A_D$ in the diagram above is called the \buff{Alexander matrix} of group $G$ (knot $K$).
 \end{definition}
 
@@ -164,4 +165,10 @@ The Alexander polynomial is a knot invariant as a consequence of \cref{wyznaczni
   % and so $a=1$.
 \end{proof}
 
-
+Notice, that sequence
+\begin{center}
+  \begin{tikzcd}
+    \star:\;0\arrow[r] \Z[\Z]\arrow[r] & \Z[\Z]^n\arrow[r, "A_D"] & \Z[\Z]^{n-1}\arrow[r] & 0 
+  \end{tikzcd}
+\end{center}
+is not acyclic, however it allows us to define the Alexander module as $H_1(\star)$.
