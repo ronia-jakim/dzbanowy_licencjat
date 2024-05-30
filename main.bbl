@@ -1,38 +1,47 @@
 \begin{thebibliography}{1}
 
+\bibitem{alex-oryginal}
+James~W. Alexander.
+\newblock Topological invariants of knots and links.
+\newblock {\em Transactions of the American Mathematical Society}, 30:275--306, {1928}.
+
+\bibitem{atiyah}
+M.~F. Atiyah and I.~G. MacDonald.
+\newblock {\em Introduction to Commutative Algebra}.
+\newblock Addison-Wesley Publishing Company, 1969.
+
+\bibitem{likorish-diagram}
+W.B.~Raymond Likorish.
+\newblock {\em An Introduction to Knot Theory}, pages 2--3.
+\newblock Springer, 1997.
+
 \bibitem{livingstone}
-{Charles Livinston}.
+Charles Livinston.
 \newblock {\em Knot Theory}.
 \newblock The Mathematical Assosiacion of America, 1993.
 
 \bibitem{milnor_infinite_cyclic}
-{John. W. Milnor}.
+John.~W. Milnor.
 \newblock Infinite cyclic coverings.
 \newblock 1967.
 
 \bibitem{murasagi-equivalence}
-{Kunio Murasagi}.
+Kunio Murasagi.
 \newblock {\em Knot theory and its applications}, pages 7--8.
 \newblock Springer, 1996.
 
-\bibitem{atiyah}
-{M. F. Atiyah and I. G. MacDonald}.
-\newblock {\em Introduction to Commutative Algebra}.
-\newblock Addison-Wesley Publishing Company, 1969.
-
 \bibitem{ruchy_zorientowane}
-{Michael Polyak}.
+Michael Polyak.
 \newblock Minimal generating set of reidemeister moves.
 \newblock {\em Quantum Topology vol 1}, 2010.
 
 \bibitem{fox}
-{Richard H. Crowell, Ralph H. Fox}.
+Ralph H.~Fox Richard H.~Crowell.
 \newblock {\em Introduction to Knot Theory}.
 \newblock Ginn and Company, 1963.
 
-\bibitem{likorish-diagram}
-{W.B. Raymond Likorish}.
-\newblock {\em An Introduction to Knot Theory}, pages 2--3.
-\newblock Springer, 1997.
+\bibitem{julia_private}
+Julia Walczuk.
+\newblock private communication, III 2024.
 
 \end{thebibliography}

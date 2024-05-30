@@ -1,11 +1,14 @@
 Let $K$ be a knot and $D$ be its oriented diagram with $s$ segments and $x$ crossings. 
+%A crossing of a diagram is a point in projection $S^1\to \R^2$ with exactly two points in its preimage along with a small neighbourhood that looks locally like \begin{tikzpicture}\draw(-.5ex,0)--(2.5ex, 0ex); \fill[white](1ex, 0) circle (.5ex);\draw(1ex, -1ex)--(1ex, 1ex);\end{tikzpicture}. 
+A segment of a diagram is a line of the diagram between two crossings in which it is disappears under another line.
+
 %The knot itself has the homotopy type of a circle and so its fundamental group is not interesting in itself. However, for a knot that is embedded in $S^3$ we can study the fun
 \begin{definition}[knot group] 
-  The fundamental group of a knot embedded in a three dimensional sphere $S^3$ is called a \buff{knot group}.
-  $$\mathbf{\pi_1(K):=\pi_1(S^3-K)}.
+  The fundamental group of knot complement $X=S^3-K$  is called a \buff{knot group}:
+  \boldmath$$\mathbf{\pi_1(K):=\pi_1(X)}.
   $$
 \end{definition}
-Although the knot itself is always a circle $S^1$, the knot group has usually an interesting yet difficult structure. The most known representation of the knot group is called \buff{the Wirtinger presentation}.
+Although the knot itself is always a circle $S^1$, the knot group has usually an interesting yet difficult structure. The most commonly used presentation of the knot group is called \buff{the Wirtinger presentation}.
 
 \begin{definition}[Wirtinger presentation]
   Given a diagram $D$ of knot $K$ with segments $a_1$, $a_2$, ..., $a_s$ and crossings $c_1$, ..., $c_x$ the knot group $\pi_1(K)$ can be represented as $\pi_1(K)=\langle G\;|\;R\rangle$, where $G$ is the set of segments of $D$ and relations $R$ correspond to crossings in the manner described in the diagram below
@@ -37,16 +40,26 @@ Although the knot itself is always a circle $S^1$, the knot group has usually an
   Representation $\langle G\;|\;R\rangle$ described above is called the \buff{Wirtinger presentation} \cite[Chapter~6]{livingstone}.
 \end{definition}
 
-An easily obtainable result, either by applying the Mayer-Vietoris sequence to $S^3=K\oplus S^3-K$ or noticing that every two generators are conjugate, is that the abelianization of the knot group is always $\Z$. This leads to an acyclic complex
+An easily obtainable result, either by applying the Mayer-Vietoris sequence to $S^3=K\oplus S^3-K$ or noticing that every two generators are conjugate, is that the abelianization of the knot group is always $\Z$. This leads to a short exact sequence
 \begin{center}
   \begin{tikzcd}
-    0\arrow[r] & K_G \arrow[r] & G=\pi_1(K)\arrow[r, "ab"] & \Z=G^{ab} \arrow[r] & 0
+    0\arrow[r] & K_G \arrow[r] & G=\pi_1(K)\arrow[r, "ab"] & \Z=G^{ab} \arrow[r] & 0.
   \end{tikzcd}
 \end{center}
 
-The group $K_G=\ker(ab:G\to\Z)=[G, G]$ is not finitely generated, an observation that is discussed in \cref{alexander module discussion}, and thus is a difficult group to work with. However, its abelianization $K_G^{ab}=K_G/[K_G, K_G]$ allows a $\Z[\Z]$ module structure and thus contains obtainable information about the knot $K$. 
+The group $K_G=\ker(ab:G\to\Z)=[G, G]$ in general is not abelian nor finitely generated, an observation that is discussed in \cref{alexander module discussion}, and thus is a difficult group to work with. However, its abelianization $K_G^{ab}=K_G/[K_G, K_G]$ allows a $\Z[\Z]$ module structure and thus contains obtainable information about the knot $K$. 
 
-The following is an exact sequence:
+\begin{lemma}
+  For any group $G$, the commutator of its commutator $K_G$ is a normal subgroup: $[K_G, K_G]=[[G, G], [G, G]\triangleleft G$. 
+\end{lemma}
+
+\begin{proof}
+  The commutator subgroup is a characteristic subgroup, since for any automorphism $\phi:G\to G$ 
+  $$\phi(hgh^{-1}g^{-1})=\phi(h)\phi(g)\phi(h)^{-1}\phi(g)^{-1}\in K_G=[G, G].$$
+  Conjugation by any element $g\in G$ is an automorphism of the commutator $K_G$. Thus it preserves its commutator subgroup $[K_G, K_G]$. 
+\end{proof}
+
+As a consequence, in the group $G/[K_G, K_G]$ left and right multiplication is the same. Thus, the following is an exact sequence:
 \begin{center}
   \begin{tikzcd}
     0\arrow[r] & K_G^{ab} \arrow[r] & G^{mab}=G/[K_G, K_G]\arrow[r] & \Z \arrow[r] & 0
@@ -60,7 +73,13 @@ which gives foundation for the following definition.
   The quotient group $G^{mab}=G/[K_G, K_G]$ is called the \buff{metabelianization} of $G$. 
 \end{definition}
 
-We will return to the concept of metabelianization in \cref{section2}.
+We will return to the concept of metabelianization in \cref{section2}. For the time being, let us assign a name to $K_G$:
+
+\begin{definition}[Alexander module]\label{alexander module def}
+  Given a group $G$, the abelianization of the commutator of a group $G$, $K_G^{ab}$, with $\Z[\Z]$-module structure is called the \buff{Alexander module} of $G$. If $G$ is a knot group, then it is the Alexander module of the knot $K$.
+\end{definition}
+
+How the $\Z[\Z]$ module structure is obtained is described in detail in \cref{alexander module discussion}.
 
 
 

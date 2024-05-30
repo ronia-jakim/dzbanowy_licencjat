@@ -1,12 +1,12 @@
-Take $G=\langle G\;|\;R\rangle$ to be the Wirtinger presentation of $G$ obtained from diagram $D$. Because $K$ is a knot and not a link, we know that the number of segments is equal to the number of crossings, thus we can take $n=s=x$.
+Take $G=\langle G\;|\;R\rangle$ to be the Wirtinger presentation of $G$ obtained from oriented diagram $D$. Because $K$ is a knot and not a link, we know that the number of segments is equal to the number of crossings, thus we can take $n=s=x$ \cite{julia_private}.
 
 Let $a_1,...,a_n$ be the generators of $G$ and $x_1,...,x_n$ its relations. The homomorphism of abelianization of $G$ is defined by 
 $$a_i\mapsto 1\in\Z$$ 
-for every $i=1,...,n$. In order to obtain a representation of $K_G$, the kernel of abelianization, we need to change the set of generators of $G$ to 
+for every $i=1,...,n$. In order to obtain a presentation of $K_G$, the kernel of abelianization, we need to change the set of generators of $G$ to 
 $$\{a_1, A_2=a_2a_1^{-1},..., A_n=a_na_1^{-1}\}.$$
-It is obvious that for every $i>1$ $A_i\mapsto0$ by abelianization of $G$.thus $A_2,...,A_n$ are some of the generators of $K_G$. However, for each $i=2,...,n$ and $k\in\Z$ the following is an element of $K_G$:
+It is obvious that for every $i>1$ $A_i\mapsto0$ by abelianization of $G$. Thus $A_2,...,A_n$ are some of the generators of $K_G$. However, for each $i=2,...,n$ and $k\in\Z$ the following is an element of $K_G$:
 $$b_{i, k}:=a_1^k A_i a_1^{-k}.$$
-Thus, the representation of $K_G$ is infinite with generators 
+Thus, the presentation of $K_G$ as an abelian group is infinite with (possibly redundant) generators 
 $$\{b_{i,k}\;:\;i=2,...,n,\;k\in\Z\}.$$
 
 Changing generators of $G$ induced a change in relations. Suppose that the following relation was true in $G$
@@ -29,18 +29,18 @@ to obtain infinitely many relations from $K_G$.
 It was mentioned in the previous chapter, that following is an exact sequence
 \begin{center}
   \begin{tikzcd}
-    0\arrow[r] & K^{ab}_G\arrow[r] & G^{mab}\arrow[r] & \Z\arrow[r] & 0 
+    0\arrow[r] & K^{ab}_G\arrow[r] & G^{mab}\arrow[r] & \Z\arrow[r] & 0.
   \end{tikzcd}
 \end{center}
+For any group $H$ with $H^{ab}=\Z$ we can write a homomorphism $\Z\to H$ such that composition $\Z\to H\to \Z$ is identity on $\Z$. Thus, this sequence splits and we can write 
+$$G^{mab}=K^{ab}_G\rtimes \Z.$$ 
 Hence action of $\Z$ can be defined on the group $K^{ab}_G$, with presentation described above, as follows 
 $$t(b_{i, k})=b_{i, k+1}.$$
 In particular, 
 $$t(A_i)=a_1 A_i a_1^{-1}.$$
 This procedure allows $K_G^{ab}$ to be interpreted as a $\Z[\Z]$-module.
 
-\begin{definition}[Alexander module]\label{alexander module def}
-  Given a group $G$, the abelianization of the commutator of a group $G$, $K_G^{ab}$, with $\Z[\Z]$-module structure is called the \buff{Alexander module} of $G$. If $G$ is a knot group, then it is the Alexander module of the knot $K$
-\end{definition}
+Moreover, the group $G^{mab}$ and $\Z[\Z]$ $K_G^{ab}$ can be used interchangeably as knowing the action of $\Z$ on $K_G^{ab}$ allows us to write the semidirect product of $\Z$ and $K_G^{ab}$.
 
 % {\color{blue}
 % \begin{lemma}
@@ -52,7 +52,7 @@ This procedure allows $K_G^{ab}$ to be interpreted as a $\Z[\Z]$-module.
 % \end{proof}
 % }
 
-Notice that if $G^m$ is known, one can easily reconstruct $K_G^{ab}$ knowing that it is the $\ker(G^m\to \Z)$. Conversely, if $K_G^{ab}$ is known, then $G^m$ can be found as the middle term of the exact sequence \begin{tikzcd}[column sep=small]0\arrow[r]& K_G^{ab}\arrow[r] &? \arrow[r] & \Z\arrow[r] & 0\end{tikzcd}
+% Notice that if $G^m$ is known, one can easily reconstruct $K_G^{ab}$ knowing that it is the $\ker(G^m\to \Z)$. Conversely, if $K_G^{ab}$ is known, then $G^m$ can be found as the middle term of the exact sequence \begin{tikzcd}[column sep=small]0\arrow[r]& K_G^{ab}\arrow[r] &? \arrow[r] & \Z\arrow[r] & 0\end{tikzcd}
 
 
 

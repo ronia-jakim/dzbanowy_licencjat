@@ -1,7 +1,8 @@
-Let $X$ be the complement of a knot $K$, that is $X=S^3-K$. Take $\widetilde{X}$ to be its universal covering, meaning that it is simply connected. The fundamental group $G$ of $X$ acts on its universal covering by deck transformations. The commutator subgroup $K_G=[G, G]$ is normal in $G$ and so the action of $K_G$ on $\widetilde{X}$ is well defined. Thus we might take the quotient space $\overline{X}=\widetilde{X}/[G, G]$ and call it the \buff{infinite cyclic covering} of $X$. The fundamental group of $\overline{X}$ is exactly 
+Let $X$ be the complement of a knot $K$ ($X=S^3-K$). Take $\widetilde{X}$ to be its universal covering, meaning that it is simply connected. The fundamental group $G$ of $X$ acts on its universal covering by deck transformations. The commutator subgroup $K_G=[G, G]$ is normal in $G$ and so $\pi_1(X)/K_G$ acts on $\widetilde{X}$. Thus we might take the quotient space $\overline{X}=\widetilde{X}/[G, G]$ and call it the \buff{infinite cyclic covering} of $X$. Due to this construction, the fundamental group of $\overline{X}$ is exactly 
 $$\pi_1(\overline{X})=[G, G]=K_G$$
 and from the perspective of homology modules, we have
 $$H_1(\overline{X}, \Z)=\pi_1(\overline{X})^{ab}=K_G^{ab}.$$
+Working with homology modules of an infinite cyclic cover of $X$ instead of $K_G^{ab}$ directly is beneficial when proving some properties of $K_G^{ab}$, i.e. that it is a torsion module in \cref{prop: modul alexandera jest torsyjny}. 
 
 The following diagram illustrates the construction of infinite cycle covering described above
 
@@ -49,18 +50,18 @@ Imagine that each copy of $X$ inside of $\overline{X}$ is a box labeled with som
       0\arrow[r] & C_*(\overline{X})\arrow[r, "f"] & C_*(\overline{X})\arrow[r] & C_*(X)\arrow[r] & 0
     \end{tikzcd}
   \end{center}
-  and induces an acyclic complex of homology modules
+  and induces a long exact homology sequence
   \begin{center}
     \begin{tikzcd}
       ... \arrow[r] & H_2(X, \Z)\arrow[r] & H_1(\overline{X}, \Z)\arrow[r, "1-t"] & H_1(\overline{X}, \Z)\arrow[r] & H_1(X, \Z)
       \arrow[dlll, rounded corners, to path={--([xshift=2ex]\tikztostart.east) |- ([xshift=-3ex, yshift=-2ex]\tikztostart.south) -| ([xshift=-2ex]\tikztotarget.west) -- (\tikztotarget)
       }]\\ 
-                    & H_0(\overline{X}, \Z)\arrow[r] & H_0(\overline{X}, \Z)\arrow[r] & H_0(X, \Z)\arrow[r] & 0
+                    & H_0(\overline{X}, \Z)\arrow[r] & H_0(\overline{X}, \Z)\arrow[r] & H_0(X, \Z)\arrow[r] & 0.
     \end{tikzcd}
   \end{center}
   As was mentioned previously, the following equality holds:
   $$H_1(X, \Z)=\pi_1(X)^{ab}=\Z.$$
-  Now, because $X$ is homotopy cycle, then $H_2(X, \Z)=0$. Both $X$ and $\overline{X}$ is connected implying that 
+  Now, because $X$ is homology circle, then $H_2(X, \Z)=0$ (one can easily check it for themselves using Alexander duality). Both $X$ and $\overline{X}$ are connected implying that 
   $$H_0(X, \Z)=H_0(\overline{X}, \Z)=\Z.$$
   \begin{center}
     \begin{tikzcd}
@@ -69,6 +70,6 @@ Imagine that each copy of $X$ inside of $\overline{X}$ is a box labeled with som
                     & \Z \arrow[r, "0"] & \Z\arrow[r, "\cong"] & \Z \arrow[r] & 0
     \end{tikzcd}
   \end{center}
-  Rewriting the sequence above we easily get that homomorphism $1-t$ is actually an isomorphism and $H_1(\overline{X}, \Z)\cong (1-t) H_1(\overline{X}, \Z)$, which allows us to use the Nakayama's lemma to conclude that there exists $x\in\Z[\Z]$ such that
+  Rewriting the sequence above we easily get that homomorphism $1-t$ is actually an isomorphism and $H_1(\overline{X}, \Z)\cong (1-t) H_1(\overline{X}, \Z)$, which allows us to use the Nakayama's lemma \cite[Proposition~2.6]{atiyah} to conclude that there exists $x\in\Z[\Z]$ such that
   $$xH_1(\overline{X}, \Z)=0.$$
 \end{proof}
