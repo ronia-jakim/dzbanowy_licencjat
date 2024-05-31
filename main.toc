@@ -9,6 +9,7 @@
 \contentsline {section}{\numberline {3}Knot colorings}{17}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Diagram colorings}{17}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Color checking matrix}{18}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Relation on color checking matrices}{20}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Reduced Smith normal form}{23}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.3}Relation on color checking matrices}{19}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Determinant of color checking matrix as a knot invariant}{22}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Reduced Smith normal form}{23}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Category of palettes}{31}{section.4}%
