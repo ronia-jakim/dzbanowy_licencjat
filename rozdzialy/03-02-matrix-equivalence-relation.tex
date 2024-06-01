@@ -1,0 +1,20 @@
+We can think of coloring diagrams with a chosen palette $(R, M, \mathcal{C}_\pm)$ as being a functor from a set of diagrams to a set of matrices.
+
+\begin{definition}[color checking matrix]\label{def:color checking matrix}
+  Assigning segments of diagram $D$ to coordinates in $M^s$ and crossings to coordinates in $N_\pm^x$ it is possible to define a linear homomorphism $D\phi:M^s\to N_\pm^x$  as
+  $$D\phi(m_1,...,m_s)=(\phi_\pm(\pi_{x_1}(m_1,...,m_s)), \phi_\pm(\pi_{x_2}(m_1,...,m_s)),...).$$
+  Matrix that is created after choosing a basis for $M^s$ and $N_\pm^x$ will be called a \buff{color checking matrix}.
+\end{definition}
+
+
+
+\begin{proposition}
+  Coloring $(m_1,...,m_s)\in M^s$ is admissible $\iff$ $(m_1,...,m_s)\in\ker D\phi$.
+\end{proposition}
+
+\begin{proof}
+  We start by saying that 
+  $$(m_1,..., m_s)\in\ker D\phi\iff [(\forall\;x_j\text{ crossing})\;\phi_\pm(\pi_{x_j}(m_1,..., m_s))=0].$$
+  Which is to say that every coordinate of $D\phi(m_1,..., m_s)$ is zero. Proposition \cref{proposition male kernel kolorowania} says that it is equivalent with $(m_1,..., m_s)$ being an admissible coloring.
+\end{proof}
+

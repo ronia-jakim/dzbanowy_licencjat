@@ -7,9 +7,6 @@
 \contentsline {subsection}{\numberline {2.2}Basic properties}{11}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}A homological roots of diagram colorings}{15}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Knot colorings}{17}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Diagram colorings}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Palettes and diagram colorings}{17}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Color checking matrix}{18}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Relation on color checking matrices}{19}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Determinant of color checking matrix as a knot invariant}{22}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Reduced Smith normal form}{23}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Category of palettes}{31}{section.4}%
+\contentsline {section}{\numberline {4}Category of palettes}{20}{section.4}%
