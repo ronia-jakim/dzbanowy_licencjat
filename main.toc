@@ -9,4 +9,4 @@
 \contentsline {section}{\numberline {3}Knot colorings}{17}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Palettes and diagram colorings}{17}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Color checking matrix}{18}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Category of palettes}{20}{section.4}%
+\contentsline {section}{\numberline {4}Category of palettes}{22}{section.4}%
