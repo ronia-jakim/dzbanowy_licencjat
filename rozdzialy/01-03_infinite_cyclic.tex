@@ -1,6 +1,10 @@
-Let $X$ be the complement of a knot $K$ ($X=S^3-K$). Take $\widetilde{X}$ to be its universal covering, meaning that it is simply connected. The fundamental group $G$ of $X$ acts on its universal covering by deck transformations. The commutator subgroup $K_G=[G, G]$ is normal in $G$ and so $\pi_1(X)/K_G$ acts on $\widetilde{X}$. Thus we might take the quotient space $\overline{X}=\widetilde{X}/[G, G]$ and call it the \buff{infinite cyclic covering} of $X$. Due to this construction, the fundamental group of $\overline{X}$ is exactly 
-$$\pi_1(\overline{X})=[G, G]=K_G$$
-and from the perspective of homology modules, we have
+Let $X$ be the complement of a knot $K$ ($X=S^3-K$). Take $\widetilde{X}$ to be its universal covering, meaning that it is simply connected. The fundamental group $G=\pi_1(X)$ of $X$ acts on its universal covering by deck transformations. \hl{The commutator subgroup $K_G=[G, G]\triangleleft G$ acts on $\widetilde{X}$ and because $K_G$ is normal in $G$, the quotient $\overline{X}=\widetilde{X}/K_G$ has fundamental group $\pi_1(\overline{X})=K_G$ no matter the choice of the basepoint of $\overline{X}$.}
+
+\begin{definition}[infinite cyclic covering]
+  The quotient space {\boldmath$\overline{X}=\widetilde{X}/K_G$} is called the \buff{infinite cyclic covering} of $X$.
+\end{definition}
+
+Looking at homology groups of $\overline{X}$, we have the following equality
 $$H_1(\overline{X}, \Z)=\pi_1(\overline{X})^{ab}=K_G^{ab}.$$
 Working with homology modules of an infinite cyclic cover of $X$ instead of $K_G^{ab}$ directly is beneficial when proving some properties of $K_G^{ab}$, i.e. that it is a torsion module in \cref{prop: modul alexandera jest torsyjny}. 
 

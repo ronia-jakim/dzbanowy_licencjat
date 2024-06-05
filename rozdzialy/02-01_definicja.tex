@@ -1,6 +1,18 @@
-Take $G=\langle G\;|\;R\rangle$ to be the Wirtinger presentation of $G$ obtained from oriented diagram $D$. Because $K$ is a knot and not a link, we know that the number of segments is equal to the number of crossings, thus we can take $n=s=x$ \cite{julia_private}.
+Take $G=\langle G\;|\;R\rangle$ to be the Wirtinger presentation of $G$ obtained from oriented diagram $D$. Because $K$ is a knot and not a link, we know that the number of segments is equal to the number of crossings.
 
-Let $a_1,...,a_n$ be the generators of $G$ and $x_1,...,x_n$ its relations. The homomorphism of abelianization of $G$ is defined by 
+\begin{lemma}\hl{
+  If $K$ is a knot and $D$ its diagram with $x>0$ crossings and $s>1$ segments, then $s=x$.}
+\end{lemma}
+
+\begin{proof}\hl{
+  Every crossing has two segments that disappear under it. Let $d$ be the number of segment ends that go below a crossing then}
+  $$2\cdot x=d.$$ \hl{
+  Every segment starts and ends in some crossing, thus}
+  $$2\cdot s=d.$$\hl{
+  From those two equalities we have that $d=2x=2s\implies x=s$.}
+\end{proof}
+
+Let $a_1,...,a_n$ be the generators of $G$ \hl{agreeing with the orientation of the diagram $D$} and $x_1,...,x_n$ its relations. The homomorphism of abelianization of $G$ is defined by 
 $$a_i\mapsto 1\in\Z$$ 
 for every $i=1,...,n$. In order to obtain a presentation of $K_G$, the kernel of abelianization, we need to change the set of generators of $G$ to 
 $$\{a_1, A_2=a_2a_1^{-1},..., A_n=a_na_1^{-1}\}.$$
@@ -40,7 +52,7 @@ In particular,
 $$t(A_i)=a_1 A_i a_1^{-1}.$$
 This procedure allows $K_G^{ab}$ to be interpreted as a $\Z[\Z]$-module.
 
-Moreover, the group $G^{mab}$ and $\Z[\Z]$ $K_G^{ab}$ can be used interchangeably as knowing the action of $\Z$ on $K_G^{ab}$ allows us to write the semidirect product of $\Z$ and $K_G^{ab}$.
+Moreover, the group $G^{mab}$ and \hl{$\Z[\Z]$-module $K_G^{ab}$} can be used interchangeably as knowing the action of $\Z$ on $K_G^{ab}$ allows us to write the semidirect product of $\Z$ and $K_G^{ab}$.
 
 % {\color{blue}
 % \begin{lemma}

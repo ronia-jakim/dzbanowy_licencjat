@@ -1,4 +1,4 @@
-PWD /home/maruda/uni-stuff/dzbanowy_licencjat
+PWD /home/marudka/uni-stuff/dzbanowy_licencjat
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main.tex
@@ -324,6 +324,11 @@ INPUT /usr/share/texmf-dist/tex/latex/cleveref/cleveref.sty
 INPUT ./funkcje/matematyka.tex
 INPUT ./funkcje/matematyka.tex
 INPUT ./funkcje/matematyka.tex
+INPUT /usr/share/texmf-dist/tex/generic/soul/soul.sty
+INPUT /usr/share/texmf-dist/tex/generic/soul/soul.sty
+INPUT /usr/share/texmf-dist/tex/generic/soul/soul-ori.sty
+INPUT /usr/share/texmf-dist/tex/generic/soul/soul-ori.sty
+INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
 INPUT /usr/share/texmf-dist/tex/latex/spath3/tikzlibraryspath3.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/spath3/tikzlibraryspath3.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/spath3/spath3.sty
@@ -470,9 +475,6 @@ INPUT rozdzialy/02-01_definicja.tex
 INPUT ./rozdzialy/02-02-resolution.tex
 INPUT ./rozdzialy/02-02-resolution.tex
 INPUT rozdzialy/02-02-resolution.tex
-INPUT ./rozdzialy/02-03-coloring_resolution.tex
-INPUT ./rozdzialy/02-03-coloring_resolution.tex
-INPUT rozdzialy/02-03-coloring_resolution.tex
 INPUT ./rozdzialy/03-00-colorings.tex
 OUTPUT rozdzialy/03-00-colorings.aux
 INPUT ./rozdzialy/03-00-colorings.tex

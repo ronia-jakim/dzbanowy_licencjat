@@ -3,7 +3,7 @@ Knowing the resolution of a module allows one to change said module into a matri
 % {\large\color{red}In this section we want to }
 
 \begin{definition}[Alexander matrix]
-  The presentation matrix $A_D$ of $K_G^{ab}$ with Wirtinger presentation is called the \buff{Alexander matrix} of the Alexander module $K_G^{ab}$.
+  The presentation matrix $A_D$ of $K_G^{ab}$ with Wirtinger presentation is \hl{the matrix $\Z[\Z]^n\xrightarrow[A_D]{}\Z[\Z]^{n-1}$ such that $\ker(A_D)$ is equal to module of relations of $K_G^{ab}$.} This matrix is called the \buff{Alexander matrix} of the Alexander module $K_G^{ab}$.
 \end{definition}
 
 We start writing the beginning $K_G^{ab}$ resolution as follows:
@@ -78,19 +78,34 @@ The \cref{alexander matrix has trivial kernel} implies that image of $A_D^V$ has
 \end{proof}
 
 \begin{definition}[Alexander polynomial]
-  The \buff{Alexander polynomial} of a knot $K$ is the determinant of any maximal minor of the Alexander matrix $A_D$.
+  \hl{Let $p(t)$ be the determinant of any maximal minor of the Alexander matrix $A_D$. Then, we can find $k\in\Z$ such that $t^kp(t)$ is a symmetrical polynomial, meaning that the absolute values of the highest and lowest powers of variables in it are equal} \cite{alex-oryginal}. \hl{The polynomial $t^kp(t)$ is called the }\buff{Alexander polynomial} of a knot $K$.
 \end{definition}
 
 The Alexander polynomial is a knot invariant as a consequence of \cref{wyznacznik nie zalezy od diagramu} and \cref{alexander matrix has trivial kernel}
 
 \begin{proposition}
-  Let $G$ be a knot group of $K$ and $F=R^{-1}R$ the field of fraction of ring $R$. Then $K_G^{ab}$ always has a resolution
+  \hl{Let $G$ be a knot group of $K$ and $F=R^{-1}R$ the field of fractions of ring $R$} \cite{atiyah}. \hl{Then, changing coefficients by applying functor $-\otimes_R F$ to the following exact sequence}
   \begin{center}
     \begin{tikzcd}
-      0\arrow[r] & M \arrow[r] & R^{n}\arrow[r, "A_D"] & R^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0
+      0\arrow[r] & \ker(A_D)\arrow[r] & R^n\arrow[r, "A_D"] & R^{n-1} \arrow[r] & K_G^{ab}\arrow[r] & 0 \\ 
     \end{tikzcd}
   \end{center}
-  where $n$ is the number of crossings of the chosen diagram $D$ of knot $K$ and $M\otimes_R F\cong F$.
+  yields the following exact sequence
+  \begin{center}
+    \begin{tikzcd}
+      0\arrow[r] & F \arrow[r] & F^{n}\arrow[r, "A_D^V"] & F^{n-1}\arrow[r] & K_G^{ab}\otimes_R F=0\arrow[r] & 0
+    \end{tikzcd}
+  \end{center}
+  \hl{where $n$ is the number of crossings of the chosen diagram $D$ of knot $K$.}
+  % Let $G$ be a knot group of $K$ and $F=R^{-1}R$ the field of fraction of ring $R$. Then $K_G^{ab}$ always has a resolution
+  % \begin{center}
+  %   \begin{tikzcd}
+  %     0\arrow[r] & M \arrow[r] & R^{n}\arrow[r, "A_D"] & R^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0
+  %   \end{tikzcd}
+  % \end{center}
+  % where $n$ is the number of crossings of the chosen diagram $D$ of knot $K$ and $M\otimes_R F\cong F$.
+  %
+  % \color{blue}tutaj próbowałam ubrać w słowa to, co Pan mówił, że niekoniecznie \begin{tikzcd}0\arrow[r]&R\arrow[r] &R^n\arrow[r] & R^{n-1}\arrow[r]&K_G^{ab}\arrow[r] & 0\end{tikzcd} jest szukanym przeze mnie ciągiem dokładnym, ale jak ostatnie $R$ zastąpię $M$ to powinno działać. Chyba, że powinnam to po prostu wyrazić w ramach $F$-modułów i wtedy nie ma problemu, ale $K_G^{ab}$ znika?
 \end{proposition}
 
 \begin{proof} We start by saying that $R\otimes_R F\cong F$ because $R$ is a free module over $R$ \cite[Proposition~2.14]{atiyah}.
@@ -113,10 +128,12 @@ The Alexander polynomial is a knot invariant as a consequence of \cref{wyznaczni
   with $M\otimes_R F\cong F$.
 \end{proof}
 
-Notice, that sequence
+\hl{to nizej pewnie wyleci}
+
+{\color{blue}Notice, that sequence
 \begin{center}
   \begin{tikzcd}
     \star:\;0\arrow[r] & \Z[\Z]\arrow[r] & \Z[\Z]^n\arrow[r, "A_D"] & \Z[\Z]^{n-1}\arrow[r] & 0 
   \end{tikzcd}
 \end{center}
-is not acyclic, however it allows us to once again define the Alexander module, this time as $H_1(\star)$.
+is not acyclic, however it allows us to once again define the Alexander module, this time as $H_1(\star)$.}
