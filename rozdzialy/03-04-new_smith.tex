@@ -1,0 +1,17 @@
+The ring $R$ of palette $(R, M, \mathcal{C}_\pm)$ is not necessarily a PID ring, e.g. $\Z[\Z]$ ring of the Alexander palette has ideal $(2, t+1)$ which is not principal. However, usually one can find a PID ring $P$ with homomorphism $R\to P$ which creates a new palette $(P, M\otimes_R P, \mathcal{C}_\pm\otimes_R P)$ derived from $(R, M, \mathcal{C}_\pm)$. Matrices over PID rings have many interesting properties, like having a Smith normal form.
+
+\begin{definition}[Smith normal form]
+Take $A\in K\phi$ and consider it as an $n\times n$ matrix with terms in a $P$ by the procedure outlined above. Then there exist a $n\times n$ matrix $S$ and $n\times n$ matrix $T$ such that $SAT$ is of form
+$$
+\begin{bmatrix}
+  a_1 & 0 & 0 & \hdots & 0 & \hdots & 0 \\ 
+  0 & a_2 & 0\\ 
+  0 & 0 & \ddots & & \vdots & & \vdots\\ 
+  \vdots & & & a_r\\ 
+  0 & & \hdots & & 0 & \hdots & 0 \\ 
+  \vdots & & & & \vdots & & \vdots\\ 
+  0 & & \hdots & & 0 & \hdots & 0
+\end{bmatrix}
+$$
+where for every $i$ $a_i|a_{i+1}$. Such a matrix $SAT$ is called the \buff{Smith normal form} of matrix $A$.
+\end{definition}

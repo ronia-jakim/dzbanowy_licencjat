@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.2)  3 JUN 2024 22:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.2)  5 JUN 2024 10:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -879,7 +879,7 @@ File: tikzlibrarybraids.code.tex 2024/01/09 v2.3 Tikz/PGF library for drawing br
 )
 \pgf@layerbox@bg=\box120
 \pgf@layerboxsaved@bg=\box121
- (./main.aux (./wstep.aux) (./rozdzialy/01-00-preliminaries.aux) (./rozdzialy/02-00-resolution.aux) (./rozdzialy/03-00-colorings.aux) (./rozdzialy/04-00-category.aux))
+ (./main.aux (./wstep.aux) (./rozdzialy/01-00-preliminaries.aux) (./rozdzialy/02-00-resolution.aux) (./rozdzialy/03-00-colorings.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -1128,28 +1128,23 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 37.
  [19]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 52.
- [20])) [21]
-\openout2 = `rozdzialy/04-00-category.aux'.
+ [20] [21]) (./rozdzialy/03-03-new_wyliczenie.tex
+Overfull \hbox (35.83347pt too wide) detected at line 70
+ [] 
+ []
 
- (./rozdzialy/04-00-category.tex (./rozdzialy/04-01-palettes.tex
+[22] [23]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 204.
+) (./rozdzialy/03-04-new_smith.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 3.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 12.
+ [24])) [25] (./main.bbl) [26
 
 
-LaTeX Warning: Reference `example reduced normal form' on page 1 undefined on input line 22.
-
-[22
-
-
-
-])) [23] (./main.bbl) [24
-
-
-] (./main.aux (./wstep.aux) (./rozdzialy/01-00-preliminaries.aux) (./rozdzialy/02-00-resolution.aux) (./rozdzialy/03-00-colorings.aux) (./rozdzialy/04-00-category.aux))
+] (./main.aux (./wstep.aux) (./rozdzialy/01-00-preliminaries.aux) (./rozdzialy/02-00-resolution.aux) (./rozdzialy/03-00-colorings.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1159,21 +1154,21 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F0E24C5AE825124504911F161B35A4CE;2069.
+(rerunfilecheck)             Checksum: A3ED922FF1880A71D5BF795A401923CC;2381.
  ) 
 Here is how much of TeX's memory you used:
- 35863 strings out of 474116
- 732935 string characters out of 5750250
- 1955187 words of memory out of 5000000
- 57298 multiletter control sequences out of 15000+600000
- 581832 words of font info for 179 fonts, out of 8000000 for 9000
+ 36014 strings out of 474116
+ 735804 string characters out of 5750250
+ 1954187 words of memory out of 5000000
+ 57432 multiletter control sequences out of 15000+600000
+ 582183 words of font info for 185 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,15n,448p,1001b,1510s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on main.pdf (24 pages, 368646 bytes).
+Output written on main.pdf (26 pages, 381058 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 99 named destinations out of 1000 (max. 500000)
- 41069 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 430 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 41077 words of extra memory for PDF output out of 42996 (max. 10000000)
 
