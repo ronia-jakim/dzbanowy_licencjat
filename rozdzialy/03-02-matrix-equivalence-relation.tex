@@ -9,7 +9,7 @@
   Matrix that is created after choosing a basis for $M^s$ and $N_\pm^x$ will be called a \buff{color checking matrix}.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}\label{admissible coloring is kernel}
   Coloring $(m_1,...,m_s)\in M^s$ is admissible $\iff$ $(m_1,...,m_s)\in\ker D\phi$.
 \end{proposition}
 
@@ -48,10 +48,10 @@ In reality, the isomorphism between diagrams which relates diagrams of the same 
 \hl{For suitably chosen palettes, an invariant of the equivalent class of matrices of the same knot is known.} 
 
 \begin{definition}[Alexander palette]
-One of such palettes is the \buff{Alexander palette} {\boldmath$(R=\Z[\Z], M=\Z[\Z], \mathcal{C}_\pm)$}, where $\mathcal{C}_\pm$ are defined by homomorphisms
+A palette {\boldmath$(R=\Z[\Z], M=\Z[\Z], \mathcal{C}_\pm)$}, where $\mathcal{C}_\pm$ are defined by homomorphisms
 $$\phi_+(u,i,o)=(1-t)u+ti-o$$
 $$\phi_-(u,i,o)=(1-t^{-1})u+t^{-1}i-o,$$
-with $u$, $i$ and $o$ defined in \cref{crossing_type}. 
+with $u$, $i$ and $o$ defined in \cref{crossing_type}, is called the \buff{Alexander palette}.
 \end{definition}
 
 For the Alexander palette said invariant is e.g. the determinant of a \hl{$n-1$ minor of the color checking matrix up to multiplication by a unit}. 
