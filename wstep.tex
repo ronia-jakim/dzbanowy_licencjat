@@ -4,22 +4,8 @@ The knot group $G=\pi_1(K)$ is a starting point for many knot invariants. Alexan
 
 \section*{Introduction}
 
-In knot theory distinguishing knots is often a difficult endeavor, usually facilitated by the notion of invariants. An interesting group of knot invariants are polynomial invariants, such as the Alexander polynomial. Another group worth mentioning are knot colorings that can also yield an element of the ring $\Z[\Z]$.
+\Cref{sec1} defines the fundamental ideas of this paper, such as the knot group (see \cref{knot gorup def}) its metabelianization (see \cref{def:metabelianization}) and the Alexander module (see \cref{alexander module def}). Two equivalent definitions fot said modules are presented: an algebraic one and a topological one. In a purely algebraical sense, the Alexander moule is the abelianized subgroup $[[G, G], [G, G]]$ of the knot group $G$, with $\Z$ action induced by abelianization homomorphism $G\to \Z$, while from a topological point of view it is the first homology module of the infinite cyclic cover (see \cref{inf cyclic cover}). An important result finishing this section is that the Alexander module is a torsion module (see \cref{prop: modul alexandera jest torsyjny}).
 
-Very often, considering only one invariant is not sufficient, as there are many knots that share its value, i.e. $K11n85$ and $K11n164$ have the same Alexander polynomial. However, a more subtle application of the same method that yields the Alexander polynomial can sometimes distinguish such knots.
+\Cref{section2} is dedicated to the Alexander matrix (see \cref{alexander matrix def}) its properties and ivariant nature of its determinant.
 
-The following paper is a result of a year long cooperation between prof. Tadeusz Januszkiewicz, Julia Walczuk and the author of this thesis. In it, connections between the knot group, knot colorings and homology modules of infinite cyclic covering (see \cite{milnor_infinite_cyclic}) will be outlined. As an additional exercise, we will show a way of distinguishing already mentioned knots $K11n85$ and $K11n164$.
 
-The first section of this paper defines the most important terms used in knot theory, as well as highlights the connection between the metabelianization of knot group and the first homology module of an infinite cyclic covering of the complement of said knot. 
-
-Subsequently, the construction of a $\Z[\Z]$ module from the kernel of $G^m\to \Z$ is presented. This module is defined to be the Alexander module $K_G^{ab}$ of knot $K$ (\cref{alexander module def}). Then, Alexander matrix is introduced (\cref{alexander matrixi def}) as the representation matrix of the Alexander module. In this section the resolution of Alexander module is proven to be of form  
-\begin{center}
-  \begin{tikzcd}
-    0\arrow[r] & \Z[\Z]\arrow[r] & \Z[\Z]^{n}\arrow[r] & \Z[\Z]^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0 
-  \end{tikzcd}
-\end{center}
-At the end of the second section, a connection between resolution of the Alexander module and coloring of diagrams is made.
-
-The third and last section is focused on coloring matrices (\cref{def:color checking matrix}) and defining an equivalence relation between matrices relating to the same knot. A new knot invariant is defined (\cref{reduced normal form def}) and an example of its utility is presented in \cref{example reduced normal form}.
-
-Last section is dedicated to presenting an approach to diagram colorings from the perspective from category theory. In addition, a connection between the Alexander matrix and color checking matrix (using a particular palette, named the Alexander palette) is presented.

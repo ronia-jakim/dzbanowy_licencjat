@@ -54,13 +54,32 @@ $$\phi_-(u,i,o)=(1-t^{-1})u+t^{-1}i-o,$$
 with $u$, $i$ and $o$ defined in \cref{crossing_type}, is called the \buff{Alexander palette}.
 \end{definition}
 
-For the Alexander palette said invariant is e.g. the determinant of a \hl{$n-1$ minor of the color checking matrix up to multiplication by a unit}. 
+The coloring rule of the Alexander palette can be derived from the relations in the Wirtinger presentation of the knot group. Consider a crossing
+\begin{center}
+  \begin{tikzpicture}
+    \draw[<-] (0, 0) node[above] {$o$} --(2, 0) node[above] {$i$};
+    \fill[white](1, 0) circle (7pt);
+    \draw[->] (1, -1) node[right] {$u$}--(1, 1);
+  \end{tikzpicture}
+\end{center}
+and take some $x$ to be the generator that is used to generate a representation for $K_G^{ab}$. Then, the following is a relation in said group:
+$$UxCx(Ux)^{-1}=Ix$$
+where $U=ux^{-1}$, $I=ix^{-1}$ and $O=ox^{-1}$. 
+We can multiply both sides by $x^{-1}$ to obtain
+$$x^{-1}UxCU^{-1}=x^{-1}Ix$$
+which is change in $\Z[\Z]$ to
+$$
+tU+C-U=tI\implies 0=(1-t)U+tI-C
+$$
+The procedure for the other type of crossing is analogous.
+
+Thus, the equivalence class of color checking matrices of a knot whose diagrams are being colored with the Alexander palette will be closely linked to the Alexander module, e.g. the determinant up to multiplication of a unit of a minor of the color checking matrix will be a knot invariant.
 
 
 The following example illustrates the importance of choosing a suitable palette.
 
 \begin{example}
-  Consider a coloring of trefoil knot $3_1$ with two palettes: $P_1=(\Z, \Z, \phi_\pm(u,i,o)=2u-i+o)$ that is not an image of the Alexander palette and $P_2=(\Z, \Z, \phi_\pm(u,i,o)=2u-i-o)$ which in turn is one. The color checking matrix of its diagram with $3$ crossings is
+  Consider a coloring of trefoil knot $3_1$ with two palettes: $P_1=(\Z, \Z, \phi_\pm(u,i,o)=2u-i+o)$ that is not an image of the Alexander palette and $P_2=(\Z, \Z, \phi_\pm(u,i,o)=2u-i-o)$ which in turn is one (by $\Z[\Z]\ni t\mapsto -1\in\Z$). The color checking matrix of its diagram with $3$ crossings is
   \begin{center}
     \begin{tikzpicture}
       \begin{knot}[

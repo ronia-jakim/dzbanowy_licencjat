@@ -1,16 +1,53 @@
 \hl{An oriented diagram $D$ of knot $K$ has two types of crossings, pictured in} \cref{crossing_type}. A diagram coloring, in essence, is an assignment of values from some mathematical object (i.e. $R$-module) to segments of $D$.
 
 \begin{figure}[h]\centering
-  \begin{tikzpicture}
-    \draw[very thick, ->] (0,0) node[below] {i} -- (1.5, 2) node[above] {o};
-    \fill[white] (0.75, 1) circle (6pt);
-    \draw[very thick, ->] (1.5, 0)--(0, 2) node[above] {u};
-    \node at (0.75, -0.5) {$+$};
+  \begin{tikzpicture}[
+      pics/arrow/.style={code={%
+        \draw[line width=0pt,{Computer Modern Rightarrow[line width=1pt,width=2ex,length=1.5ex]}-] (-0.5ex,0) -- (0.5ex,0);
+        }
+      },
+      pics/arrow2/.style={code={%
+        \draw[line width=0pt,-{Computer Modern Rightarrow[line width=1pt,width=2ex,length=1.5ex]}] (-0.5ex,0) -- (0.5ex,0);
+        }
+      }
+    ]
+    % \draw[very thick, ->] (0,0) node[below] {i} -- (1.5, 2) node[above] {o};
+    % \fill[white] (0.75, 1) circle (6pt);
+    % \draw[very thick, ->] (1.5, 0)--(0, 2) node[above] {u};
+    % \node at (0.75, -0.5) {$+$};
+    %
+    % \draw[very thick, ->] (4.5, 0) node[below] {i} --(3, 2) node[above] {o};
+    % \fill[white] (3.75, 1) circle (6pt);
+    % \draw[very thick, ->] (3, 0)--(4.5, 2) node[above] {u};
+    % \node at (3.75, -0.5) {$-$};
 
-    \draw[very thick, ->] (4.5, 0) node[below] {i} --(3, 2) node[above] {o};
-    \fill[white] (3.75, 1) circle (6pt);
-    \draw[very thick, ->] (3, 0)--(4.5, 2) node[above] {u};
-    \node at (3.75, -0.5) {$-$};
+    \begin{knot}[
+      consider self intersections, 
+      clip width =10pt
+      ]
+      \strand[ultra thick] (0, 0) to[out=90, in=180]
+      (2, 2) to[out=0, in=180] pic[pos=0,sloped]{arrow}
+      (6, -2) to[out=0, in=180]  pic[pos=0,sloped]{arrow}
+      (10, 2) to[out=0, in=90]  pic[pos=0,sloped]{arrow}
+      (12, 0) to[out=-90, in=0]
+      (10, -2) to[out=180, in=0] 
+      (6, 2) to[out=180, in=0] pic[pos=0,sloped]{arrow2}
+      (2, -2) to[out=180, in=-90]
+      (0,0);
+    \end{knot}
+    \draw[dashed, thick] (4, 0) circle (30pt);
+    \draw[dashed, thick] (8, 0) circle (30pt);
+
+    \node at (8, -1.3) {$-$};
+    \node at (4, -1.3) {$+$};
+    
+    \node at ($(4, 0)+(.6, -.6)$) {$u$};
+    \node at ($(4, 0)+(.6, .6)$) {$i$};
+    \node at ($(4, 0)+(-.6, -.6)$) {$o$};
+
+    \node at ($(8, 0)+(.6, -.6)$) {$o$};
+    \node at ($(8, 0)+(.6, .6)$) {$u$};
+    \node at ($(8, 0)+(-.6, .6)$) {$i$};
   \end{tikzpicture}
   \caption{Two types of crossing in oriented diagram.\label{crossing_type}}
 \end{figure}
@@ -29,7 +66,9 @@ We will cumulatively call the two modules $\mathcal{C}_\pm$ the \buff{coloring r
 \hl{where $\pi_{x_j}:M^s\to M^3$ is a projection of module $M^s$ to the $M^3$ factor that corresponds to segments that constitute $x_j$.} 
 \end{definition}
 
-Usually, a crossing comprises of exactly three segments. However, as is the case for the first Reidemeister move, a crossing can be comprised of only two segments. Thus, if $x_j$ is such a two-segment crossing, $\im(\pi_{x_j})$ should be isomorphic to $\{(x, y, y)\;:\;x,y\in M\}$.
+Sometimes, a crossing is actually composed of only two segments, as is the case e.g. in the first Reidemeister move (\cref{reidemeister-generating}). For such a crossing $x_j$ we require that $\im(\pi_{x_j})\cong M^2\subseteq M^3$.
+
+% Usually, a crossing comprises of exactly three segments. However, as is the case for the first Reidemeister move, a crossing can be comprised of only two segments. Thus, if $x_j$ is such a two-segment crossing, $\im(\pi_{x_j})$ should be isomorphic to $\{(x, y, y)\;:\;x,y\in M\}$.
 
 We can now define two linear homomorphisms
 $$\phi_\pm:M^3\to M^3/\mathcal{C}_\pm=N_\pm$$

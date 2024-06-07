@@ -8,5 +8,5 @@
 \contentsline {section}{\numberline {3}Knot colorings}{17}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Palettes and diagram colorings}{17}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Color checking matrix}{18}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Reidemeister relation on color checking matrices}{22}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Reidemeister relation on color checking matrices}{23}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Smith normal form}{25}{subsection.3.4}%
