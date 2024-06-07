@@ -18,7 +18,11 @@ $$
 where for every $i$ $a_i|a_{i+1}$. Such a matrix $SAT$ is called the \buff{Smith normal form} of matrix $A$.
 \end{definition}
 
-As was mentioned in the first section, $\overline{x}\in M^n$ is a coloring of a diagram $D$ if and only if $D\phi(\overline{x})=0$, that is $\overline{x}\in\ker D\phi$. The Smith normal form hints at the structure of matrix kernel - the columns filled with zeros will contributed a "free" factor $M$ to the kernel. 
+As was mentioned in the first section, $\overline{x}\in M^n$ is a coloring of a diagram $D$ if and only if $D\phi(\overline{x})=0$, that is $\overline{x}\in\ker D\phi$. The Smith normal form hints at the structure of matrix kernel - the columns filled with zeros (or zero divisors) will contributed a "free" factor $M$ to the kernel. 
+
+Similarly, every column of the Smith normal form contains information about the $\coker(D\phi)$.
+
+
 
 Take $(a)$ to be a prime ideal with its generator $a$ appearing in the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $P/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood. Meaning that kernel became bigger and more colorings are admissible over $P/(a)$.
 

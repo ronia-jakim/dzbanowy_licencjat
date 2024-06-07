@@ -12,14 +12,14 @@ Warning--empty journal in milnor_infinite_cyclic
 Warning--empty chapter and pages in murasagi-equivalence
 You've used 8 entries,
             2730 wiz_defined-function locations,
-            628 strings with 5773 characters,
-and the built_in function-call counts, 4638 in all, are:
+            624 strings with 5442 characters,
+and the built_in function-call counts, 4626 in all, are:
 = -- 388
 > -- 88
 < -- 8
 + -- 37
 - -- 27
-* -- 301
+* -- 293
 := -- 716
 add.period$ -- 31
 call.type$ -- 8
@@ -33,13 +33,13 @@ if$ -- 958
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 65
-newline$ -- 50
+newline$ -- 46
 num.names$ -- 32
 pop$ -- 151
 preamble$ -- 1
 purify$ -- 41
 quote$ -- 0
-skip$ -- 136
+skip$ -- 140
 stack$ -- 0
 substring$ -- 343
 swap$ -- 106
@@ -50,5 +50,5 @@ type$ -- 57
 warning$ -- 3
 while$ -- 38
 width$ -- 0
-write$ -- 107
+write$ -- 103
 (There were 3 warnings)

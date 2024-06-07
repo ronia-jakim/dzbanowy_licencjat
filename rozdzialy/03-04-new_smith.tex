@@ -1,7 +1,7 @@
 The ring $R$ of palette $(R, M, \mathcal{C}_\pm)$ is not necessarily a PID ring, e.g. $\Z[\Z]$ ring of the Alexander palette has ideal $(2, t+1)$ which is not principal. However, usually one can find a PID ring $P$ with homomorphism $R\to P$ which creates a new palette $(P, M\otimes_R P, \mathcal{C}_\pm\otimes_R P)$ derived from $(R, M, \mathcal{C}_\pm)$. Matrices over PID rings have many interesting properties, like having a Smith normal form.
 
 \begin{definition}[Smith normal form]
-Take $A\in K\phi$ and consider it as an $n\times n$ matrix with terms in a $P$ by the procedure outlined above. Then there exist a $n\times n$ matrix $S$ and $n\times n$ matrix $T$ such that $SAT$ is of form
+Take $A\in K\phi$ and consider it as an $s\times x$ matrix with terms in a $P$ by the procedure outlined above. Then there exist a $s\times s$ matrix $S$ and $x\times x$ matrix $T$ such that $SAT$ is of form
 $$
 \begin{bmatrix}
   a_1 & 0 & 0 & \hdots & 0 & \hdots & 0 \\ 
@@ -30,9 +30,33 @@ The following is an algorithm for computing the Smith normal form of a matrix $A
   \item Repeat the same algorithm on the smaller matrix  $\{a_{i,j}\}_{1<i, j\leq n}$.
 \end{enumerate}
 
-In \cref{admissible coloring is kernel} we showed that $\overline{x}\in M^n$ is an admissible coloring of a diagram $D$ if and only if $\overline{x}\in\ker D\phi$. The Smith normal form hints at the structure of matrix kernel - the columns filled with zeros will contributed a factor $M$ to the kernel. 
+In \cref{admissible coloring is kernel} we showed that $\overline{x}\in M^n$ is an admissible coloring of a diagram $D$ if and only if $\overline{x}\in\ker D\phi$. The Smith normal form of $D\phi$, when the diagram is colored using the Alexander palette, hints at the structure of matrix kernel - the columns filled with zeros will contributed a factor $M$ to the kernel. 
 
-Take $(a)$ to be a prime ideal with its generator $a$ appearing on the diagonal of the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $P/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood. Meaning that kernel became bigger and more colorings are admissible over $P/(a)$. 
+Similarly, each column of the Smith normal form contains information about the cokernel $\coker(D\phi)$. The columns containing units disappear, the zero columns contribute a free factor while for every other term $a$ which appears on the diagonal, $P/(a)$ is a summand of the cokernel.
+This information aligns with the information obtained from the Alexander module, as one can derive the coloring rule of the Alexander palette from the Wirtinger presentation of a diagram.
+
+Consider a crossing
+\begin{center}
+  \begin{tikzpicture}
+    \draw[<-] (0, 0) node[above] {$o$} --(2, 0) node[above] {$i$};
+    \fill[white](1, 0) circle (7pt);
+    \draw[->] (1, -1) node[right] {$u$}--(1, 1);
+  \end{tikzpicture}
+\end{center}
+and take some $x$ to be the generator that is used to generate a representation for $K_G^{ab}$. Then, the following is a relation in said group:
+$$UxCx(Ux)^{-1}=Ix$$
+where $U=ux^{-1}$, $I=ix^{-1}$ and $O=ox^{-1}$. 
+We can multiply both sides by $x^{-1}$ to obtain
+$$x^{-1}UxCU^{-1}=x^{-1}Ix$$
+which is change in $\Z[\Z]$ to
+$$
+tU+C-U=tI\implies 0=(1-t)U+tI-C
+$$
+The procedure for the other type of crossing is analogous.
+
+
+
+% Take $(a)$ to be a prime ideal with its generator $a$ appearing on the diagonal of the Smith normal form of $D\phi$. Then we might consider the matrix over a new ring $P/(a)$, which is still a PID. After this change, the structure of the kernel has changed as now there are additional zero columns where $a$ and all its multiples stood. Meaning that kernel became bigger and more colorings are admissible over $P/(a)$. 
 
 
 \begin{definition}[reduced normal form of matrix]\label{reduced normal form def}
@@ -151,18 +175,12 @@ Consider the following as a motivation behind \cref{reduced normal form def}.
     \end{tikzpicture}
     \caption{A diagram for knot $K11n164$.\label{k11n164 diagram}}
   \end{figure}
-  Consider the knots $K11n85$ and $K11n164$ pictured in \cref{k11n85 diagram,k11n164 diagram}. They both have the Alexander polynomial equal 
+  Consider the knots $K11n85$ and $K11n164$ pictured in \cref{k11n85 diagram,k11n164 diagram} respectively. They both have the Alexander polynomial equal 
   $$
   \Delta(t)=-t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}.
   $$
-  Coloring them over ring $\Z[\Z]$ with module $M=\Z[\Z]$ and coloring rules
-  $$
-  \phi_+(u, i, o)=(1-t)u+tb-o
-  $$
-  $$
-  \phi_-(u,i,o)=(1-t^{-1})y+t^{-1}b-o
-  $$
-  yields two $11\times 11$ matrices whose any $10\times 10$ minor is equal to the Alexander polynomial (up to multiplication by a unit). However, the reduced Smith normal form are 
+  Coloring them with the Alexander palette
+  yields two $11\times 11$ matrices whose any $10\times 10$ minor is equal to the Alexander polynomial (up to multiplication by a unit). However, the reduced Smith normal form are distinguishable
   $$D_{11n85}\phi=\begin{bmatrix}
     -t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}
   \end{bmatrix}$$
@@ -173,5 +191,5 @@ Consider the following as a motivation behind \cref{reduced normal form def}.
   \end{bmatrix}
   $$
 \end{example}
-
+ 
 \input{./rozdzialy/theorem_reduced_normal_is_invariant.tex}

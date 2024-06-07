@@ -2,21 +2,21 @@
 
 \begin{figure}[h]\centering
   \begin{tikzpicture}
-    \draw[->] (0,0) node[below] {i} -- (1.5, 2) node[above] {o};
+    \draw[very thick, ->] (0,0) node[below] {i} -- (1.5, 2) node[above] {o};
     \fill[white] (0.75, 1) circle (6pt);
-    \draw[->] (1.5, 0)--(0, 2) node[above] {u};
+    \draw[very thick, ->] (1.5, 0)--(0, 2) node[above] {u};
     \node at (0.75, -0.5) {$+$};
 
-    \draw[->] (4.5, 0) node[below] {i} --(3, 2) node[above] {o};
+    \draw[very thick, ->] (4.5, 0) node[below] {i} --(3, 2) node[above] {o};
     \fill[white] (3.75, 1) circle (6pt);
-    \draw[->] (3, 0)--(4.5, 2) node[above] {u};
+    \draw[very thick, ->] (3, 0)--(4.5, 2) node[above] {u};
     \node at (3.75, -0.5) {$-$};
   \end{tikzpicture}
   \caption{Two types of crossing in oriented diagram.\label{crossing_type}}
 \end{figure}
 
 \begin{definition}[palette]
-  We say that a triplet {\boldmath$(R, M, \mathcal{C}_\pm)$} is a \buff{palette} if $R$ is a commutative ring with unity, $M$ an $R$-module and $\mathcal{C}_\pm$ are two $R$-modules, corresponding to the two types of crossings (\cref{crossing_type}) such that $\mathcal{C}_\pm\subseteq M^3$.
+  We say that a quadruple {\boldmath$(R, M, \mathcal{C}_\pm)$} is a \buff{palette} if $R$ is a commutative ring with unity, $M$ an $R$-module and $\mathcal{C}_\pm$ are two $R$-modules, corresponding to the two types of crossings (\cref{crossing_type}) such that $\mathcal{C}_\pm\subseteq M^3$.
 \end{definition}
 
 We will cumulatively call the two modules $\mathcal{C}_\pm$ the \buff{coloring rule} of palette $(R, M, \mathcal{C}_\pm)$ as they determine whether a coloring is admissible.
