@@ -56,6 +56,8 @@
   We say that a quadruple {\boldmath$(R, M, \mathcal{C}_\pm)$} is a \buff{palette} if $R$ is a commutative ring with unity, $M$ an $R$-module and $\mathcal{C}_\pm$ are two $R$-modules, corresponding to the two types of crossings (\cref{crossing_type}) such that $\mathcal{C}_\pm\subseteq M^3$.
 \end{definition}
 
+If a palette $(R, M, \mathcal{C}_\pm)$ is given along with a ring homomorphism $f:R\to S$, then the image of this palette through induced palette homomorphism $f_*$ is $(S, M\otimes_R S, \mathcal{C}_\pm\otimes_R S)$. Similarly, for an $R$-module homomorphism $g:M\to N$ we write $g_*(R, M, \mathcal{C}_\pm)=(R, N, g(\mathcal{C})_\pm)$. 
+
 We will cumulatively call the two modules $\mathcal{C}_\pm$ the \buff{coloring rule} of palette $(R, M, \mathcal{C}_\pm)$ as they determine whether a coloring is admissible.
 
 \begin{definition}[diagram coloring]
@@ -66,7 +68,7 @@ We will cumulatively call the two modules $\mathcal{C}_\pm$ the \buff{coloring r
 \hl{where $\pi_{x_j}:M^s\to M^3$ is a projection of module $M^s$ to the $M^3$ factor that corresponds to segments that constitute $x_j$.} 
 \end{definition}
 
-Sometimes, a crossing is actually composed of only two segments, as is the case e.g. in the first Reidemeister move (\cref{reidemeister-generating}). For such a crossing $x_j$ we require that $\im(\pi_{x_j})\cong M^2\subseteq M^3$.
+% Sometimes, a crossing is actually composed of only two segments, as is the case e.g. in the first Reidemeister move (\cref{reidemeister-generating}). For such a crossing $x_j$ we require that $\im(\pi_{x_j})\cong M^2\subseteq M^3$.
 
 % Usually, a crossing comprises of exactly three segments. However, as is the case for the first Reidemeister move, a crossing can be comprised of only two segments. Thus, if $x_j$ is such a two-segment crossing, $\im(\pi_{x_j})$ should be isomorphic to $\{(x, y, y)\;:\;x,y\in M\}$.
 
@@ -88,3 +90,8 @@ for $u$, $i$, $o$ understood like in \cref{crossing_type} and with coefficients 
   Stems from the fact that $\mathcal{C}_\pm=\ker\phi_\pm$.
 \end{proof}
 
+
+
+% \begin{definition}[category of palettes]
+%   The set of palettes with morphisms induced by ring and module homomorphisms as above is a category of palettes.
+% \end{definition}

@@ -1,13 +1,11 @@
-% We can think of coloring diagrams with a chosen palette $(R, M, \mathcal{C}_\pm)$ as being a {\color{red}functor from a set of diagrams to a set of matrices}.
-\hl{Coloring diagrams with a chosen palette $(R, M, \mathcal{C}_\pm)$ is a functor from the category of knot diagrams, whose objects are diagrams and morphisms represent Reidemeister moves, to a category of matrices, with morphisms corresponding to matrix equivalence explained in this section.}
-
-\hl{Moreover, if a palette $P=(R, M, \mathcal{C}_\pm)$ is given alongside a ring homomorphism $f:R\to S$, then an image of this palette $P$ through induced palette homomorphism is $(S, M\otimes_R S, \mathcal{C}_\pm\otimes_R S)$. Similarly, if an $R$-module homomorphism $g:M\to N$ is given, then the image of palette $P$ is $(R, N, g(\mathcal{C}_\pm))$.}
+Given a palette $P=(R, M, \mathcal{C}_\pm)$ and a diagram $D$ with $s$ segments and $x$ crossings, a homomorphism $D\phi:M^s\to N_\pm^x$ with $\ker(D\phi)$ containing the admissible colorings, can be produced.
 
 \begin{definition}[color checking matrix]\label{def:color checking matrix}
   Assigning segments of diagram $D$ to coordinates in $M^s$ and crossings to coordinates in $N_\pm^x$ it is possible to define a linear homomorphism $D\phi:M^s\to N_\pm^x$  as
   $$D\phi(m_1,...,m_s)=(\phi_\pm(\pi_{x_1}(m_1,...,m_s)), \phi_\pm(\pi_{x_2}(m_1,...,m_s)),...).$$
   Matrix that is created after choosing a basis for $M^s$ and $N_\pm^x$ will be called a \buff{color checking matrix}.
 \end{definition}
+
 
 \begin{proposition}\label{admissible coloring is kernel}
   Coloring $(m_1,...,m_s)\in M^s$ is admissible $\iff$ $(m_1,...,m_s)\in\ker D\phi$.
@@ -16,25 +14,28 @@
 \begin{proof}
   We start by saying that 
   $$(m_1,..., m_s)\in\ker D\phi\iff [(\forall\;x_j\text{ crossing})\;\phi_\pm(\pi_{x_j}(m_1,..., m_s))=0].$$
-  Which is to say that every coordinate of $D\phi(m_1,..., m_s)$ is zero. \Cref{proposition male kernel kolorowania} says that it is equivalent with $(m_1,..., m_s)$ being an admissible coloring.
+  meaning that every coordinate of $D\phi(m_1,..., m_s)$ is zero. \Cref{proposition male kernel kolorowania} says that it is equivalent with $(m_1,..., m_s)$ being an admissible coloring.
 \end{proof}
 
-We want to define which color checking matrices are equivalent. We will say that $D\phi$ and $D'\phi$ are equivalent if 
-\begin{enumerate}
-  \item they differ by a permutation of rows or columns, 
-  \item one can be obtained from the other by adding a linear combination of rows or columns to another row or column 
-  \item one can be obtained from the other by adding a new row and a new column with only $0$ save for the term on their intersection, which is a unit.
-\end{enumerate}
-The first two points mean that two color checking matrices $D\phi, D'\phi:M^s\to N^x$ are equivalent if there exist an isomorphisms $\theta:M^s\to M^s$ and $\psi:N^x\to N^x$ such that
+In the most basic sense, two diagrams $D$ and $D'$ are isomorphic if there exists an isotopy $h_t:\R^2\to \R^2$ such that $h_0(D)=D$ and $h_1(D)=D'$ and $D'$ has crossings identical to those of $D$.
+
+Knot diagrams create a category with Reidemeister moves and the isotopy $h_t$ supplying morphisms between objects. The assigment $D\mapsto D\phi$ of a color checking matrix for a chosen palette is to be a functor from the category of diagrams to the category of color checking matrices. This means that if two diagrams were equivalent, then their color checking matrices must also be equivalent.
+
+We say that two color checking matrices $D\phi$ and $D'\phi$ are equivalent if 
+% \begin{enumerate}
+%   \item they differ by a permutation of rows or columns, 
+%   \item one can be obtained from the other by adding a linear combination of rows or columns to another row or column 
+%   \item one can be obtained from the other by adding a new row and a new column with only $0$ save for the term on their intersection, which is a unit.
+% \end{enumerate}
+% The first two points mean that two color checking matrices $D\phi, D'\phi:M^s\to N^x$ are equivalent if 
+there exist isomorphisms $\theta:M^s\to M^s$ and $\psi:N^x\to N_\pm^x$ such that
 $$
 \begin{tikzcd}[column sep=large]
   M^s\arrow[r, "D\phi"]\arrow[d, "\theta" left] & N^x\arrow[d, "\psi" right]\\ 
   M^s\arrow[r, "D'\phi" below] & N^x
 \end{tikzcd}
 $$
-is a commutative diagram. 
-
-In the most basic sense, two diagrams $D$ and $D'$ are isomorphic if there exists an isotopy $h_t:\R^2\to \R^2$ such that $h_0(D)=D$ and $h_1(D)=D'$ and $D'$ has crossings identical to those of $D$.
+is a commutative diagram. Additionally, we allow $D\phi$ to differ from $D'\phi$ by a identity matrix block.
 
 \begin{lemma}
   Isomorphic diagrams $D\sim D'$ yield equivalent color checking matrices $D\phi\sim D'\phi$.

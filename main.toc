@@ -9,5 +9,5 @@
 \contentsline {subsection}{\numberline {3.1}Palettes and diagram colorings}{17}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Color checking matrix}{18}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Alexander palette}{20}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Reidemeister relation on color checking matrices}{23}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Smith normal form}{26}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.4}Reidemeister relation on color checking matrices}{22}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Smith normal form}{25}{subsection.3.5}%

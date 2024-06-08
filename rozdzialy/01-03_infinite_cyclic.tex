@@ -1,4 +1,12 @@
-Let $X$ be the complement of a knot $K$ ($X=S^3-K$). Take $\widetilde{X}$ to be its universal covering, meaning that it is simply connected. The fundamental group $G=\pi_1(X)$ of $X$ acts on its universal covering by deck transformations. \hl{The commutator subgroup $K_G=[G, G]\triangleleft G$ acts on $\widetilde{X}$, the quotient $\overline{X}=\widetilde{X}/K_G$ has fundamental group $\pi_1(\overline{X})=K_G$ and the quotient group $G/K_G=\Z$ acts on $\overline{X}$ because $K_G$ is a normal subgroup of $G$.}
+Let $X$ be the complement of a knot $K$ ($X=S^3-K$). Take $\widetilde{X}$ to be its universal covering, meaning that it is simply connected. 
+The knot group $G=\pi_1(X)$ of $X$ acts on its universal covering by deck transformations. 
+The commutator subgroup $K_G=[G, G]\triangleleft G$ also acts on $\widetilde{X}$ and the quotient 
+$$\overline{X}=\widetilde{X}/K_G$$ 
+has a fundamental group 
+$$\pi_1(\overline{X})=K_G$$
+no matter the choice of basepoint in $\widetilde{X}$.
+
+Since $K_G$ is a normal subgroup, then $G/K_G=G^{ab}=\Z$ also acts on the quotient space $\overline{X}$. This extends to the homology groups of $\overline{X}$ and allows a $\Z[\Z]$-module structure on them.
 
 \begin{definition}[infinite cyclic covering]\label{inf cyclic cover}
   The quotient space {\boldmath$\overline{X}=\widetilde{X}/K_G$} is called the \buff{infinite cyclic covering} of $X$.
@@ -34,9 +42,9 @@ The following diagram illustrates the construction of infinite cycle covering de
 % \end{lemma}
 %
 
-A \buff{Seifert surface} $S$ of knot $K$ is an orientable surface with boundary embedded in $S^3$ such that $\partial S=K$. Take a countable amount of $X$, with $S$ without its boundary embedded, and label each with an element from $\Z$. We might now cut each of the copies of $X$ along the Seifert surface of $K$ and identify the $+$ side of $S$ from the $i$-th copy of $X$ with the $-$ side of $S$ from the $(i+1)$-th copy of $X$. Notice that the arising space with a projection to one copy of $X$ is an infinite cyclic cover of $X$.
+A \buff{Seifert surface} $S$ of knot $K$ is an orientable surface with boundary embedded in $S^3$ such that $\partial S=K$. Take a countable amount of $X$, with $S$ without its boundary embedded, and label each with an element from $\Z$. We might now cut each of the copies of $X$ along the Seifert surface of $K$ and identify the $+$ side of $S$ from the $i$-th copy of $X$ with the $-$ side of $S$ from the $(i+1)$-th copy of $X$. The arising space with a projection to one copy of $X$ is an infinite cyclic cover of $X$.
 
-Imagine that each copy of $X$ inside of $\overline{X}$ is a box labeled with some integer $k$. The ring action of $\Z[\Z]$ on $\overline{X}$ is increasing or decreasing the label on the box from which a cycle is taken, depending on the power of $t\in\Z[\Z]$ in the polynomial which we apply to $\overline{X}$.
+Imagine that each copy of $X$ inside of $\overline{X}$ is a box labeled with some integer $k$ such that copies of $X$ sharing the Seifert surface are labeled with consecutive integers. The ring action of $\Z[\Z]$ on $\overline{X}$ is increasing or decreasing the label on the box from which a cycle is taken, depending on the power of $t\in\Z[\Z]$ in the polynomial which we apply to $\overline{X}$.
 
 \begin{proposition}\label{prop: modul alexandera jest torsyjny}
   The $\Z[\Z]$-module $K^{ab}=H_1(\overline{X}, \Z)$ is a torsion module.
@@ -46,7 +54,7 @@ Imagine that each copy of $X$ inside of $\overline{X}$ is a box labeled with som
   Consider the following homomorphism on chain complexes:
   $$f:C_*(\overline{X})\to C_*(\overline{X})$$
   $$f(x)=(1-t)x.$$
-  It translates to removing from a cycle in the $(i+1)$-th box a corresponding cycle in the $i$-th box. From this it is an immediate result that $\ker f=0$ and that $\coker f=C_*(X)$ : after gluing all pairs of cycles from two consecutive boxes, the result is easily identified with just one box.
+  It translates to removing from a cycle in the $(i+1)$-th box a corresponding cycle in the $i$-th box. From this it is an immediate result that $\ker f=0$ and that $\coker f=C_*(X)$ : after gluing all pairs of cycles from two consecutive boxes, the result is easily identified with cycles from just one box.
 
   As a consequence, the following sequence of chain complexes is exact
   \begin{center}
