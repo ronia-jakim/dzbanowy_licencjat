@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.5)  7 JUN 2024 22:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.5)  8 JUN 2024 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1122,24 +1122,31 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 12.
+
+Overfull \hbox (4.09804pt too wide) in paragraph at lines 18--20
+\T1/cmr/m/n/14.4 (-20) Which is to say that ev-ery co-or-di-nate of $\OML/cmm/m/it/14.4 D^^^\OT1/cmr/m/n/14.4 (-20) (\OML/cmm/m/it/14.4 m[]; :::; m[]\OT1/cmr/m/n/14.4 (-20) )$ \T1/cmr/m/n/14.4 (-20) is zero. Lemma []3.1[]
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 40.
- [19]
+[19]) (./rozdzialy/03-03-alexander-palette.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 50.
+(mdframed)              on input line 23.
+Package mdframed Info: Not enough space on this page on input line 28.
  [20]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 82.
+Package mdframed Info: Not enough space on this page on input line 28.
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 37.
 
-Overfull \hbox (19.3411pt too wide) in paragraph at lines 158--159
+Overfull \hbox (19.3411pt too wide) in paragraph at lines 113--114
  [] 
  []
 
 [21]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 174.
+(mdframed)              on input line 129.
  [22]) (./rozdzialy/03-03-new_wyliczenie.tex
 Overfull \hbox (35.83347pt too wide) detected at line 70
  [] 
@@ -1149,28 +1156,24 @@ Overfull \hbox (35.83347pt too wide) detected at line 70
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 210.
-) (./rozdzialy/03-04-new_smith.tex
+) (./rozdzialy/03-04-new_smith.tex [25]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 3.
- [25]
-Package mdframed Info: Not enough space on this page on input line 17.
  [26]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 41.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [27]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./rozdzialy/theorem_reduced_normal_is_invariant.tex
+[28] (./rozdzialy/theorem_reduced_normal_is_invariant.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 2.
- [27] [28] [29] [30] [31]))) [32] (./main.bbl) [33
+Package mdframed Info: Not enough space on this page on input line 3.
+ [29] [30] [31]))) [32] (./main.bbl) [33
 
 
 ] (./main.aux (./wstep.aux) (./rozdzialy/01-00-preliminaries.aux) (./rozdzialy/02-00-resolution.aux) (./rozdzialy/03-00-colorings.aux))
@@ -1179,21 +1182,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 76791013FD6203793C8D705EC958F24D;2131.
+(rerunfilecheck)             Checksum: D8A1798C2E9A42FE0245EA88FB219C4D;2277.
  ) 
 Here is how much of TeX's memory you used:
- 36352 strings out of 474116
- 741386 string characters out of 5750250
+ 36408 strings out of 474116
+ 742259 string characters out of 5750250
  1956187 words of memory out of 5000000
- 57724 multiletter control sequences out of 15000+600000
- 582753 words of font info for 190 fonts, out of 8000000 for 9000
+ 57754 multiletter control sequences out of 15000+600000
+ 587011 words of font info for 210 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,15n,453p,1001b,1593s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on main.pdf (33 pages, 394725 bytes).
+ 107i,15n,453p,1001b,1510s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb>
+Output written on main.pdf (33 pages, 429332 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
- 138 named destinations out of 1000 (max. 500000)
- 41069 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 434 compressed objects within 5 object streams
+ 139 named destinations out of 1000 (max. 500000)
+ 47221 words of extra memory for PDF output out of 51595 (max. 10000000)
 

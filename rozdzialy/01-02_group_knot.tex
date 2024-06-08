@@ -63,7 +63,7 @@ Although the knot itself is always a circle $S^1$, the knot group has usually an
   Presentation $\langle S\;|\;R\rangle$ described above is called the \buff{Wirtinger presentation} \cite[Chapter~6]{livingstone}.
 \end{definition}
 
-By applying the Mayer-Vietoris sequence to $S^3=K\oplus S^3-K$ or noticing that every two generators are conjugate, one can conclude that the abelianization of the knot group is always $\Z$. This leads to a short exact sequence
+By applying the Mayer-Vietoris sequence to $S^3=K\cup S^3-K$ or noticing that every two generators are conjugate, one can conclude that the abelianization of the knot group is always $\Z$. This leads to a short exact sequence
 \begin{center}
   \begin{tikzcd}
     0\arrow[r] & K_G \arrow[r] & G=\pi_1(K)\arrow[r, "ab"] & \Z=G^{ab} \arrow[r] & 0.
@@ -100,7 +100,7 @@ We will return to the concept of metabelianization in \cref{section2}. For the t
 
 \begin{definition}[Alexander module]\label{alexander module def}
   % \hl{tutaj nie rozumiem Pana uwagi "$G\to \Z$ nie nagie G"}
-  Given a group $G$ with a homomorphism $g:G\to \Z$, the abelianization of the commutator of a group $G$, $K_G^{ab}$, with $\Z[\Z]$-module structure is called the \buff{Alexander module} of $G$. If $G$ is a knot group, then it is the Alexander module of the knot $K$.
+  Given a group $G$ with a homomorphism $g:G\to \Z$, the abelianization of the kernel $\ker(g)$, $K_G^{ab}$, with $\Z[\Z]$-module structure is called the \buff{Alexander module} of $G$. If $G$ is a knot group, then $\ker(g)=[G, G]=K_G$ and it is the Alexander module of the knot $K$.
 \end{definition}
 
 How the $\Z[\Z]$ module structure is obtained is described in detail in \cref{alexander module discussion}.

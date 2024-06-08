@@ -1,15 +1,71 @@
-\section*{Abstract}
-
-The knot group $G=\pi_1(K)$ is a starting point for many knot invariants. Alexander matrix is a representation matrix for a subgroup of $G$ and from its determinant, the Alexander polynomial is obtained. Another way of obtaining said polynomial is by considering a coloring matrix which assigns elements of $R$-module $M$ to segments from a diagram $D$ of knot $K$. This approach can be derived from the image of a resolution of Alexander module through the functor $\Hom(-, M)$. Nevertheless, color checking matrices do not instantly yield a knot invariant, however it is possible to define an equivalence relation that identifies matrices stemming from the same knot. This approach is used to distinguish a pair of knots with the same Alexander polynomial. In the end, a way of generalizing the procedure of coloring diagrams is presented in terms of category theory.
-
 \section*{Introduction}
 
-\Cref{sec1} defines the fundamental ideas of this paper, such as the knot group (see \cref{knot group def}) its metabelianization (see \cref{metab def}) and the Alexander module (see \cref{alexander module def}). Two equivalent definitions fot said modules are presented: an algebraic one and a topological one. In a purely algebraical sense, the Alexander moule is the abelianized subgroup $[[G, G], [G, G]]$ of the knot group $G$, with $\Z$ action induced by abelianization homomorphism $G\to \Z$, while from a topological point of view it is the first homology module of the infinite cyclic cover (see \cref{inf cyclic cover}). An important result finishing this section is that the Alexander module is a torsion module (see \cref{prop: modul alexandera jest torsyjny}).
+Let $K$ be a knot embedded in $S^3$ and $D$ its diagram. The fundamental group of the knot complement $\pi_1(S^3-K)$, called the knot group, is a knot invariant. It is a basis for many simpler invariants, such as the Alexander polynomial \cite{alex-oryginal}. In this paper, numerous ways of obtaining information form the knot group are discussed and explained.
+
+On the other hand, one can approach the search for knot invariants from the perspective of diagrams. A coloring is an assignment of elements of a module $M$ to segments of the diagram. If rules are impost on this assignment, a knot invariant can be obtained by this procedure. The following thesis is concentrated on finding a connection between the information about a knot $K$ obtained from its group with the information obtained from a diagram coloring.
+
+\Cref{sec1} defines the fundamental concepts of this paper, such as the knot group (see \cref{knot group def}) its metabelianization (see \cref{metab def}) and the Alexander module (see \cref{alexander module def}). Two equivalent definitions for said modules are presented: an algebraic one and a topological one. In a purely algebraic sense, the Alexander module is the abelianized subgroup $[[G, G], [G, G]]$ of the knot group $G$, with $\Z$ action induced by abelianization homomorphism $G\to \Z$, while from a topological point of view it is the first homology module of the infinite cyclic cover (see \cref{inf cyclic cover}). An important result finishing this section is that the Alexander module is a torsion module (see \cref{prop: modul alexandera jest torsyjny}).
 
 \Cref{section2} is dedicated to the Alexander matrix (see \cref{alexander matrix def}) and its properties. We start by showing an algorithm for obtaining the presentation of the Alexander module, which is then used to construct a resolution of said module. The Alexander matrix is defined as the matrix of the homomorphism in this sequence for which cokernel is the Alexander module. The Alexander polynomial is defined as the normalized determinant of the Alexander matrix and it is shown that this polynomial is never zero for knots.
 
-In the last \cref{sec3} diagram colorings are discussed, starting with a definition of a palette (see \cref{def paleta}). A set of palettes of particular interest are the Alexander palette and all its images through homomorphisms induced by either a ring homomorphism or a module homomorphism. From diagram coloring a matrix is obtained, called the color checking matrix (see \cref{def:color checking matrix}). A set of criteria that must be met in order for color checking matrices to be a knot invariant is presented.
+In the last \cref{sec3} diagram colorings are discussed, starting with a definition of a palette (see \cref{def paleta}). A set of palettes of particular interest are the Alexander palette and all its images through homomorphisms induced by either a ring homomorphism or a module homomorphism. From diagram coloring a matrix is obtained, called the color checking matrix (see \cref{def:color checking matrix}). A new matrix is defined, called the reduced Smith normal form (see \cref{reduced normal form def}), and proven that for diagrams colored using the Alexander palette it is a knot invariant. Two knots, K11n85 and Kn164, having the same Alexander polynomial, are distinguished using this new invariant.
 
 This thesis is a result of cooperation between Julia Walczuk and myself, and is written under supervision of prof. Tadeusz Januszkiewicz.
 
+\vspace{2cm}
+
+\begin{center}
+\scalebox{0.9}{
+    \begin{tikzpicture}
+      \coordinate (a1) at (90:5);
+      \coordinate (a2) at (40:3);
+      \coordinate (a3) at (-40:3);
+      \coordinate (a4) at (-90:5);
+      \coordinate (a5) at (-160:3.5);
+\coordinate (a6) at (40:1);
+      \coordinate (a7) at (20:6);
+      \coordinate (a8) at (80:3);
+      \coordinate (a9) at (180+25:1);
+      \coordinate (a10) at (130:4);
+      \coordinate (a11) at (180:5);
+      \coordinate (a12) at (-90:3);
+      \coordinate (a13) at (-10:6);
+      \coordinate (a14) at (110:2);
+      \coordinate (a15) at (110:5);
+
+      % \foreach \i in {1,..., 15} \fill (a\i) circle (5pt);
+
+      \begin{knot}[
+        consider self intersections, 
+        clip width = 20pt, 
+        % draft mode=crossings, 
+        flip crossing=1, 
+        flip crossing=3, 
+        flip crossing=8, 
+        flip crossing=4, 
+        flip crossing=7, 
+        flip crossing=10, 
+        flip crossing=9
+        ]
+        \strand[thick] (a1) to[out=0, in=90] 
+        (a2) to[out=-90, in=90] 
+        (a3) to[out=-90, in=0] 
+        (a4) to[out=180, in=-120]
+        (a5) to[out=60, in=150]
+        (a6) to[out=-30, in=-90] 
+        (a7) to[out=90, in=90, looseness=2] 
+        (a8) to[out=-90, in=30]
+        (a9) to[out=-150, in=-60]
+        (a10) to[out=120, in=90] 
+        (a11) to[out=-90, in=180]
+        (a12) to[out=0, in=-90] 
+        (a13) to[out=90, in=20, looseness=1.5]
+        (a14) to[out=-160, in=200, looseness=2]
+        (a15) to[out=20, in=180] 
+        (a1);
+      \end{knot}
+    \end{tikzpicture}
+    % \caption{A diagram for knot $K11n164$.\label{k11n164 diagram}}
+}
+\end{center}
  

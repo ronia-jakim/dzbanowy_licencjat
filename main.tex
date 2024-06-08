@@ -33,104 +33,19 @@
   \large
   \textbf{Promotor:} prof. Tadeusz Januszkiewicz
 \end{center}
-\vspace{10pt}
+\vspace{3cm}
 
-\begin{center}
-\scalebox{0.7}{
-    \begin{tikzpicture}
-      \coordinate (a1) at (90:5);
-      \coordinate (a2) at (40:3);
-      \coordinate (a3) at (-40:3);
-      \coordinate (a4) at (-90:5);
-      \coordinate (a5) at (-160:3.5);
-      \coordinate (a6) at (40:1);
-      \coordinate (a7) at (20:6);
-      \coordinate (a8) at (80:3);
-      \coordinate (a9) at (180+25:1);
-      \coordinate (a10) at (130:4);
-      \coordinate (a11) at (180:5);
-      \coordinate (a12) at (-90:3);
-      \coordinate (a13) at (-10:6);
-      \coordinate (a14) at (110:2);
-      \coordinate (a15) at (110:5);
 
-      % \foreach \i in {1,..., 15} \fill (a\i) circle (5pt);
+\section*{\centering\normalsize Abstract}
 
-      \begin{knot}[
-        consider self intersections, 
-        clip width = 20pt, 
-        % draft mode=crossings, 
-        flip crossing=1, 
-        flip crossing=3, 
-        flip crossing=8, 
-        flip crossing=4, 
-        flip crossing=7, 
-        flip crossing=10, 
-        flip crossing=9
-        ]
-        \strand[thick] (a1) to[out=0, in=90] 
-        (a2) to[out=-90, in=90] 
-        (a3) to[out=-90, in=0] 
-        (a4) to[out=180, in=-120]
-        (a5) to[out=60, in=150]
-        (a6) to[out=-30, in=-90] 
-        (a7) to[out=90, in=90, looseness=2] 
-        (a8) to[out=-90, in=30]
-        (a9) to[out=-150, in=-60]
-        (a10) to[out=120, in=90] 
-        (a11) to[out=-90, in=180]
-        (a12) to[out=0, in=-90] 
-        (a13) to[out=90, in=20, looseness=1.5]
-        (a14) to[out=-160, in=200, looseness=2]
-        (a15) to[out=20, in=180] 
-        (a1);
-      \end{knot}
-    \end{tikzpicture}
-    % \caption{A diagram for knot $K11n164$.\label{k11n164 diagram}}
+{\small
+For a knot $K\subseteq S^3$ its knot group $G=\pi_1(S^3-K)$ is a starting point for many knot invariants. One such invariant is the Alexander module $K_G^{ab}$, the abelianized kernel of homomorphism $G\to \Z$ with a $\Z[\Z]$-module structure. Associated with the Alexander module is Alexander matrix $A_D$ with $\coker(A_D)= K_G^{ab}$. The same matrix can be obtained by coloring any diagram of $K$ with a properly chosen palette. In the following paper, the connection between the algebraical, topological and combinatorial definitions of the Alexander matrix and module are given along with connections between them.
+%
+% The knot group $G=\pi_1(K)$ is a starting point for many knot invariants. Alexander matrix is a representation matrix for a subgroup of $G$ and from its determinant, the Alexander polynomial is obtained. Another way of obtaining said polynomial is by considering a coloring matrix which assigns elements of $R$-module $M$ to segments from a diagram $D$ of knot $K$. This approach can be derived from the image of a resolution of Alexander module through the functor $\Hom(-, M)$. Nevertheless, color checking matrices do not instantly yield a knot invariant, however it is possible to define an equivalence relation that identifies matrices stemming from the same knot. This approach is used to distinguish a pair of knots with the same Alexander polynomial. In the end, a way of generalizing the procedure of coloring diagrams is presented in terms of category theory.
 }
-\end{center}
-
-% \begin{center}
-%   \begin{tikzpicture}[bgnd/.style={circle, fill=white, draw=white}]
-%     %\node[opacity=0.2] at (0,0) {\includegraphics[width=0.7\textwidth]{./rozdzialy/6_1-3d.png}};
-%
-%     \coordinate (a0) at (0,0);
-%     \coordinate (a1) at (90:5);
-%     \coordinate (a2) at (45:3);
-%     \coordinate (a3) at (-40:4.6);
-%     \coordinate (a4) at (-120:2.4);
-%     \coordinate (a5) at (10:0.7);
-%     \coordinate (a6) at (50:5);
-%     \coordinate (a7) at (90:3.5);
-%     \coordinate (a8) at (180-50:5);
-%     \coordinate (a9) at (170:0.7);
-%     \coordinate (a10) at (-70:2.4);
-%     \coordinate (a11) at (220:4.6);
-%     \coordinate (a12) at (180-45:3);
-%
-%     %\foreach \i in {0,...,12} \fill (a\i) circle (2pt);
-%
-%     \begin{knot}[
-%       clip width=20,
-%       flip crossing=1,
-%       flip crossing=3,
-%       flip crossing=6
-%       ]
-%       \strand[thick] (a1) to[out=0, in=90+45] (a2) to[out=-45, in=40] (a3);
-%       \strand[thick] (a3) to[out=220, in=-90] (a4) to[out=90, in=200] (a5);
-%       \strand[thick] (a5) to[out=20, in=-30] (a6);
-%       \strand[thick] (a6) to[out=150, in=5] (a7);
-%       \strand[thick] (a7) to[out=175, in=30] (a8);
-%       \strand[thick] (a8) to[out=210, in=160] (a9);
-%       \strand[thick] (a9) to[out=-20, in=90] (a10);
-%       \strand[thick] (a10) to[out=-90, in=-40] (a11);
-%       \strand[thick] (a11) to[out=140, in=180+45] (a12);
-%       \strand[thick] (a12) to[out=45, in=180] (a1);
-%     \end{knot}
-%   \end{tikzpicture}
-% \end{center}
 
 \newpage
+
 
 \include{wstep.tex}
 

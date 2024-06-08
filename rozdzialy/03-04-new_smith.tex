@@ -55,6 +55,23 @@ Similarly, each column of the Smith normal form contains information about the c
 Consider the following as a motivation behind \cref{reduced normal form def}.
 
 \begin{example} \label{example reduced normal form}
+  Consider the knots $K11n85$ and $K11n164$ pictured in \cref{k11n85 diagram,k11n164 diagram} respectively. They both have the Alexander polynomial equal 
+  $$
+  \Delta(t)=-t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}.
+  $$
+  Coloring them with the Alexander palette
+  yields two $11\times 11$ matrices whose any $10\times 10$ minor is equal to the Alexander polynomial (up to multiplication by a unit). However, the reduced Smith normal forms are distinguishable
+  $$D_{11n85}\phi=\begin{bmatrix}
+    -t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}
+  \end{bmatrix}$$
+  $$
+  D_{11n164}\phi=\begin{bmatrix}
+    1-t+t^2 & 0 \\ 
+    0 & -t^{-1}+4-5t+4t^2-t^3
+  \end{bmatrix}
+  $$
+\end{example}
+
   \begin{figure}[h]\centering 
     \begin{tikzpicture}
       \coordinate (a1) at (90:6);
@@ -154,21 +171,6 @@ Consider the following as a motivation behind \cref{reduced normal form def}.
     \end{tikzpicture}
     \caption{A diagram for knot $K11n164$.\label{k11n164 diagram}}
   \end{figure}
-  Consider the knots $K11n85$ and $K11n164$ pictured in \cref{k11n85 diagram,k11n164 diagram} respectively. They both have the Alexander polynomial equal 
-  $$
-  \Delta(t)=-t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}.
-  $$
-  Coloring them with the Alexander palette
-  yields two $11\times 11$ matrices whose any $10\times 10$ minor is equal to the Alexander polynomial (up to multiplication by a unit). However, the reduced Smith normal forms are distinguishable
-  $$D_{11n85}\phi=\begin{bmatrix}
-    -t^3+5t^2-10t+13-10t^{-1}+5t^{-2}-t^{-3}
-  \end{bmatrix}$$
-  $$
-  D_{11n164}\phi=\begin{bmatrix}
-    1-t+t^2 & 0 \\ 
-    0 & -t^{-1}+4-5t+4t^2-t^3
-  \end{bmatrix}
-  $$
-\end{example}
+  \newpage
  
 \input{./rozdzialy/theorem_reduced_normal_is_invariant.tex}
