@@ -14,7 +14,7 @@ where the $f$ arrow sends every generator $(0,..., 1,...,0)\in\Z[\Z]^{n-1}$ to e
 The Alexander matrix in the case of a knot group is not a square matrix. However, striking out any of its columns will give a square matrix whose determinant is nonzero (see \cref{alexander matrix has trivial kernel}).  Take $R=\Z[\Z]$. 
 %We will prove this statement promptly after consider the Alexander module as a vector space over the field of fractions of $R=\Z[\Z]$ \cite[Chapter~3]{atiyah}.
 
-In \cref{prop: modul alexandera jest torsyjny} it was shown that the Alexander module is torsion. Let $F=R^{-1}R$ be the field of fractions of $R$ \cite[Chapter~2]{atiyah}. Then, as a vector space $K_G^{ab}\otimes_R F=0$ is trivial. Hence, the sequence in (\ref{pierwsza rezolwenta}) translates to the following sequence of $F$ modules
+In \cref{prop: modul alexandera jest torsyjny} it was shown that the Alexander module is torsion. Let $F=R^{-1}R$ be the field of fractions of $R$ \cite[Chapter~2]{atiyah}. Then, as a vector space $K_G^{ab}\otimes_R F=0$ is trivial. The field of fractions is flat $R$-module \cite[Corollary~3.6]{atiyah} and so the sequence in (\ref{pierwsza rezolwenta}) translates to the following exact sequence of $F$ modules
 \begin{equation}\label{resolution vector spaces}
   \begin{tikzcd}[column sep=small]
     0\arrow[r] & \ker(A_D)\otimes_RF \arrow[r] & R^n\otimes_R F \arrow[r, "A_D^V"] & R^{n-1}\otimes_R F \arrow[r] & 0
@@ -79,7 +79,9 @@ A proof of this statement using the Dehn presentation of knot group rather than 
 
 The Alexander polynomial is a knot invariant as a consequence of \cref{wyznacznik nie zalezy od diagramu}.
 
-\begin{proposition}
+\Cref{alexander matrix has trivial kernel} gives information about \eqref{resolution vector spaces}, implicitly stated in \cref{proposition o wygladzie resolution}.
+
+  \begin{proposition}\label{proposition o wygladzie resolution}
   \hl{Let $G$ be a knot group of $K$ and $F=R^{-1}R$ the field of fractions of ring $R$} \cite{atiyah}. \hl{Then, changing coefficients by applying functor $-\otimes_R F$ to the resolution \eqref{pierwsza rezolwenta}}
   % \begin{center}
   %   \begin{tikzcd}

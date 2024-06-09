@@ -11,3 +11,4 @@
 \contentsline {subsection}{\numberline {3.3}Alexander palette}{20}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Reidemeister relation on color checking matrices}{22}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Smith normal form}{25}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Color checking matrix and Alexander matrix}{31}{subsection.3.6}%

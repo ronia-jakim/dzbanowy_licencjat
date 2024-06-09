@@ -1,50 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
-A level-1 auxiliary file: wstep.aux
-A level-1 auxiliary file: rozdzialy/01-00-preliminaries.aux
-A level-1 auxiliary file: rozdzialy/02-00-resolution.aux
-A level-1 auxiliary file: rozdzialy/03-00-colorings.aux
-The style file: alpha.bst
-Database file #1: literatura.bib
-You've used 6 entries,
-            2543 wiz_defined-function locations,
-            595 strings with 5123 characters,
-and the built_in function-call counts, 1968 in all, are:
-= -- 181
-> -- 59
-< -- 7
-+ -- 17
-- -- 16
-* -- 108
-:= -- 327
-add.period$ -- 18
-call.type$ -- 6
-change.case$ -- 27
-chr.to.int$ -- 6
-cite$ -- 6
-duplicate$ -- 104
-empty$ -- 170
-format.name$ -- 27
-if$ -- 416
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 10
-newline$ -- 33
-num.names$ -- 18
-pop$ -- 48
-preamble$ -- 1
-purify$ -- 37
-quote$ -- 0
-skip$ -- 74
-stack$ -- 0
-substring$ -- 88
-swap$ -- 16
-text.length$ -- 7
-text.prefix$ -- 5
-top$ -- 0
-type$ -- 32
-warning$ -- 0
-while$ -- 18
-width$ -- 8
-write$ -- 77
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[88] biber:340> INFO - === nie cze  9, 2024, 19:18:49
+[106] Biber.pm:419> INFO - Reading 'main.bcf'
+[170] Biber.pm:979> INFO - Found 6 citekeys in bib section 0
+[191] Biber.pm:4419> INFO - Processing section 0
+[203] Biber.pm:4610> INFO - Looking for bibtex file 'lit.bib' for section 0
+[204] bibtex.pm:1713> INFO - LaTeX decoding ...
+[210] bibtex.pm:1519> INFO - Found BibTeX data source 'lit.bib'
+[270] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[270] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[270] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[270] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[277] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[280] bbl.pm:763> INFO - Output to main.bbl

@@ -25,6 +25,13 @@
 % \includeonly{wstep.tex}
 % \includeonly{rozdzialy/01-00-preliminaries.tex}
 
+\usepackage[
+    backend=biber,
+    style=alphabetic,
+  ]{biblatex}
+
+ \addbibresource{lit.bib}
+
 \begin{document}
 \maketitle
 \bigskip
@@ -48,7 +55,7 @@ For a knot $K\subseteq S^3$ its knot group $G=\pi_1(S^3-K)$ is a starting point 
 
 
 \include{wstep.tex}
-
+ 
 \newpage
 
 \tableofcontents
@@ -63,10 +70,12 @@ For a knot $K\subseteq S^3$ its knot group $G=\pi_1(S^3-K)$ is a starting point 
 
 % \include{rozdzialy/04-00-category.tex}
 
-\bibliographystyle{alpha}
-\bibliography{literatura}
+% \bibliographystyle{alpha} 
+% \bibliography{literatura}
 
-\newpage 
+\printbibliography
+
+% \newpage 
 
 
 

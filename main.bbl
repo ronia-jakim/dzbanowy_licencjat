@@ -1,33 +1,179 @@
-\begin{thebibliography}{Mur96}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Ale28]{alex-oryginal}
-James~W. Alexander.
-\newblock Topological invariants of knots and links.
-\newblock {\em Transactions of the American Mathematical Society}, 30:275--306, {1928}.
 
-\bibitem[AM69]{atiyah}
-M.~F. Atiyah and I.~G. MacDonald.
-\newblock {\em Introduction to Commutative Algebra}.
-\newblock Addison-Wesley Publishing Company, 1969.
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{alex-oryginal}{article}{}
+      \name{author}{1}{}{%
+        {{hash=571fe59ee1c7913036286c2c99b8f844}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{fullhash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{bibnamehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{authorbibnamehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{authornamehash}{571fe59ee1c7913036286c2c99b8f844}
+      \strng{authorfullhash}{571fe59ee1c7913036286c2c99b8f844}
+      \field{labelalpha}{Ale28}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transactions of the American Mathematical Society}
+      \field{title}{Topological invariants of knots and links}
+      \field{volume}{30}
+      \field{year}{1928}
+      \field{pages}{275\bibrangedash 306}
+      \range{pages}{32}
+    \endentry
+    \entry{atiyah}{book}{}
+      \name{author}{2}{}{%
+        {{hash=feb3593a7d423b4961148cc3cc6c0231}{%
+           family={Atiyah},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=a16c1f3219ee3501467aab0bc1c3a1b3}{%
+           family={MacDonald},
+           familyi={M\bibinitperiod},
+           given={I.\bibnamedelimi G.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Publishing Company}%
+      }
+      \strng{namehash}{da0fe93a9f9148b2d341a69f9ad11fc6}
+      \strng{fullhash}{da0fe93a9f9148b2d341a69f9ad11fc6}
+      \strng{bibnamehash}{da0fe93a9f9148b2d341a69f9ad11fc6}
+      \strng{authorbibnamehash}{da0fe93a9f9148b2d341a69f9ad11fc6}
+      \strng{authornamehash}{da0fe93a9f9148b2d341a69f9ad11fc6}
+      \strng{authorfullhash}{da0fe93a9f9148b2d341a69f9ad11fc6}
+      \field{labelalpha}{AM69}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Commutative Algebra}
+      \field{year}{1969}
+    \endentry
+    \entry{likorish-diagram}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fd5eb830166d1eba4534428931689418}{%
+           family={Likorish},
+           familyi={L\bibinitperiod},
+           given={W.B.\bibnamedelimi Raymond},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fd5eb830166d1eba4534428931689418}
+      \strng{fullhash}{fd5eb830166d1eba4534428931689418}
+      \strng{bibnamehash}{fd5eb830166d1eba4534428931689418}
+      \strng{authorbibnamehash}{fd5eb830166d1eba4534428931689418}
+      \strng{authornamehash}{fd5eb830166d1eba4534428931689418}
+      \strng{authorfullhash}{fd5eb830166d1eba4534428931689418}
+      \field{labelalpha}{Lik97}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to Knot Theory}
+      \field{year}{1997}
+    \endentry
+    \entry{livingstone}{book}{}
+      \name{author}{1}{}{%
+        {{hash=07019b1278f62a46233ac55e8373d59f}{%
+           family={Livinston},
+           familyi={L\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Mathematical Assosiacion of America}%
+      }
+      \strng{namehash}{07019b1278f62a46233ac55e8373d59f}
+      \strng{fullhash}{07019b1278f62a46233ac55e8373d59f}
+      \strng{bibnamehash}{07019b1278f62a46233ac55e8373d59f}
+      \strng{authorbibnamehash}{07019b1278f62a46233ac55e8373d59f}
+      \strng{authornamehash}{07019b1278f62a46233ac55e8373d59f}
+      \strng{authorfullhash}{07019b1278f62a46233ac55e8373d59f}
+      \field{labelalpha}{Liv93}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Knot Theory}
+      \field{year}{1993}
+    \endentry
+    \entry{murasagi-equivalence}{book}{}
+      \name{author}{1}{}{%
+        {{hash=75df41061bf980184443463302015a70}{%
+           family={Murasagi},
+           familyi={M\bibinitperiod},
+           given={Kunio},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{75df41061bf980184443463302015a70}
+      \strng{fullhash}{75df41061bf980184443463302015a70}
+      \strng{bibnamehash}{75df41061bf980184443463302015a70}
+      \strng{authorbibnamehash}{75df41061bf980184443463302015a70}
+      \strng{authornamehash}{75df41061bf980184443463302015a70}
+      \strng{authorfullhash}{75df41061bf980184443463302015a70}
+      \field{labelalpha}{Mur96}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Knot theory and its applications}
+      \field{year}{1996}
+    \endentry
+    \entry{ruchy_zorientowane}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8b866f8766a1642003f95afd1e7f6334}{%
+           family={Polyak},
+           familyi={P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b866f8766a1642003f95afd1e7f6334}
+      \strng{fullhash}{8b866f8766a1642003f95afd1e7f6334}
+      \strng{bibnamehash}{8b866f8766a1642003f95afd1e7f6334}
+      \strng{authorbibnamehash}{8b866f8766a1642003f95afd1e7f6334}
+      \strng{authornamehash}{8b866f8766a1642003f95afd1e7f6334}
+      \strng{authorfullhash}{8b866f8766a1642003f95afd1e7f6334}
+      \field{labelalpha}{Pol10}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quantum Topology vol 1}
+      \field{title}{Minimal generating set of Reidemeister moves}
+      \field{year}{2010}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem[Lik97]{likorish-diagram}
-W.B.~Raymond Likorish.
-\newblock {\em An Introduction to Knot Theory}, pages 2--3.
-\newblock Springer, 1997.
-
-\bibitem[Liv93]{livingstone}
-Charles Livinston.
-\newblock {\em Knot Theory}.
-\newblock The Mathematical Assosiacion of America, 1993.
-
-\bibitem[Mur96]{murasagi-equivalence}
-Kunio Murasagi.
-\newblock {\em Knot theory and its applications}, pages 7--8.
-\newblock Springer, 1996.
-
-\bibitem[Pol10]{ruchy_zorientowane}
-Michael Polyak.
-\newblock Minimal generating set of reidemeister moves.
-\newblock {\em Quantum Topology vol 1}, 2010.
-
-\end{thebibliography}

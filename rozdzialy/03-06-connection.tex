@@ -1,0 +1,41 @@
+The Alexander matrix (\cref{alexander matrix def}) is derived from the presentation of the $\Z[\Z]$-module $K_G^{ab}$. We showed that the Alexander palette is also closely connected with the Wirtinger presentation of this module. In this section a connection between the Alexander matrix and the color checking matrix obtained by using the Alexander palette will be showed.
+
+\begin{theorem}\label{jadra sa izomorficzne}
+  Let $D\phi$ be the color checking matrix of diagram $D$ with $s=x=n$ crossings, colored with the Alexander palette. 
+  Then $\ker(A_D)\cong \ker(D\phi)$.
+  %, where $D\phi$ is obtained by coloring a diagram $D$ with the Alexander palette.
+\end{theorem}
+
+\begin{proof}
+  In the color checking matrix, every row has entries $(1-t)$, $t$ and $-1$ or $(1-t^{-1})$, $t^{-1}$ and $-1$, while in the Alexander matrix every row has entries $\pm t^k(1-t)$, $\pm t^{k+1}$ and $\mp t^k$ or $\pm t^k(1-t^{-1})$, $\pm t^{k-1}$ and $\mp t^k$. Let $a_i$ be the $i$-th row of the color checking matrix, then $\pm t^{k_i}\cdot a_i$ with one coordinate, call this coordinate $j$, struck out is the $i$-th row of the Alexander matrix.
+
+  For any $x=(x_1,..., x_n)\in\Z[\Z]^n$ its image through the color checking matrix is 
+  $$\begin{bmatrix} 
+    \langle x, a_1\rangle\\ 
+    \vdots\\ 
+    \langle x, a_n\rangle 
+  \end{bmatrix} \in\Z[\Z]^n,$$
+  where $\langle x, a_i\rangle=x^Ta_i$. The Alexander matrix will produce
+  $$\begin{bmatrix} 
+    \pm t^{k_i} \langle x, a_1\rangle\\ 
+    \vdots\\ 
+    \pm t^{k_{j-1}} \langle x, a_{j-1}\rangle \\ 
+    \pm t^{k_{j+1}} \langle x, a_{j+1}\rangle \\ 
+    \vdots \\ 
+  \pm t^{k_n}\langle x, a_n\rangle\end{bmatrix}\in\Z[\Z]^{n-1}.$$
+  From this inclusion $\ker(D\phi)\subseteq \ker(A_D)$ is obtained. 
+
+  In \cref{alexander module discussion} the choice of the segment in transition from presentation of $G$ to presentation of $K_G^{ab}$ determined which coordinate $j$ is struck out in $K_G^{ab}$. The choice of this segment does not impact kernel of $A_D$ and only changes exponents $k_i$ to $k_i'$. Hence, if $j'\neq j$ is a new segment struck out, then $x\in \ker(A_D)\iff \langle x, a_i\rangle=0$ for all $i\neq j'$, in particular for $i=j$, which was not known before the change of $j$. 
+  % This implies that every time the coordinate missing from one version of the matrix $A_D$ is present in the other choice. 
+  Hence $\ker(A_D)\subseteq \ker(D\phi)$. 
+\end{proof}
+
+\Cref{jadra sa izomorficzne} combined with the first isomorphism theorem for modules yields
+$$\im(A_D)\cong \Z[\Z]^n/\ker(A_D)\cong \Z[\Z]^n/\ker(D\phi)\cong \im(D\phi).$$
+In \cref{alexander matrix has trivial kernel} it was shown that $\im(A_D)\cong \Z[\Z]^{n-1}$. Thus, the following is a commutative diagram
+$$
+\begin{tikzcd}
+  0\arrow[r] & \ker(A_D)\arrow[r] \arrow[d, "\cong"] & \Z[\Z]^n\arrow[r, "A_D"] \arrow[d, "id"] & \Z[\Z]^{n-1}\arrow[d, "\cong"] \\ 
+  0\arrow[r] & \ker(D\phi)\arrow[r] & \Z[\Z]^n\arrow[r, "D\phi"] & \im(D\phi) \arrow[r] & \Z[\Z]^n
+\end{tikzcd}
+$$
