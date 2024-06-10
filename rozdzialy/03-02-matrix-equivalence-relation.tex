@@ -19,9 +19,9 @@ Given a palette $P=(R, M, \mathcal{C}_\pm)$ and a diagram $D$ with $s$ segments 
 
 In the most basic sense, two diagrams $D$ and $D'$ are isomorphic if there exists an isotopy $h_t:\R^2\to \R^2$ such that $h_0(D)=D$ and $h_1(D)=D'$ and $D'$ has crossings identical to those of $D$.
 
-Knot diagrams create a category with Reidemeister moves and the isotopy $h_t$ supplying morphisms between objects. The assigment $D\mapsto D\phi$ of a color checking matrix for a chosen palette is to be a functor from the category of diagrams to the category of color checking matrices. This means that if two diagrams were equivalent, then their color checking matrices must also be equivalent.
+Knot diagrams create a category with Reidemeister moves and the isotopy $h_t$ supplying morphism between objects, with latter being an isomorphism. The assigment $D\mapsto D\phi$ of a color checking matrix for a chosen palette is to be a functor from the category of diagrams to the category of color checking matrices. This means that if two diagrams were equivalent, then their color checking matrices must also be equivalent.
 
-We say that two color checking matrices $D\phi$ and $D'\phi$ are equivalent if 
+We say that two color checking matrices $D\phi$ and $D'\phi$ are isomorphic if 
 % \begin{enumerate}
 %   \item they differ by a permutation of rows or columns, 
 %   \item one can be obtained from the other by adding a linear combination of rows or columns to another row or column 
@@ -35,10 +35,11 @@ $$
   M^s\arrow[r, "D'\phi" below] & N^x
 \end{tikzcd}
 $$
-is a commutative diagram. Additionally, we allow $D\phi$ to differ from $D'\phi$ by a identity matrix block.
+is a commutative diagram. 
+%Additionally, we allow $D\phi$ to differ from $D'\phi$ by a identity matrix block.
 
 \begin{lemma}
-  Isomorphic diagrams $D\sim D'$ yield equivalent color checking matrices $D\phi\sim D'\phi$.
+  Isomorphic diagrams $D\sim D'$ yield isomorphic color checking matrices $D\phi\sim D'\phi$.
 \end{lemma}
 
 \begin{proof}

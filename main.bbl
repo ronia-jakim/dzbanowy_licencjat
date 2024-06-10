@@ -58,6 +58,9 @@
            given={I.\bibnamedelimi G.},
            giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {Melano Par - California, London, Don Mills - Ontario}%
+      }
       \list{publisher}{1}{%
         {Addison-Wesley Publishing Company}%
       }
@@ -83,8 +86,11 @@
            given={W.B.\bibnamedelimi Raymond},
            giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {New York}%
+      }
       \list{publisher}{1}{%
-        {Springer}%
+        {Springer-Verlag}%
       }
       \strng{namehash}{fd5eb830166d1eba4534428931689418}
       \strng{fullhash}{fd5eb830166d1eba4534428931689418}
@@ -97,7 +103,10 @@
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{0-387-98254-X}
+      \field{series}{Graduate Texts in Mathematics}
       \field{title}{An Introduction to Knot Theory}
+      \field{volume}{175}
       \field{year}{1997}
     \endentry
     \entry{livingstone}{book}{}
@@ -107,6 +116,9 @@
            familyi={L\bibinitperiod},
            given={Charles},
            giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Washington DC}%
       }
       \list{publisher}{1}{%
         {The Mathematical Assosiacion of America}%
@@ -122,7 +134,10 @@
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{0-88385-027-3}
+      \field{series}{Carus Mathematical Monographs}
       \field{title}{Knot Theory}
+      \field{volume}{24}
       \field{year}{1993}
     \endentry
     \entry{murasagi-equivalence}{book}{}
@@ -133,8 +148,11 @@
            given={Kunio},
            giveni={K\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {Boston - Massachusetts}%
+      }
       \list{publisher}{1}{%
-        {Springer}%
+        {Birkhäuser Boston Inc.}%
       }
       \strng{namehash}{75df41061bf980184443463302015a70}
       \strng{fullhash}{75df41061bf980184443463302015a70}
@@ -142,13 +160,15 @@
       \strng{authorbibnamehash}{75df41061bf980184443463302015a70}
       \strng{authornamehash}{75df41061bf980184443463302015a70}
       \strng{authorfullhash}{75df41061bf980184443463302015a70}
-      \field{labelalpha}{Mur96}
+      \field{labelalpha}{Mur08}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-0-8176-4718-6}
+      \field{series}{Modern Birkhäuser Classics}
       \field{title}{Knot theory and its applications}
-      \field{year}{1996}
+      \field{year}{2008}
     \endentry
     \entry{ruchy_zorientowane}{article}{}
       \name{author}{1}{}{%
@@ -169,9 +189,12 @@
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Quantum Topology vol 1}
+      \field{journaltitle}{Quantum Topology}
       \field{title}{Minimal generating set of Reidemeister moves}
+      \field{volume}{1}
       \field{year}{2010}
+      \field{pages}{399\bibrangedash 411}
+      \range{pages}{13}
     \endentry
   \enddatalist
 \endrefsection

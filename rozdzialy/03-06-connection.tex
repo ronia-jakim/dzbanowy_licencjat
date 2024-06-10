@@ -2,7 +2,7 @@ The Alexander matrix (\cref{alexander matrix def}) is derived from the presentat
 
 \begin{theorem}\label{jadra sa izomorficzne}
   Let $D\phi$ be the color checking matrix of diagram $D$ with $s=x=n$ crossings, colored with the Alexander palette. 
-  Then $\ker(A_D)\cong \ker(D\phi)$.
+  Then $\ker(A_D)\cong \ker(D\phi)$ and $\coker(A_D)\oplus \Z[\Z]\cong \coker(D\phi)$.
   %, where $D\phi$ is obtained by coloring a diagram $D$ with the Alexander palette.
 \end{theorem}
 
@@ -23,14 +23,13 @@ The Alexander matrix (\cref{alexander matrix def}) is derived from the presentat
     \pm t^{k_{j+1}} \langle x, a_{j+1}\rangle \\ 
     \vdots \\ 
   \pm t^{k_n}\langle x, a_n\rangle\end{bmatrix}\in\Z[\Z]^{n-1}.$$
-  From this inclusion $\ker(D\phi)\subseteq \ker(A_D)$ is obtained. 
+  From this inclusion $\ker(D\phi)\subseteq \ker(A_D)$ is obtained.
 
   In \cref{alexander module discussion} the choice of the segment in transition from presentation of $G$ to presentation of $K_G^{ab}$ determined which coordinate $j$ is struck out in $K_G^{ab}$. The choice of this segment does not impact kernel of $A_D$ and only changes exponents $k_i$ to $k_i'$. Hence, if $j'\neq j$ is a new segment struck out, then $x\in \ker(A_D)\iff \langle x, a_i\rangle=0$ for all $i\neq j'$, in particular for $i=j$, which was not known before the change of $j$. 
   % This implies that every time the coordinate missing from one version of the matrix $A_D$ is present in the other choice. 
   Hence $\ker(A_D)\subseteq \ker(D\phi)$. 
-\end{proof}
 
-\Cref{jadra sa izomorficzne} combined with the first isomorphism theorem for modules yields
+We combine $\ker(D\phi)\cong \ker(A_D)$ with the first isomorphism theorem for modules to get an isomorphism between images of those two matrices:
 $$\im(A_D)\cong \Z[\Z]^n/\ker(A_D)\cong \Z[\Z]^n/\ker(D\phi)\cong \im(D\phi).$$
 In \cref{alexander matrix has trivial kernel} it was shown that $\im(A_D)\cong \Z[\Z]^{n-1}$. Thus, the following is a commutative diagram
 $$
@@ -39,3 +38,9 @@ $$
   0\arrow[r] & \ker(D\phi)\arrow[r] & \Z[\Z]^n\arrow[r, "D\phi"] & \im(D\phi) \arrow[r] & \Z[\Z]^n
 \end{tikzcd}
 $$
+and so $\coker(A_D)\oplus \Z[\Z]\cong \coker(D\phi)$.
+\end{proof}
+
+\Cref{jadra sa izomorficzne} holds true for any image of the Alexander palette. 
+
+Over a PID ring $P$, knowing that $\coker(D\phi)\cong P/(a_1)\oplus ...\oplus P/(a_n)$ determines the reduced normal form of $D\phi$ as well as the reduced normal form of $A_D$. 
