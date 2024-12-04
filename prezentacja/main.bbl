@@ -1,0 +1,19 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{AM69}
+
+\bibitem[Ale28]{alex-oryginal}
+James~W. Alexander, \emph{Topological invariants of knots and links}, Transactions of the American Mathematical Society \textbf{30} (1928), 275--306.
+
+\bibitem[AM69]{atiyah}
+M.~F. Atiyah and I.~G. MacDonald, \emph{Introduction to commutative algebra}, Addison-Wesley Publishing Company, 1969.
+
+\bibitem[Mil67]{milnor_infinite_cyclic}
+John.~W. Milnor, \emph{Infinite cyclic coverings}, Transactions of the Americal Mathematical Society (1967), no.~2.
+
+\end{thebibliography}

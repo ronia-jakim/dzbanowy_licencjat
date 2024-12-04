@@ -1,0 +1,12 @@
+\frametitle{Macierz Alexandera}
+Prezentacja Wirtingera $\pi_1(X)$ daje nieskończoną prezentacje $K_G$, której abelianizacja $K_G^{ab}$ jako $\Z[\Z]$-moduł jest generowana przez $(n-1)$ elementów.
+    \begin{center}
+      \begin{tikzcd}[column sep=small]
+        0\arrow[r] & \ker(A_D)\arrow[r] & \Z[\Z]^{n}\arrow[r, "A_D"] & \Z[\Z]^{n-1}\arrow[r] & K_G^{ab}\arrow[r] & 0
+      \end{tikzcd}
+    \end{center}
+
+    \begin{deff}
+      Macierz przekształcenia $A_D$ nazywamy \textbf{macierzą Alexandera} modułu $K_G^{ab}$ powiązanego z diagramem $D$.
+    \end{deff}
+
