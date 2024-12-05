@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1733343593.35799 "main.aux" "main.bbl" "main" 1733343947.52075 0
-  "./lit.bib" 1733342994.72599 646 52be7c34d867b161a521f92bcd11c772 ""
+["bibtex main"] 1733343593.35799 "main.aux" "main.bbl" "main" 1733418777.15305 0
+  "./lit.bib" 1733396912.06602 646 52be7c34d867b161a521f92bcd11c772 ""
   "/usr/share/texmf-dist/bibtex/bst/amscls/amsalpha.bst" 1727349926 28675 71ba1b1ee8387ac88670b0ea0eb2399a ""
-  "main.aux" 1733343947.37743 1597 fc4bf4bbf435dd449e0e7e8c215ec0e2 "pdflatex"
+  "main.aux" 1733418776.87869 1597 fc4bf4bbf435dd449e0e7e8c215ec0e2 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1733343941.96416 "main.tex" "main.pdf" "main" 1733343947.5209 2
+["pdflatex"] 1733418770.13638 "main.tex" "main.pdf" "main" 1733418777.15324 2
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1727349926 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1727349926 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -268,13 +268,13 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1727349926 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1727349926 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1733261796.49564 5317883 a2dfe678353f042b4dbd47c58aed9764 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1733261791 7132925 4dadac3687c2aa500286cc1cc970ed31 ""
-  "main.aux" 1733343947.37743 1597 fc4bf4bbf435dd449e0e7e8c215ec0e2 "pdflatex"
-  "main.bbl" 1733343593.38937 845 919c76d9249d9ed5977664bbd827cbff "bibtex main"
-  "main.nav" 1733343947.37743 835 f59d22aa96adabf3b99407c42c425f2f "pdflatex"
-  "main.out" 1733343942.45079 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1733343941.43079 14074 32837526377a59b8d757d48b77f08869 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1733320891.71648 5467607 1f3b9843102088c2a7136e28f005c5e4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1733320874 8555705 a9a7df847257dadf97eea15700fefb9d ""
+  "main.aux" 1733418776.87869 1597 fc4bf4bbf435dd449e0e7e8c215ec0e2 "pdflatex"
+  "main.bbl" 1733396912.06602 845 919c76d9249d9ed5977664bbd827cbff "bibtex main"
+  "main.nav" 1733418776.87869 835 f59d22aa96adabf3b99407c42c425f2f "pdflatex"
+  "main.out" 1733418770.81207 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1733418765.53545 14073 db33901e2ba86f09821f9df652b5cf30 ""
   (generated)
   "main.aux"
   "main.log"
